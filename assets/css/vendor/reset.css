@@ -24,7 +24,10 @@ td,
 header,
 footer,
 figure,
-label {
+label,
+button,
+span,
+section {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
