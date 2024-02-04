@@ -1,626 +1,641 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>농협대학교 API 플랫폼</title>
-    <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/css/vendor/reset.css">
-    <link rel="stylesheet" href="assets/css/ui.css">
-    <link rel="stylesheet" href="assets/css/pages.css">
-    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
-  </head>
-  <body>
-    <div id="app">
-      <div class="dashboard-page page-wrapper">
-        <div class="dashboard-layout">
 
-          <!-- (대시보드) 왼쪽 사이드바 -->
-          <div class="dashboard-layout-sidebar">
-            <div class="left-sidebar-top">
-              <h1 class="logo">
-                <a href="dashboard-home.html" class="logo-link">
-                  <img src="assets/images/logo/logo-naos.png" alt="로고" class="logo-img">
-                </a>
-              </h1>
-              <button type="button" onclick="location.href='project-main.html';" class="btn btn-type18">
-                <img src="assets/images/ico/ico-new-add.svg" alt="더하기" class="ico ico-18">
-                <span class="txt">새 프로젝트</span>
-              </button>
-            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>농협대학교 API 플랫폼</title>
+  <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/vendor/reset.css">
+  <link rel="stylesheet" href="assets/css/ui.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+</head>
 
-            <!-- TODO: 메뉴 많아지면 스크롤 됨 -->
-            <div class="left-sidebar-mid">
+<body>
+  <div id="app">
+    <div class="dashboard-page page-wrapper">
+      <div class="dashboard-layout">
+
+        <!-- (대시보드) 왼쪽 사이드바 -->
+        <div class="dashboard-layout-sidebar">
+          <div class="left-sidebar-top">
+            <h1 class="logo">
+              <a href="dashboard-home.html" class="logo-link">
+                <img src="assets/images/logo/logo-naos.png" alt="로고" class="logo-img">
+              </a>
+            </h1>
+            <button type="button" onclick="location.href='project-main.html';" class="btn btn-type18">
+              <img src="assets/images/ico/ico-new-add.svg" alt="더하기" class="ico ico-18">
+              <span class="txt">새 프로젝트</span>
+            </button>
+          </div>
+
+          <!-- TODO: 메뉴 많아지면 스크롤 됨 -->
+          <div class="left-sidebar-mid">
+            <ul class="btn-list-grp">
+              <li class="btn-list ">
+                <div onclick="location.href='dashboard-home.html';" class="btn list-btn-type06">
+                  <div class="ico-box">
+                    <img src="assets/images/ico/ico-nav-home-on.svg" alt="아이콘" class="ico ico-on">
+                    <img src="assets/images/ico/ico-nav-home-off.svg" alt="아이콘" class="ico ico-off">
+                  </div>
+                  <span class="txt">HOME</span>
+                </div>
+              </li>
+              <li class="btn-list ">
+                <div onclick="location.href='dashboard-voice.html';" class="btn list-btn-type06">
+                  <div class="ico-box">
+                    <img src="assets/images/ico/ico-nav-voice-on.svg" alt="아이콘" class="ico ico-on">
+                    <img src="assets/images/ico/ico-nav-voice-off.svg" alt="아이콘" class="ico ico-off">
+                  </div>
+                  <span class="txt">보이스</span>
+                </div>
+              </li>
+              <li class="btn-list active">
+                <div onclick="location.href='dashboard-avatar.html';" class="btn list-btn-type06">
+                  <div class="ico-box">
+                    <img src="assets/images/ico/ico-nav-avatar-on.svg" alt="아이콘" class="ico ico-on">
+                    <img src="assets/images/ico/ico-nav-avatar-off.svg" alt="아이콘" class="ico ico-off">
+                  </div>
+                  <span class="txt">아바타</span>
+                </div>
+              </li>
+              <li class="btn-list ">
+                <div onclick="location.href='dashboard-project-setting.html';" class="btn list-btn-type06">
+                  <div class="ico-box">
+                    <img src="assets/images/ico/ico-nav-project-on.svg" alt="아이콘" class="ico ico-on">
+                    <img src="assets/images/ico/ico-nav-project-off.svg" alt="아이콘" class="ico ico-off">
+                  </div>
+                  <span class="txt">프로젝트 관리</span>
+                </div>
+              </li>
+            </ul>
+            <div class="section">
               <ul class="btn-list-grp">
-                <li class="btn-list ">
-                  <div onclick="location.href='dashboard-home.html';" class="btn list-btn-type06">
-                    <div class="ico-box">
-                      <img src="assets/images/ico/ico-nav-home-on.svg" alt="아이콘" class="ico ico-on">
-                      <img src="assets/images/ico/ico-nav-home-off.svg" alt="아이콘" class="ico ico-off">
+                <li class="btn-list">
+                  <div class="dropdown-btn-list">
+                    <div class="dropdown-btn-top ">
+                      <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
+                        <div class="ico-box">
+                          <img src="assets/images/ico/ico-nav-custom-on.svg" alt="아이콘" class="ico ico-on">
+                          <img src="assets/images/ico/ico-nav-custom-off.svg" alt="아이콘" class="ico ico-off">
+                        </div>
+                        <span class="txt">커스텀 GPT</span>
+                        <img src="assets/images/ico/ico-down-arrow-gray.svg" alt="아래로" class="ico ico-16 ico-down">
+                      </div>
                     </div>
-                    <span class="txt">HOME</span>
-                  </div>
-                </li>
-                <li class="btn-list ">
-                  <div onclick="location.href='dashboard-voice.html';" class="btn list-btn-type06">
-                    <div class="ico-box">
-                      <img src="assets/images/ico/ico-nav-voice-on.svg" alt="아이콘" class="ico ico-on">
-                      <img src="assets/images/ico/ico-nav-voice-off.svg" alt="아이콘" class="ico ico-off">
-                    </div>
-                    <span class="txt">보이스</span>
-                  </div>
-                </li>
-                <li class="btn-list active">
-                  <div onclick="location.href='dashboard-avatar.html';" class="btn list-btn-type06">
-                    <div class="ico-box">
-                      <img src="assets/images/ico/ico-nav-avatar-on.svg" alt="아이콘" class="ico ico-on">
-                      <img src="assets/images/ico/ico-nav-avatar-off.svg" alt="아이콘" class="ico ico-off">
-                    </div>
-                    <span class="txt">아바타</span>
-                  </div>
-                </li>
-                <li class="btn-list ">
-                  <div onclick="location.href='dashboard-project-setting.html';" class="btn list-btn-type06">
-                    <div class="ico-box">
-                      <img src="assets/images/ico/ico-nav-project-on.svg" alt="아이콘" class="ico ico-on">
-                      <img src="assets/images/ico/ico-nav-project-off.svg" alt="아이콘" class="ico ico-off">
-                    </div>
-                    <span class="txt">프로젝트 관리</span>
+                    <ul class="dropdown-btn-bottom">
+                      <li class="btn-list ">
+                        <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
+                          <div class="ico-box">
+                            <img src="assets/images/ico/ico-nav-robot-on.svg" alt="아이콘" class="ico ico-on">
+                            <img src="assets/images/ico/ico-nav-robot-off.svg" alt="아이콘" class="ico ico-off">
+                          </div>
+                          <span class="txt">NAOS GPT</span>
+                        </div>
+                      </li>
+                      <li class="btn-list ">
+                        <div onclick="location.href='dashboard-custom-gpt-setting.html';" class="btn list-btn-type06">
+                          <div class="ico-box">
+                            <img src="assets/images/ico/ico-nav-gpt-setting-on.svg" alt="아이콘" class="ico ico-on">
+                            <img src="assets/images/ico/ico-nav-gpt-setting-off.svg" alt="아이콘" class="ico ico-off">
+                          </div>
+                          <span class="txt">GPT 설정</span>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
                 </li>
               </ul>
-              <div class="section">
-                <ul class="btn-list-grp">
-                  <li class="btn-list">
-                    <div class="dropdown-btn-list">
-                      <div class="dropdown-btn-top ">
-                        <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
-                          <div class="ico-box">
-                            <img src="assets/images/ico/ico-nav-custom-on.svg" alt="아이콘" class="ico ico-on">
-                            <img src="assets/images/ico/ico-nav-custom-off.svg" alt="아이콘" class="ico ico-off">
-                          </div>
-                          <span class="txt">커스텀 GPT</span>
-                          <img src="assets/images/ico/ico-down-arrow-gray.svg" alt="아래로" class="ico ico-16 ico-down">
-                        </div>
-                      </div>
-                      <ul class="dropdown-btn-bottom">
-                        <li class="btn-list ">
-                          <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
-                            <div class="ico-box">
-                              <img src="assets/images/ico/ico-nav-robot-on.svg" alt="아이콘" class="ico ico-on">
-                              <img src="assets/images/ico/ico-nav-robot-off.svg" alt="아이콘" class="ico ico-off">
+            </div>
+            <ul class="btn-list-grp">
+              <li class="btn-list ">
+                <div onclick="location.href='dashboard-faq.html';" class="btn list-btn-type06">
+                  <div class="ico-box">
+                    <img src="assets/images/ico/ico-nav-faq-on.svg" alt="아이콘" class="ico ico-on">
+                    <img src="assets/images/ico/ico-nav-faq-off.svg" alt="아이콘" class="ico ico-off">
+                  </div>
+                  <span class="txt">자주 묻는 질문</span>
+                </div>
+              </li>
+              <li class="btn-list ">
+                <div onclick="location.href='dashboard-notice.html';" class="btn list-btn-type06">
+                  <div class="ico-box">
+                    <img src="assets/images/ico/ico-nav-notice-on.svg" alt="아이콘" class="ico ico-on">
+                    <img src="assets/images/ico/ico-nav-notice-off.svg" alt="아이콘" class="ico ico-off">
+                  </div>
+                  <span class="txt">공지사항</span>
+                </div>
+              </li>
+              <li class="btn-list ">
+                <div onclick="location.href='dashboard-mypage.html';" class="btn list-btn-type06">
+                  <div class="ico-box">
+                    <img src="assets/images/ico/ico-nav-mypage-on.svg" alt="아이콘" class="ico ico-on">
+                    <img src="assets/images/ico/ico-nav-mypage-off.svg" alt="아이콘" class="ico ico-off">
+                  </div>
+                  <span class="txt">내 정보</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="left-sidebar-bottom">
+            <span class="txt">Powered by</span>
+            <img src="assets/images/logo/logo-nh.png" alt="농협대학교 로고" class="logo-img">
+          </div>
+        </div>
+
+        <!-- END (대시보드) 왼쪽 사이드바 -->
+
+        <!-- (대시보드) 오른쪽 내용 영역 -->
+
+        <!-- 대시보드 아바타 -->
+        <div class="dashboard-layout-content">
+          <div class="dsbd-avatar-page dashboard-layout-page">
+
+            <!-- 제목 -->
+            <div class="dashboard-ttl-wrap">
+              <h2 class="title-default">아바타</h2>
+            </div>
+
+            <!-- END 제목 -->
+
+            <!-- 내용 -->
+            <div class="dashboard-content-wrap">
+              <section class="section intro-section">
+                <div class="avatar-intro-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/sample/img-sample-basic-avatar.png" alt="썸네일 이미지" class="thumbnail-img">
+                  </figure>
+                  <div class="card-content">
+                    <div class="card-ttl-wrap">
+                      <h4 class="card-ttl">베이직 아바타</h4>
+                    </div>
+                    <p class="card-desc">단 한 장의 사진으로 완성하는 최고의 창작 아바타</p>
+                  </div>
+                  <div class="card-btn-wrap">
+                    <button type="button" class="btn btn-type10">제작하기</button>
+                  </div>
+                </div>
+                <div class="avatar-intro-card">
+                  <figure class="thumbnail">
+                    <img src="assets/images/sample/img-sample-premium-avatar.png" alt="썸네일 이미지" class="thumbnail-img">
+                  </figure>
+                  <div class="card-content">
+                    <div class="card-ttl-wrap">
+                      <h4 class="card-ttl">프리미엄 아바타</h4>
+                      <span class="badge">관리자 승인</span>
+                    </div>
+                    <p class="card-desc">자연스러운 제스처를 구현하며 몇 분 안에 완성되는 아바타</p>
+                  </div>
+                  <div class="card-btn-wrap">
+                    <button type="button" class="btn btn-type10">제작하기</button>
+                  </div>
+                </div>
+              </section>
+              <section class="section grid-section">
+
+                <!-- 섹션 제목 -->
+                <div class="dashboard-ttl-wrap">
+                  <h2 class="title-default">나의 아바타</h2>
+                </div>
+
+                <!-- END 섹션 제목 -->
+
+                <!-- 섹션 내용 -->
+                <div class="section-content">
+                  <div class="tabs">
+                    <button type="button" data-tabs-content="basic-avatar-content" class="tab active">베이직 아바타</button>
+                    <button type="button" data-tabs-content="premium-avatar-content" class="tab">프리미엄 아바타</button>
+                  </div>
+                  <div id="avatar-tabs-container" class="tabs-content-container">
+                    <div id="basic-avatar-content" class="tabs-content active">
+
+                      <!-- TODO: 제작된 아바타가 있을 때 -->
+                      <ul class="grid-grp">
+                        <li class="grid">
+                          <div class="triple-btn-card">
+                            <div class="card-thumbnail">
+                              <figure class="thumbnail">
+                                <img src="assets/images/sample/img-sample-basic-avatar-ex1.png" alt="아바타 예시 사진"
+                                  class="thumbnail-img">
+                              </figure>
                             </div>
-                            <span class="txt">NAOS GPT</span>
+                            <div class="card-btn-wrap">
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                                </span>
+                                <span class="txt blue-txt">사용하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                                </span>
+                                <span class="txt">편집하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                                </span>
+                                <span class="txt">삭제하기</span>
+                              </button>
+                            </div>
                           </div>
                         </li>
-                        <li class="btn-list ">
-                          <div onclick="location.href='dashboard-custom-gpt-setting.html';" class="btn list-btn-type06">
-                            <div class="ico-box">
-                              <img src="assets/images/ico/ico-nav-gpt-setting-on.svg" alt="아이콘" class="ico ico-on">
-                              <img src="assets/images/ico/ico-nav-gpt-setting-off.svg" alt="아이콘" class="ico ico-off">
+                        <li class="grid">
+                          <div class="triple-btn-card">
+                            <div class="card-thumbnail">
+                              <figure class="thumbnail">
+                                <img src="assets/images/sample/img-sample-basic-avatar-ex2.png" alt="아바타 예시 사진"
+                                  class="thumbnail-img">
+                              </figure>
                             </div>
-                            <span class="txt">GPT 설정</span>
+                            <div class="card-btn-wrap">
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                                </span>
+                                <span class="txt blue-txt">사용하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                                </span>
+                                <span class="txt">편집하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                                </span>
+                                <span class="txt">삭제하기</span>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="grid">
+                          <div class="triple-btn-card">
+                            <div class="card-thumbnail">
+                              <figure class="thumbnail">
+                                <img src="assets/images/sample/img-sample-basic-avatar-ex3.png" alt="아바타 예시 사진"
+                                  class="thumbnail-img">
+                              </figure>
+                            </div>
+                            <div class="card-btn-wrap">
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                                </span>
+                                <span class="txt blue-txt">사용하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                                </span>
+                                <span class="txt">편집하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                                </span>
+                                <span class="txt">삭제하기</span>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="grid">
+                          <div class="triple-btn-card">
+                            <div class="card-thumbnail">
+                              <figure class="thumbnail">
+                                <img src="assets/images/sample/img-sample-basic-avatar-ex4.png" alt="아바타 예시 사진"
+                                  class="thumbnail-img">
+                              </figure>
+                            </div>
+                            <div class="card-btn-wrap">
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                                </span>
+                                <span class="txt blue-txt">사용하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                                </span>
+                                <span class="txt">편집하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                                </span>
+                                <span class="txt">삭제하기</span>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="grid">
+                          <div class="triple-btn-card">
+                            <div class="card-thumbnail">
+                              <figure class="thumbnail">
+                                <img src="assets/images/sample/img-sample-basic-avatar-ex5.png" alt="아바타 예시 사진"
+                                  class="thumbnail-img">
+                              </figure>
+                            </div>
+                            <div class="card-btn-wrap">
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                                </span>
+                                <span class="txt blue-txt">사용하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                                </span>
+                                <span class="txt">편집하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                                </span>
+                                <span class="txt">삭제하기</span>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="grid">
+                          <div class="triple-btn-card">
+                            <div class="card-thumbnail">
+                              <figure class="thumbnail">
+                                <img src="assets/images/sample/img-sample-basic-avatar-ex6.png" alt="아바타 예시 사진"
+                                  class="thumbnail-img">
+                              </figure>
+                            </div>
+                            <div class="card-btn-wrap">
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                                </span>
+                                <span class="txt blue-txt">사용하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                                </span>
+                                <span class="txt">편집하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                                </span>
+                                <span class="txt">삭제하기</span>
+                              </button>
+                            </div>
                           </div>
                         </li>
                       </ul>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <ul class="btn-list-grp">
-                <li class="btn-list ">
-                  <div onclick="location.href='dashboard-faq.html';" class="btn list-btn-type06">
-                    <div class="ico-box">
-                      <img src="assets/images/ico/ico-nav-faq-on.svg" alt="아이콘" class="ico ico-on">
-                      <img src="assets/images/ico/ico-nav-faq-off.svg" alt="아이콘" class="ico ico-off">
-                    </div>
-                    <span class="txt">자주 묻는 질문</span>
-                  </div>
-                </li>
-                <li class="btn-list ">
-                  <div onclick="location.href='dashboard-notice.html';" class="btn list-btn-type06">
-                    <div class="ico-box">
-                      <img src="assets/images/ico/ico-nav-notice-on.svg" alt="아이콘" class="ico ico-on">
-                      <img src="assets/images/ico/ico-nav-notice-off.svg" alt="아이콘" class="ico ico-off">
-                    </div>
-                    <span class="txt">공지사항</span>
-                  </div>
-                </li>
-                <li class="btn-list ">
-                  <div onclick="location.href='dashboard-mypage.html';" class="btn list-btn-type06">
-                    <div class="ico-box">
-                      <img src="assets/images/ico/ico-nav-mypage-on.svg" alt="아이콘" class="ico ico-on">
-                      <img src="assets/images/ico/ico-nav-mypage-off.svg" alt="아이콘" class="ico ico-off">
-                    </div>
-                    <span class="txt">내 정보</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="left-sidebar-bottom">
-              <span class="txt">Powered by</span>
-              <img src="assets/images/logo/logo-nh.png" alt="농협대학교 로고" class="logo-img">
-            </div>
-          </div>
 
-          <!-- END (대시보드) 왼쪽 사이드바 -->
-
-          <!-- (대시보드) 오른쪽 내용 영역 -->
-
-          <!-- 대시보드 아바타 -->
-          <div class="dashboard-layout-content">
-            <div class="dsbd-avatar-page dashboard-layout-page">
-
-              <!-- 제목 -->
-              <div class="dashboard-ttl-wrap">
-                <h2 class="title-default">아바타</h2>
-              </div>
-
-              <!-- END 제목 -->
-
-              <!-- 내용 -->
-              <div class="dashboard-content-wrap">
-                <section class="section intro-section">
-                  <div class="avatar-intro-card">
-                    <figure class="thumbnail">
-                      <img src="assets/images/sample/img-sample-basic-avatar.png" alt="썸네일 이미지" class="thumbnail-img">
-                    </figure>
-                    <div class="card-content">
-                      <div class="card-ttl-wrap">
-                        <h4 class="card-ttl">베이직 아바타</h4>
-                      </div>
-                      <p class="card-desc">단 한 장의 사진으로 완성하는 최고의 창작 아바타</p>
-                    </div>
-                    <div class="card-btn-wrap">
-                      <button type="button" class="btn btn-type10">제작하기</button>
-                    </div>
-                  </div>
-                  <div class="avatar-intro-card">
-                    <figure class="thumbnail">
-                      <img src="assets/images/sample/img-sample-premium-avatar.png" alt="썸네일 이미지" class="thumbnail-img">
-                    </figure>
-                    <div class="card-content">
-                      <div class="card-ttl-wrap">
-                        <h4 class="card-ttl">프리미엄 아바타</h4>
-                        <span class="badge">관리자 승인</span>
-                      </div>
-                      <p class="card-desc">자연스러운 제스처를 구현하며 몇 분 안에 완성되는 아바타</p>
-                    </div>
-                    <div class="card-btn-wrap">
-                      <button type="button" class="btn btn-type10">제작하기</button>
-                    </div>
-                  </div>
-                </section>
-                <section class="section grid-section">
-
-                  <!-- 섹션 제목 -->
-                  <div class="dashboard-ttl-wrap">
-                    <h2 class="title-default">나의 아바타</h2>
-                  </div>
-
-                  <!-- END 섹션 제목 -->
-
-                  <!-- 섹션 내용 -->
-                  <div class="section-content">
-                    <div class="tabs">
-                      <button type="button" data-tabs-content="basic-avatar-content" class="tab active">베이직 아바타</button>
-                      <button type="button" data-tabs-content="premium-avatar-content" class="tab">프리미엄 아바타</button>
-                    </div>
-                    <div id="avatar-tabs-container" class="tabs-content-container">
-                      <div id="basic-avatar-content" class="tabs-content active">
-
-                        <!-- TODO: 제작된 아바타가 있을 때 -->
-                        <ul class="grid-grp">
-                          <li class="grid">
-                            <div class="triple-btn-card">
-                              <div class="card-thumbnail">
-                                <figure class="thumbnail">
-                                  <img src="assets/images/sample/img-sample-basic-avatar-ex1.png" alt="아바타 예시 사진" class="thumbnail-img">
-                                </figure>
-                              </div>
-                              <div class="card-btn-wrap">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                            </span>
-                                  <span class="txt blue-txt">사용하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                            </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                            </span>
-                                  <span class="txt">삭제하기</span>
-                                </button>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="grid">
-                            <div class="triple-btn-card">
-                              <div class="card-thumbnail">
-                                <figure class="thumbnail">
-                                  <img src="assets/images/sample/img-sample-basic-avatar-ex2.png" alt="아바타 예시 사진" class="thumbnail-img">
-                                </figure>
-                              </div>
-                              <div class="card-btn-wrap">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                            </span>
-                                  <span class="txt blue-txt">사용하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                            </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                            </span>
-                                  <span class="txt">삭제하기</span>
-                                </button>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="grid">
-                            <div class="triple-btn-card">
-                              <div class="card-thumbnail">
-                                <figure class="thumbnail">
-                                  <img src="assets/images/sample/img-sample-basic-avatar-ex3.png" alt="아바타 예시 사진" class="thumbnail-img">
-                                </figure>
-                              </div>
-                              <div class="card-btn-wrap">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                            </span>
-                                  <span class="txt blue-txt">사용하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                            </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                            </span>
-                                  <span class="txt">삭제하기</span>
-                                </button>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="grid">
-                            <div class="triple-btn-card">
-                              <div class="card-thumbnail">
-                                <figure class="thumbnail">
-                                  <img src="assets/images/sample/img-sample-basic-avatar-ex4.png" alt="아바타 예시 사진" class="thumbnail-img">
-                                </figure>
-                              </div>
-                              <div class="card-btn-wrap">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                            </span>
-                                  <span class="txt blue-txt">사용하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                            </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                            </span>
-                                  <span class="txt">삭제하기</span>
-                                </button>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="grid">
-                            <div class="triple-btn-card">
-                              <div class="card-thumbnail">
-                                <figure class="thumbnail">
-                                  <img src="assets/images/sample/img-sample-basic-avatar-ex5.png" alt="아바타 예시 사진" class="thumbnail-img">
-                                </figure>
-                              </div>
-                              <div class="card-btn-wrap">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                            </span>
-                                  <span class="txt blue-txt">사용하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                            </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                            </span>
-                                  <span class="txt">삭제하기</span>
-                                </button>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="grid">
-                            <div class="triple-btn-card">
-                              <div class="card-thumbnail">
-                                <figure class="thumbnail">
-                                  <img src="assets/images/sample/img-sample-basic-avatar-ex6.png" alt="아바타 예시 사진" class="thumbnail-img">
-                                </figure>
-                              </div>
-                              <div class="card-btn-wrap">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                            </span>
-                                  <span class="txt blue-txt">사용하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                            </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                            </span>
-                                  <span class="txt">삭제하기</span>
-                                </button>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-
-                        <!-- TODO: 제작된 아바타가 없을 때 -->
-                        <div class="nothing-box">
-                          <h3 class="nothing-ttl">제작된 베이직 아바타가 없어요</h3>
-                          <p class="nothing-desc">나만의 아바타를 생성해 보세요</p>
-                          <div class="btn-wrap">
-                            <button type="button" class="btn btn-type11">나만의 아바타 생성하기</button>
-                          </div>
+                      <!-- TODO: 제작된 아바타가 없을 때 -->
+                      <div class="nothing-box">
+                        <h3 class="nothing-ttl">제작된 베이직 아바타가 없어요</h3>
+                        <p class="nothing-desc">나만의 아바타를 생성해 보세요</p>
+                        <div class="btn-wrap">
+                          <button type="button" class="btn btn-type11">나만의 아바타 생성하기</button>
                         </div>
-
-                        <!-- END 제작된 아바타가 없을 때 -->
                       </div>
-                      <div id="premium-avatar-content" class="tabs-content">
-                        <ul class="grid-grp">
-                          <li class="grid">
-                            <div class="triple-btn-card">
-                              <div class="card-thumbnail">
-                                <figure class="thumbnail type-premium">
-                                  <img src="assets/images/sample/img-sample-premium-avatar-ex1.png" alt="아바타 예시 사진" class="thumbnail-img">
-                                </figure>
-                              </div>
-                              <div class="card-btn-wrap">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                            </span>
-                                  <span class="txt blue-txt">사용하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                            </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                            </span>
-                                  <span class="txt">삭제하기</span>
-                                </button>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="grid">
-                            <div class="triple-btn-card">
-                              <div class="card-thumbnail">
-                                <figure class="thumbnail type-premium">
-                                  <img src="assets/images/sample/img-sample-premium-avatar-ex2.png" alt="아바타 예시 사진" class="thumbnail-img">
-                                </figure>
-                              </div>
-                              <div class="card-btn-wrap">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                            </span>
-                                  <span class="txt blue-txt">사용하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                            </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                            </span>
-                                  <span class="txt">삭제하기</span>
-                                </button>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="grid">
-                            <div class="triple-btn-card">
-                              <div class="card-thumbnail">
-                                <figure class="thumbnail type-premium">
-                                  <img src="assets/images/sample/img-sample-premium-avatar-ex3.png" alt="아바타 예시 사진" class="thumbnail-img">
-                                </figure>
-                              </div>
-                              <div class="card-btn-wrap">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                            </span>
-                                  <span class="txt blue-txt">사용하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                            </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                            </span>
-                                  <span class="txt">삭제하기</span>
-                                </button>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="grid">
-                            <div class="triple-btn-card">
-                              <div class="card-thumbnail">
-                                <figure class="thumbnail type-premium">
-                                  <img src="assets/images/sample/img-sample-premium-avatar-ex4.png" alt="아바타 예시 사진" class="thumbnail-img">
-                                </figure>
-                              </div>
-                              <div class="card-btn-wrap">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                            </span>
-                                  <span class="txt blue-txt">사용하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                            </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                            </span>
-                                  <span class="txt">삭제하기</span>
-                                </button>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="grid">
-                            <div class="triple-btn-card">
-                              <div class="card-thumbnail">
-                                <figure class="thumbnail type-premium">
-                                  <img src="assets/images/sample/img-sample-premium-avatar-ex5.png" alt="아바타 예시 사진" class="thumbnail-img">
-                                </figure>
-                              </div>
-                              <div class="card-btn-wrap">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                            </span>
-                                  <span class="txt blue-txt">사용하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                            </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                            </span>
-                                  <span class="txt">삭제하기</span>
-                                </button>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="grid">
-                            <div class="triple-btn-card">
-                              <div class="card-thumbnail">
-                                <figure class="thumbnail type-premium">
-                                  <img src="assets/images/sample/img-sample-premium-avatar-ex6.png" alt="아바타 예시 사진" class="thumbnail-img">
-                                </figure>
-                              </div>
-                              <div class="card-btn-wrap">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                            </span>
-                                  <span class="txt blue-txt">사용하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                            </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                              <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                            </span>
-                                  <span class="txt">삭제하기</span>
-                                </button>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
 
-                        <!-- END 제작된 아바타가 있을 때 -->
-
-                        <!-- TODO: 제작된 아바타가 없을 때 -->
-                        <div class="nothing-box">
-                          <h3 class="nothing-ttl">제작된 프리미엄 아바타가 없어요</h3>
-                          <p class="nothing-desc">프리미엄 아바타를 생성해 보세요</p>
-                          <div class="btn-wrap">
-                            <button type="button" class="btn btn-type11">나만의 아바타 생성하기</button>
+                      <!-- END 제작된 아바타가 없을 때 -->
+                    </div>
+                    <div id="premium-avatar-content" class="tabs-content">
+                      <ul class="grid-grp">
+                        <li class="grid">
+                          <div class="triple-btn-card">
+                            <div class="card-thumbnail">
+                              <figure class="thumbnail type-premium">
+                                <img src="assets/images/sample/img-sample-premium-avatar-ex1.png" alt="아바타 예시 사진"
+                                  class="thumbnail-img">
+                              </figure>
+                            </div>
+                            <div class="card-btn-wrap">
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                                </span>
+                                <span class="txt blue-txt">사용하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                                </span>
+                                <span class="txt">편집하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                                </span>
+                                <span class="txt">삭제하기</span>
+                              </button>
+                            </div>
                           </div>
-                        </div>
+                        </li>
+                        <li class="grid">
+                          <div class="triple-btn-card">
+                            <div class="card-thumbnail">
+                              <figure class="thumbnail type-premium">
+                                <img src="assets/images/sample/img-sample-premium-avatar-ex2.png" alt="아바타 예시 사진"
+                                  class="thumbnail-img">
+                              </figure>
+                            </div>
+                            <div class="card-btn-wrap">
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                                </span>
+                                <span class="txt blue-txt">사용하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                                </span>
+                                <span class="txt">편집하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                                </span>
+                                <span class="txt">삭제하기</span>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="grid">
+                          <div class="triple-btn-card">
+                            <div class="card-thumbnail">
+                              <figure class="thumbnail type-premium">
+                                <img src="assets/images/sample/img-sample-premium-avatar-ex3.png" alt="아바타 예시 사진"
+                                  class="thumbnail-img">
+                              </figure>
+                            </div>
+                            <div class="card-btn-wrap">
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                                </span>
+                                <span class="txt blue-txt">사용하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                                </span>
+                                <span class="txt">편집하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                                </span>
+                                <span class="txt">삭제하기</span>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="grid">
+                          <div class="triple-btn-card">
+                            <div class="card-thumbnail">
+                              <figure class="thumbnail type-premium">
+                                <img src="assets/images/sample/img-sample-premium-avatar-ex4.png" alt="아바타 예시 사진"
+                                  class="thumbnail-img">
+                              </figure>
+                            </div>
+                            <div class="card-btn-wrap">
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                                </span>
+                                <span class="txt blue-txt">사용하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                                </span>
+                                <span class="txt">편집하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                                </span>
+                                <span class="txt">삭제하기</span>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="grid">
+                          <div class="triple-btn-card">
+                            <div class="card-thumbnail">
+                              <figure class="thumbnail type-premium">
+                                <img src="assets/images/sample/img-sample-premium-avatar-ex5.png" alt="아바타 예시 사진"
+                                  class="thumbnail-img">
+                              </figure>
+                            </div>
+                            <div class="card-btn-wrap">
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                                </span>
+                                <span class="txt blue-txt">사용하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                                </span>
+                                <span class="txt">편집하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                                </span>
+                                <span class="txt">삭제하기</span>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="grid">
+                          <div class="triple-btn-card">
+                            <div class="card-thumbnail">
+                              <figure class="thumbnail type-premium">
+                                <img src="assets/images/sample/img-sample-premium-avatar-ex6.png" alt="아바타 예시 사진"
+                                  class="thumbnail-img">
+                              </figure>
+                            </div>
+                            <div class="card-btn-wrap">
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                                </span>
+                                <span class="txt blue-txt">사용하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                                </span>
+                                <span class="txt">편집하기</span>
+                              </button>
+                              <button type="button" class="btn list-btn-type05">
+                                <span class="ico-box">
+                                  <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                                </span>
+                                <span class="txt">삭제하기</span>
+                              </button>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
 
-                        <!-- END 제작된 아바타가 없을 때 -->
+                      <!-- END 제작된 아바타가 있을 때 -->
+
+                      <!-- TODO: 제작된 아바타가 없을 때 -->
+                      <div class="nothing-box">
+                        <h3 class="nothing-ttl">제작된 프리미엄 아바타가 없어요</h3>
+                        <p class="nothing-desc">프리미엄 아바타를 생성해 보세요</p>
+                        <div class="btn-wrap">
+                          <button type="button" class="btn btn-type11">나만의 아바타 생성하기</button>
+                        </div>
                       </div>
+
+                      <!-- END 제작된 아바타가 없을 때 -->
                     </div>
                   </div>
+                </div>
 
-                  <!-- END 섹션 내용 -->
-                </section>
-              </div>
-
-              <!-- END 내용 -->
+                <!-- END 섹션 내용 -->
+              </section>
             </div>
-          </div>
 
-          <!-- END (대시보드) 오른쪽 내용 영역 -->
+            <!-- END 내용 -->
+          </div>
         </div>
+
+        <!-- END (대시보드) 오른쪽 내용 영역 -->
       </div>
-
-      <!-- FIXME: 프리미엄 아바타 - 제작하기 모달 (STEP 01 ~ 03)-->
-
-      <!-- FIXME: 아바타 삭제 모달-->
-
-      <!-- FIXME: 편집하기 모달-->
-
-      <!-- FIXME: 승인요청 모달-->
     </div>
-    <script>
-      $('[data-tabs-content]').on('click', function() {
-        var content = $(this).attr('data-tabs-content');
-        var contentParent = $('#' + content).parents('.tabs-content-container').attr('id');
-        $('[data-tabs-content]').removeClass('active');
-        $(this).addClass('active');
-        $(`#${contentParent} .tabs-content`).removeClass('active');
-        $(`#${contentParent} #${content}`).addClass('active');
-      })
-    </script>
-  </body>
+
+    <!-- FIXME: 프리미엄 아바타 - 제작하기 모달 (STEP 01 ~ 03)-->
+
+    <!-- FIXME: 아바타 삭제 모달-->
+
+    <!-- FIXME: 편집하기 모달-->
+
+    <!-- FIXME: 승인요청 모달-->
+  </div>
+  <script>
+    $('[data-tabs-content]').on('click', function () {
+      var content = $(this).attr('data-tabs-content');
+      var contentParent = $('#' + content).parents('.tabs-content-container').attr('id');
+      $('[data-tabs-content]').removeClass('active');
+      $(this).addClass('active');
+      $(`#${contentParent} .tabs-content`).removeClass('active');
+      $(`#${contentParent} #${content}`).addClass('active');
+    })
+  </script>
+</body>
+
 </html>

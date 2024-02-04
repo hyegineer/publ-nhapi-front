@@ -1,205 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>농협대학교 API 플랫폼</title>
-    <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/css/vendor/reset.css">
-    <link rel="stylesheet" href="assets/css/ui.css">
-    <link rel="stylesheet" href="assets/css/pages.css">
-    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
-  </head>
-  <body>
-    <div id="app">
-      <div class="guide-page">
-        <div class="guide-table-wrap">
-          <h1>1. 계정 관련 (총 5페이지)</h1>
-          <table>
-            <thead>
-              <tr>
-                <th>페이지명</th>
-                <th>기타 화면</th>
-                <th>링크</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>로그인</td>
-                <td></td>
-                <td>
-                  <a href="login.html">login.html</a>
-                </td>
-              </tr>
-              <tr>
-                <td>비밀번호 찾기</td>
-                <td></td>
-                <td>
-                  <a href="find-pwd.html">find-pwd.html</a>
-                </td>
-              </tr>
-              <tr>
-                <td>비밀번호 설정</td>
-                <td></td>
-                <td>
-                  <a href="pwd-setting.html">pwd-setting.html</a>
-                </td>
-              </tr>
-              <tr>
-                <td>변경 완료</td>
-                <td></td>
-                <td>
-                  <a href="pwd-change-complete.html">pwd-change-complete.html</a>
-                </td>
-              </tr>
-              <tr>
-                <td>변경시간 만료</td>
-                <td></td>
-                <td>
-                  <a href="pwd-change-expiry.html">pwd-change-expiry.html</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="guide-table-wrap">
-          <h1>2. 대시보드 관련 (9페이지)</h1>
-          <table>
-            <thead>
-              <tr>
-                <th>페이지명</th>
-                <th>기타 화면</th>
-                <th>링크</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>새 프로젝트</td>
-                <td>
-                  <ul>
-                    <li>- 저장 확인 모달 및 보이스편집 화면</li>
-                    <li>- 보이스 선택 메뉴</li>
-                    <li>- 세팅값 설정 메뉴</li>
-                    <li>- 텍스트 인풋 박스</li>
-                    <li>- 로딩페이지</li>
-                    <li>- 아바타 추가</li>
-                    <li>- 스크립트 작성</li>
-                  </ul>
-                </td>
-                <td>
-                  <a href="project-main.html">project-main.html</a>
-                </td>
-              </tr>
-              <tr>
-                <td>대시보드) 홈</td>
-                <td>
-                  <ul>
-                    <li>- 최신 프로젝트 Hover 메뉴: 제목 변경 팝업</li>
-                    <li>- 최신 프로젝트 Hover 메뉴: 프로젝트 삭제 팝업</li>
-                    <li>- 공지사항 모달</li>
-                  </ul>
-                </td>
-                <td>
-                  <a href="dashboard-home.html">dashboard-home.html</a>
-                </td>
-              </tr>
-              <tr>
-                <td>대시보드) 보이스</td>
-                <td>
-                  <ul>
-                    <li>- 지원국가 확인하기 모달</li>
-                    <li>- 마이보이스 추가하기 모달</li>
-                  </ul>
-                </td>
-                <td>
-                  <a href="dashboard-voice.html">dashboard-voice.html</a>
-                </td>
-              </tr>
-              <tr>
-                <td>대시보드) 아바타/프리미엄 아바타</td>
-                <td>
-                  <ul>
-                    <li>- 베이직 아바타 제작하기</li>
-                    <li>- 디지털 휴먼 삭제하기</li>
-                    <li>- 프리미엄 아바타 제작하기</li>
-                    <li>- 승인요청 모달 창</li>
-                  </ul>
-                </td>
-                <td>
-                  <a href="dashboard-avatar.html">dashboard-avatar.html</a>
-                </td>
-              </tr>
-              <tr>
-                <td>대시보드) 프로젝트 관리</td>
-                <td>
-                  <ul>
-                    <li>- 프로젝트 제목 변경 모달</li>
-                    <li>- 프로젝트 삭제 모달</li>
-                  </ul>
-                </td>
-                <td>
-                  <a href="dashboard-project-setting.html">dashboard-project-setting.html</a>
-                </td>
-              </tr>
-              <tr>
-                <td>대시보드) 커스텀 GPT</td>
-                <td>
-                  <ul>
-                    <li>- GPT 데이터 보기 모달</li>
-                  </ul>
-                </td>
-                <td>
-                  <a href="dashboard-custom-gpt.html">dashboard-custom-gpt.html</a>
-                </td>
-              </tr>
-              <tr>
-                <td>대시보드) 커스텀 GPT 설정</td>
-                <td>
-                  <ul>
-                    <li>- 삭제 모달창</li>
-                  </ul>
-                </td>
-                <td>
-                  <a href="dashboard-custom-gpt-setting.html">dashboard-custom-gpt-setting.html</a>
-                </td>
-              </tr>
-              <tr>
-                <td>대시보드) 자주 묻는 질문</td>
-                <td>
-                  <ul>
-                    <li>- 드롭다운</li>
-                  </ul>
-                </td>
-                <td>
-                  <a href="dashboard-faq.html">dashboard-faq.html</a>
-                </td>
-              </tr>
-              <tr>
-                <td>대시보드) 공지사항</td>
-                <td>
-                </td>
-                <td>
-                  <a href="dashboard-notice.html">dashboard-notice.html</a>
-                </td>
-              </tr>
-              <tr>
-                <td>대시보드) 내 정보</td>
-                <td>
-                  <ul>
-                    <li>- 개인정보 약관 동의 모달</li>
-                    <li>- 내 정보 화면 동의 체크표시</li>
-                    <li>- 변경사항 저장 모달</li>
-                    <li>- 추가 사용 요청</li>
-                  </ul>
-                </td>
-                <td>
-                  <a href="dashboard-mypage.html">dashboard-mypage.html</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>농협대학교 API 플랫폼</title>
+  <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/vendor/reset.css">
+  <link rel="stylesheet" href="assets/css/ui.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="guide-page">
+      <div class="guide-table-wrap">
+        <h1>1. 계정 관련 (총 5페이지)</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>페이지명</th>
+              <th>기타 화면</th>
+              <th>링크</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>로그인</td>
+              <td></td>
+              <td>
+                <a href="login.html">login.html</a>
+              </td>
+            </tr>
+            <tr>
+              <td>비밀번호 찾기</td>
+              <td></td>
+              <td>
+                <a href="find-pwd.html">find-pwd.html</a>
+              </td>
+            </tr>
+            <tr>
+              <td>비밀번호 설정</td>
+              <td></td>
+              <td>
+                <a href="pwd-setting.html">pwd-setting.html</a>
+              </td>
+            </tr>
+            <tr>
+              <td>변경 완료</td>
+              <td></td>
+              <td>
+                <a href="pwd-change-complete.html">pwd-change-complete.html</a>
+              </td>
+            </tr>
+            <tr>
+              <td>변경시간 만료</td>
+              <td></td>
+              <td>
+                <a href="pwd-change-expiry.html">pwd-change-expiry.html</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="guide-table-wrap">
+        <h1>2. 대시보드 관련 (9페이지)</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>페이지명</th>
+              <th>기타 화면</th>
+              <th>링크</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>새 프로젝트</td>
+              <td>
+                <ul>
+                  <li>- 저장 확인 모달 및 보이스편집 화면</li>
+                  <li>- 보이스 선택 메뉴</li>
+                  <li>- 세팅값 설정 메뉴</li>
+                  <li>- 텍스트 인풋 박스</li>
+                  <li>- 로딩페이지</li>
+                  <li>- 아바타 추가</li>
+                  <li>- 스크립트 작성</li>
+                </ul>
+              </td>
+              <td>
+                <a href="project-main.html">project-main.html</a>
+              </td>
+            </tr>
+            <tr>
+              <td>대시보드) 홈</td>
+              <td>
+                <ul>
+                  <li>- 최신 프로젝트 Hover 메뉴: 제목 변경 팝업</li>
+                  <li>- 최신 프로젝트 Hover 메뉴: 프로젝트 삭제 팝업</li>
+                  <li>- 공지사항 모달</li>
+                </ul>
+              </td>
+              <td>
+                <a href="dashboard-home.html">dashboard-home.html</a>
+              </td>
+            </tr>
+            <tr>
+              <td>대시보드) 보이스</td>
+              <td>
+                <ul>
+                  <li>- 지원국가 확인하기 모달</li>
+                  <li>- 마이보이스 추가하기 모달</li>
+                </ul>
+              </td>
+              <td>
+                <a href="dashboard-voice.html">dashboard-voice.html</a>
+              </td>
+            </tr>
+            <tr>
+              <td>대시보드) 아바타/프리미엄 아바타</td>
+              <td>
+                <ul>
+                  <li>- 베이직 아바타 제작하기</li>
+                  <li>- 디지털 휴먼 삭제하기</li>
+                  <li>- 프리미엄 아바타 제작하기</li>
+                  <li>- 승인요청 모달 창</li>
+                </ul>
+              </td>
+              <td>
+                <a href="dashboard-avatar.html">dashboard-avatar.html</a>
+              </td>
+            </tr>
+            <tr>
+              <td>대시보드) 프로젝트 관리</td>
+              <td>
+                <ul>
+                  <li>- 프로젝트 제목 변경 모달</li>
+                  <li>- 프로젝트 삭제 모달</li>
+                </ul>
+              </td>
+              <td>
+                <a href="dashboard-project-setting.html">dashboard-project-setting.html</a>
+              </td>
+            </tr>
+            <tr>
+              <td>대시보드) 커스텀 GPT</td>
+              <td>
+                <ul>
+                  <li>- GPT 데이터 보기 모달</li>
+                </ul>
+              </td>
+              <td>
+                <a href="dashboard-custom-gpt.html">dashboard-custom-gpt.html</a>
+              </td>
+            </tr>
+            <tr>
+              <td>대시보드) 커스텀 GPT 설정</td>
+              <td>
+                <ul>
+                  <li>- 삭제 모달창</li>
+                </ul>
+              </td>
+              <td>
+                <a href="dashboard-custom-gpt-setting.html">dashboard-custom-gpt-setting.html</a>
+              </td>
+            </tr>
+            <tr>
+              <td>대시보드) 자주 묻는 질문</td>
+              <td>
+                <ul>
+                  <li>- 드롭다운</li>
+                </ul>
+              </td>
+              <td>
+                <a href="dashboard-faq.html">dashboard-faq.html</a>
+              </td>
+            </tr>
+            <tr>
+              <td>대시보드) 공지사항</td>
+              <td>
+              </td>
+              <td>
+                <a href="dashboard-notice.html">dashboard-notice.html</a>
+              </td>
+            </tr>
+            <tr>
+              <td>대시보드) 내 정보</td>
+              <td>
+                <ul>
+                  <li>- 개인정보 약관 동의 모달</li>
+                  <li>- 내 정보 화면 동의 체크표시</li>
+                  <li>- 변경사항 저장 모달</li>
+                  <li>- 추가 사용 요청</li>
+                </ul>
+              </td>
+              <td>
+                <a href="dashboard-mypage.html">dashboard-mypage.html</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

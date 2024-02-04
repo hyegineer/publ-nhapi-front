@@ -1,170 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>농협대학교 API 플랫폼</title>
-    <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/css/vendor/reset.css">
-    <link rel="stylesheet" href="assets/css/ui.css">
-    <link rel="stylesheet" href="assets/css/pages.css">
-    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
-  </head>
-  <body>
-    <div id="app">
-      <div class="dashboard-page page-wrapper">
-        <div class="dashboard-layout">
 
-          <!-- (대시보드) 왼쪽 사이드바 -->
-          <div class="dashboard-layout-sidebar">
-            <div class="left-sidebar-top">
-              <h1 class="logo">
-                <a href="dashboard-home.html" class="logo-link">
-                  <img src="assets/images/logo/logo-naos.png" alt="로고" class="logo-img">
-                </a>
-              </h1>
-              <button type="button" onclick="location.href='project-main.html';" class="btn btn-type18">
-                <img src="assets/images/ico/ico-new-add.svg" alt="더하기" class="ico ico-18">
-                <span class="txt">새 프로젝트</span>
-              </button>
-            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>농협대학교 API 플랫폼</title>
+  <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="assets/css/vendor/reset.css">
+  <link rel="stylesheet" href="assets/css/ui.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+</head>
 
-            <!-- TODO: 메뉴 많아지면 스크롤 됨 -->
-            <div class="left-sidebar-mid">
-              <ul class="btn-list-grp">
-                <li class="btn-list ">
-                  <div onclick="location.href='dashboard-home.html';" class="btn list-btn-type06">
-                    <div class="ico-box">
-                      <img src="assets/images/ico/ico-nav-home-on.svg" alt="아이콘" class="ico ico-on">
-                      <img src="assets/images/ico/ico-nav-home-off.svg" alt="아이콘" class="ico ico-off">
-                    </div>
-                    <span class="txt">HOME</span>
-                  </div>
-                </li>
-                <li class="btn-list ">
-                  <div onclick="location.href='dashboard-voice.html';" class="btn list-btn-type06">
-                    <div class="ico-box">
-                      <img src="assets/images/ico/ico-nav-voice-on.svg" alt="아이콘" class="ico ico-on">
-                      <img src="assets/images/ico/ico-nav-voice-off.svg" alt="아이콘" class="ico ico-off">
-                    </div>
-                    <span class="txt">보이스</span>
-                  </div>
-                </li>
-                <li class="btn-list ">
-                  <div onclick="location.href='dashboard-avatar.html';" class="btn list-btn-type06">
-                    <div class="ico-box">
-                      <img src="assets/images/ico/ico-nav-avatar-on.svg" alt="아이콘" class="ico ico-on">
-                      <img src="assets/images/ico/ico-nav-avatar-off.svg" alt="아이콘" class="ico ico-off">
-                    </div>
-                    <span class="txt">아바타</span>
-                  </div>
-                </li>
-                <li class="btn-list ">
-                  <div onclick="location.href='dashboard-project-setting.html';" class="btn list-btn-type06">
-                    <div class="ico-box">
-                      <img src="assets/images/ico/ico-nav-project-on.svg" alt="아이콘" class="ico ico-on">
-                      <img src="assets/images/ico/ico-nav-project-off.svg" alt="아이콘" class="ico ico-off">
-                    </div>
-                    <span class="txt">프로젝트 관리</span>
-                  </div>
-                </li>
-              </ul>
-              <div class="section">
-                <ul class="btn-list-grp">
-                  <li class="btn-list">
-                    <div class="dropdown-btn-list">
-                      <div class="dropdown-btn-top ">
-                        <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
-                          <div class="ico-box">
-                            <img src="assets/images/ico/ico-nav-custom-on.svg" alt="아이콘" class="ico ico-on">
-                            <img src="assets/images/ico/ico-nav-custom-off.svg" alt="아이콘" class="ico ico-off">
-                          </div>
-                          <span class="txt">커스텀 GPT</span>
-                          <img src="assets/images/ico/ico-down-arrow-gray.svg" alt="아래로" class="ico ico-16 ico-down">
-                        </div>
-                      </div>
-                      <ul class="dropdown-btn-bottom">
-                        <li class="btn-list ">
-                          <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
-                            <div class="ico-box">
-                              <img src="assets/images/ico/ico-nav-robot-on.svg" alt="아이콘" class="ico ico-on">
-                              <img src="assets/images/ico/ico-nav-robot-off.svg" alt="아이콘" class="ico ico-off">
-                            </div>
-                            <span class="txt">NAOS GPT</span>
-                          </div>
-                        </li>
-                        <li class="btn-list ">
-                          <div onclick="location.href='dashboard-custom-gpt-setting.html';" class="btn list-btn-type06">
-                            <div class="ico-box">
-                              <img src="assets/images/ico/ico-nav-gpt-setting-on.svg" alt="아이콘" class="ico ico-on">
-                              <img src="assets/images/ico/ico-nav-gpt-setting-off.svg" alt="아이콘" class="ico ico-off">
-                            </div>
-                            <span class="txt">GPT 설정</span>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <ul class="btn-list-grp">
-                <li class="btn-list active">
-                  <div onclick="location.href='dashboard-faq.html';" class="btn list-btn-type06">
-                    <div class="ico-box">
-                      <img src="assets/images/ico/ico-nav-faq-on.svg" alt="아이콘" class="ico ico-on">
-                      <img src="assets/images/ico/ico-nav-faq-off.svg" alt="아이콘" class="ico ico-off">
-                    </div>
-                    <span class="txt">자주 묻는 질문</span>
-                  </div>
-                </li>
-                <li class="btn-list ">
-                  <div onclick="location.href='dashboard-notice.html';" class="btn list-btn-type06">
-                    <div class="ico-box">
-                      <img src="assets/images/ico/ico-nav-notice-on.svg" alt="아이콘" class="ico ico-on">
-                      <img src="assets/images/ico/ico-nav-notice-off.svg" alt="아이콘" class="ico ico-off">
-                    </div>
-                    <span class="txt">공지사항</span>
-                  </div>
-                </li>
-                <li class="btn-list ">
-                  <div onclick="location.href='dashboard-mypage.html';" class="btn list-btn-type06">
-                    <div class="ico-box">
-                      <img src="assets/images/ico/ico-nav-mypage-on.svg" alt="아이콘" class="ico ico-on">
-                      <img src="assets/images/ico/ico-nav-mypage-off.svg" alt="아이콘" class="ico ico-off">
-                    </div>
-                    <span class="txt">내 정보</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="left-sidebar-bottom">
-              <span class="txt">Powered by</span>
-              <img src="assets/images/logo/logo-nh.png" alt="농협대학교 로고" class="logo-img">
-            </div>
+<body>
+  <div id="app">
+    <div class="dashboard-page page-wrapper">
+      <div class="dashboard-layout">
+
+        <!-- (대시보드) 왼쪽 사이드바 -->
+        <div class="dashboard-layout-sidebar">
+          <div class="left-sidebar-top">
+            <h1 class="logo">
+              <a href="dashboard-home.html" class="logo-link">
+                <img src="assets/images/logo/logo-naos.png" alt="로고" class="logo-img">
+              </a>
+            </h1>
+            <button type="button" onclick="location.href='project-main.html';" class="btn btn-type18">
+              <img src="assets/images/ico/ico-new-add.svg" alt="더하기" class="ico ico-18">
+              <span class="txt">새 프로젝트</span>
+            </button>
           </div>
 
-          <!-- END (대시보드) 왼쪽 사이드바 -->
+          <!-- TODO: 메뉴 많아지면 스크롤 됨 -->
+          <div class="left-sidebar-mid">
+            <ul class="btn-list-grp">
+              <li class="btn-list ">
+                <div onclick="location.href='dashboard-home.html';" class="btn list-btn-type06">
+                  <div class="ico-box">
+                    <img src="assets/images/ico/ico-nav-home-on.svg" alt="아이콘" class="ico ico-on">
+                    <img src="assets/images/ico/ico-nav-home-off.svg" alt="아이콘" class="ico ico-off">
+                  </div>
+                  <span class="txt">HOME</span>
+                </div>
+              </li>
+              <li class="btn-list ">
+                <div onclick="location.href='dashboard-voice.html';" class="btn list-btn-type06">
+                  <div class="ico-box">
+                    <img src="assets/images/ico/ico-nav-voice-on.svg" alt="아이콘" class="ico ico-on">
+                    <img src="assets/images/ico/ico-nav-voice-off.svg" alt="아이콘" class="ico ico-off">
+                  </div>
+                  <span class="txt">보이스</span>
+                </div>
+              </li>
+              <li class="btn-list ">
+                <div onclick="location.href='dashboard-avatar.html';" class="btn list-btn-type06">
+                  <div class="ico-box">
+                    <img src="assets/images/ico/ico-nav-avatar-on.svg" alt="아이콘" class="ico ico-on">
+                    <img src="assets/images/ico/ico-nav-avatar-off.svg" alt="아이콘" class="ico ico-off">
+                  </div>
+                  <span class="txt">아바타</span>
+                </div>
+              </li>
+              <li class="btn-list ">
+                <div onclick="location.href='dashboard-project-setting.html';" class="btn list-btn-type06">
+                  <div class="ico-box">
+                    <img src="assets/images/ico/ico-nav-project-on.svg" alt="아이콘" class="ico ico-on">
+                    <img src="assets/images/ico/ico-nav-project-off.svg" alt="아이콘" class="ico ico-off">
+                  </div>
+                  <span class="txt">프로젝트 관리</span>
+                </div>
+              </li>
+            </ul>
+            <div class="section">
+              <ul class="btn-list-grp">
+                <li class="btn-list">
+                  <div class="dropdown-btn-list">
+                    <div class="dropdown-btn-top ">
+                      <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
+                        <div class="ico-box">
+                          <img src="assets/images/ico/ico-nav-custom-on.svg" alt="아이콘" class="ico ico-on">
+                          <img src="assets/images/ico/ico-nav-custom-off.svg" alt="아이콘" class="ico ico-off">
+                        </div>
+                        <span class="txt">커스텀 GPT</span>
+                        <img src="assets/images/ico/ico-down-arrow-gray.svg" alt="아래로" class="ico ico-16 ico-down">
+                      </div>
+                    </div>
+                    <ul class="dropdown-btn-bottom">
+                      <li class="btn-list ">
+                        <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
+                          <div class="ico-box">
+                            <img src="assets/images/ico/ico-nav-robot-on.svg" alt="아이콘" class="ico ico-on">
+                            <img src="assets/images/ico/ico-nav-robot-off.svg" alt="아이콘" class="ico ico-off">
+                          </div>
+                          <span class="txt">NAOS GPT</span>
+                        </div>
+                      </li>
+                      <li class="btn-list ">
+                        <div onclick="location.href='dashboard-custom-gpt-setting.html';" class="btn list-btn-type06">
+                          <div class="ico-box">
+                            <img src="assets/images/ico/ico-nav-gpt-setting-on.svg" alt="아이콘" class="ico ico-on">
+                            <img src="assets/images/ico/ico-nav-gpt-setting-off.svg" alt="아이콘" class="ico ico-off">
+                          </div>
+                          <span class="txt">GPT 설정</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <ul class="btn-list-grp">
+              <li class="btn-list active">
+                <div onclick="location.href='dashboard-faq.html';" class="btn list-btn-type06">
+                  <div class="ico-box">
+                    <img src="assets/images/ico/ico-nav-faq-on.svg" alt="아이콘" class="ico ico-on">
+                    <img src="assets/images/ico/ico-nav-faq-off.svg" alt="아이콘" class="ico ico-off">
+                  </div>
+                  <span class="txt">자주 묻는 질문</span>
+                </div>
+              </li>
+              <li class="btn-list ">
+                <div onclick="location.href='dashboard-notice.html';" class="btn list-btn-type06">
+                  <div class="ico-box">
+                    <img src="assets/images/ico/ico-nav-notice-on.svg" alt="아이콘" class="ico ico-on">
+                    <img src="assets/images/ico/ico-nav-notice-off.svg" alt="아이콘" class="ico ico-off">
+                  </div>
+                  <span class="txt">공지사항</span>
+                </div>
+              </li>
+              <li class="btn-list ">
+                <div onclick="location.href='dashboard-mypage.html';" class="btn list-btn-type06">
+                  <div class="ico-box">
+                    <img src="assets/images/ico/ico-nav-mypage-on.svg" alt="아이콘" class="ico ico-on">
+                    <img src="assets/images/ico/ico-nav-mypage-off.svg" alt="아이콘" class="ico ico-off">
+                  </div>
+                  <span class="txt">내 정보</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="left-sidebar-bottom">
+            <span class="txt">Powered by</span>
+            <img src="assets/images/logo/logo-nh.png" alt="농협대학교 로고" class="logo-img">
+          </div>
+        </div>
 
-          <!-- (대시보드) 오른쪽 내용 영역 -->
+        <!-- END (대시보드) 왼쪽 사이드바 -->
 
-          <!-- 대시보드 FAQ -->
-          <div class="dashboard-layout-content">
-            <div class="dsbd-faq-page dashboard-layout-page">
+        <!-- (대시보드) 오른쪽 내용 영역 -->
 
-              <!-- 제목 -->
-              <div class="dashboard-ttl-wrap">
-                <h2 class="title-lg">자주 묻는 질문</h2>
-              </div>
+        <!-- 대시보드 FAQ -->
+        <div class="dashboard-layout-content">
+          <div class="dsbd-faq-page dashboard-layout-page">
 
-              <!-- END 제목 -->
+            <!-- 제목 -->
+            <div class="dashboard-ttl-wrap">
+              <h2 class="title-lg">자주 묻는 질문</h2>
+            </div>
 
-              <!-- 내용 -->
-              <div class="dashboard-content-wrap">
+            <!-- END 제목 -->
+
+            <!-- 내용 -->
+            <div class="dashboard-content-wrap">
+              <section class="section">
+
+                <!-- 섹션 제목 -->
+                <div class="section-title-wrap">
+                  <h2 class="title">서비스 기초 안내</h2>
+                </div>
+
+                <!-- END 섹션 제목 -->
+
+                <!-- 섹션 내용 -->
+                <div class="section-content">
+                  <ul class="faq-list-grp">
+                    <li class="faq-list">
+                      <div class="accordion-faq-card">
+
+                        <!-- 아코디언 상단 -->
+                        <div class="accordion-faq-top">
+                          <div class="faq-card">
+                            <p class="txt">NAOS를 사용하기 위한 최소 사용 환경은 무엇인가요?</p>
+                          </div>
+                        </div>
+
+                        <!-- 아코디언 하단 -->
+                        <div class="accordion-faq-bottom">
+                          <div class="faq-down-card">
+                            <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
+                            <div class="card-content">
+                              <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
+                              <div class="faq-content">
+                                <ul class="dot-list-grp">
+                                  <li class="dot-list">chrome: 109 이상</li>
+                                  <li class="dot-list">safari: 14.1 이상</li>
+                                  <li class="dot-list">edge: 114 이상</li>
+                                  <li class="dot-list">firefox: 115 이상</li>
+                                </ul>
+                                <div class="skyblue-box">
+                                  <ul class="bar-list-grp">
+                                    <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
+                                    <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- END 섹션 내용 -->
+              </section>
+              <div class="section-grid">
                 <section class="section">
 
                   <!-- 섹션 제목 -->
                   <div class="section-title-wrap">
-                    <h2 class="title">서비스 기초 안내</h2>
+                    <h2 class="title">보이스</h2>
                   </div>
 
                   <!-- END 섹션 제목 -->
@@ -178,7 +233,77 @@
                           <!-- 아코디언 상단 -->
                           <div class="accordion-faq-top">
                             <div class="faq-card">
-                              <p class="txt">NAOS를 사용하기 위한 최소 사용 환경은 무엇인가요?</p>
+                              <p class="txt">보이스의 사용법이 궁금해요.</p>
+                            </div>
+                          </div>
+
+                          <!-- 아코디언 하단 -->
+                          <div class="accordion-faq-bottom">
+                            <div class="faq-down-card">
+                              <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
+                              <div class="card-content">
+                                <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
+                                <div class="faq-content">
+                                  <ul class="dot-list-grp">
+                                    <li class="dot-list">chrome: 109 이상</li>
+                                    <li class="dot-list">safari: 14.1 이상</li>
+                                    <li class="dot-list">edge: 114 이상</li>
+                                    <li class="dot-list">firefox: 115 이상</li>
+                                  </ul>
+                                  <div class="skyblue-box">
+                                    <ul class="bar-list-grp">
+                                      <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
+                                      <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="faq-list">
+                        <div class="accordion-faq-card">
+
+                          <!-- 아코디언 상단 -->
+                          <div class="accordion-faq-top">
+                            <div class="faq-card">
+                              <p class="txt">보이스는 최대 몇회까지 제작해 볼수 있나요? </p>
+                            </div>
+                          </div>
+
+                          <!-- 아코디언 하단 -->
+                          <div class="accordion-faq-bottom">
+                            <div class="faq-down-card">
+                              <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
+                              <div class="card-content">
+                                <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
+                                <div class="faq-content">
+                                  <ul class="dot-list-grp">
+                                    <li class="dot-list">chrome: 109 이상</li>
+                                    <li class="dot-list">safari: 14.1 이상</li>
+                                    <li class="dot-list">edge: 114 이상</li>
+                                    <li class="dot-list">firefox: 115 이상</li>
+                                  </ul>
+                                  <div class="skyblue-box">
+                                    <ul class="bar-list-grp">
+                                      <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
+                                      <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="faq-list">
+                        <div class="accordion-faq-card">
+
+                          <!-- 아코디언 상단 -->
+                          <div class="accordion-faq-top">
+                            <div class="faq-card">
+                              <p class="txt">보이스의 다운로드 방법이 궁금해요.</p>
                             </div>
                           </div>
 
@@ -212,512 +337,390 @@
 
                   <!-- END 섹션 내용 -->
                 </section>
-                <div class="section-grid">
-                  <section class="section">
+                <section class="section">
 
-                    <!-- 섹션 제목 -->
-                    <div class="section-title-wrap">
-                      <h2 class="title">보이스</h2>
-                    </div>
+                  <!-- 섹션 제목 -->
+                  <div class="section-title-wrap">
+                    <h2 class="title">아바타</h2>
+                  </div>
 
-                    <!-- END 섹션 제목 -->
+                  <!-- END 섹션 제목 -->
 
-                    <!-- 섹션 내용 -->
-                    <div class="section-content">
-                      <ul class="faq-list-grp">
-                        <li class="faq-list">
-                          <div class="accordion-faq-card">
+                  <!-- 섹션 내용 -->
+                  <div class="section-content">
+                    <ul class="faq-list-grp">
+                      <li class="faq-list">
+                        <div class="accordion-faq-card">
 
-                            <!-- 아코디언 상단 -->
-                            <div class="accordion-faq-top">
-                              <div class="faq-card">
-                                <p class="txt">보이스의 사용법이 궁금해요.</p>
-                              </div>
+                          <!-- 아코디언 상단 -->
+                          <div class="accordion-faq-top">
+                            <div class="faq-card">
+                              <p class="txt">아바타의 사용법이 궁금해요.</p>
                             </div>
+                          </div>
 
-                            <!-- 아코디언 하단 -->
-                            <div class="accordion-faq-bottom">
-                              <div class="faq-down-card">
-                                <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
-                                <div class="card-content">
-                                  <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
-                                  <div class="faq-content">
-                                    <ul class="dot-list-grp">
-                                      <li class="dot-list">chrome: 109 이상</li>
-                                      <li class="dot-list">safari: 14.1 이상</li>
-                                      <li class="dot-list">edge: 114 이상</li>
-                                      <li class="dot-list">firefox: 115 이상</li>
+                          <!-- 아코디언 하단 -->
+                          <div class="accordion-faq-bottom">
+                            <div class="faq-down-card">
+                              <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
+                              <div class="card-content">
+                                <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
+                                <div class="faq-content">
+                                  <ul class="dot-list-grp">
+                                    <li class="dot-list">chrome: 109 이상</li>
+                                    <li class="dot-list">safari: 14.1 이상</li>
+                                    <li class="dot-list">edge: 114 이상</li>
+                                    <li class="dot-list">firefox: 115 이상</li>
+                                  </ul>
+                                  <div class="skyblue-box">
+                                    <ul class="bar-list-grp">
+                                      <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
+                                      <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
                                     </ul>
-                                    <div class="skyblue-box">
-                                      <ul class="bar-list-grp">
-                                        <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
-                                        <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
-                                      </ul>
-                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </li>
-                        <li class="faq-list">
-                          <div class="accordion-faq-card">
+                        </div>
+                      </li>
+                      <li class="faq-list">
+                        <div class="accordion-faq-card">
 
-                            <!-- 아코디언 상단 -->
-                            <div class="accordion-faq-top">
-                              <div class="faq-card">
-                                <p class="txt">보이스는 최대 몇회까지 제작해 볼수 있나요? </p>
-                              </div>
+                          <!-- 아코디언 상단 -->
+                          <div class="accordion-faq-top">
+                            <div class="faq-card">
+                              <p class="txt">아바타는 최대 몇회까지 제작해 볼수 있나요? </p>
                             </div>
+                          </div>
 
-                            <!-- 아코디언 하단 -->
-                            <div class="accordion-faq-bottom">
-                              <div class="faq-down-card">
-                                <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
-                                <div class="card-content">
-                                  <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
-                                  <div class="faq-content">
-                                    <ul class="dot-list-grp">
-                                      <li class="dot-list">chrome: 109 이상</li>
-                                      <li class="dot-list">safari: 14.1 이상</li>
-                                      <li class="dot-list">edge: 114 이상</li>
-                                      <li class="dot-list">firefox: 115 이상</li>
+                          <!-- 아코디언 하단 -->
+                          <div class="accordion-faq-bottom">
+                            <div class="faq-down-card">
+                              <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
+                              <div class="card-content">
+                                <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
+                                <div class="faq-content">
+                                  <ul class="dot-list-grp">
+                                    <li class="dot-list">chrome: 109 이상</li>
+                                    <li class="dot-list">safari: 14.1 이상</li>
+                                    <li class="dot-list">edge: 114 이상</li>
+                                    <li class="dot-list">firefox: 115 이상</li>
+                                  </ul>
+                                  <div class="skyblue-box">
+                                    <ul class="bar-list-grp">
+                                      <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
+                                      <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
                                     </ul>
-                                    <div class="skyblue-box">
-                                      <ul class="bar-list-grp">
-                                        <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
-                                        <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
-                                      </ul>
-                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </li>
-                        <li class="faq-list">
-                          <div class="accordion-faq-card">
+                        </div>
+                      </li>
+                      <li class="faq-list">
+                        <div class="accordion-faq-card">
 
-                            <!-- 아코디언 상단 -->
-                            <div class="accordion-faq-top">
-                              <div class="faq-card">
-                                <p class="txt">보이스의 다운로드 방법이 궁금해요.</p>
-                              </div>
+                          <!-- 아코디언 상단 -->
+                          <div class="accordion-faq-top">
+                            <div class="faq-card">
+                              <p class="txt">아바타의 다운로드 방법이 궁금해요.</p>
                             </div>
+                          </div>
 
-                            <!-- 아코디언 하단 -->
-                            <div class="accordion-faq-bottom">
-                              <div class="faq-down-card">
-                                <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
-                                <div class="card-content">
-                                  <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
-                                  <div class="faq-content">
-                                    <ul class="dot-list-grp">
-                                      <li class="dot-list">chrome: 109 이상</li>
-                                      <li class="dot-list">safari: 14.1 이상</li>
-                                      <li class="dot-list">edge: 114 이상</li>
-                                      <li class="dot-list">firefox: 115 이상</li>
+                          <!-- 아코디언 하단 -->
+                          <div class="accordion-faq-bottom">
+                            <div class="faq-down-card">
+                              <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
+                              <div class="card-content">
+                                <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
+                                <div class="faq-content">
+                                  <ul class="dot-list-grp">
+                                    <li class="dot-list">chrome: 109 이상</li>
+                                    <li class="dot-list">safari: 14.1 이상</li>
+                                    <li class="dot-list">edge: 114 이상</li>
+                                    <li class="dot-list">firefox: 115 이상</li>
+                                  </ul>
+                                  <div class="skyblue-box">
+                                    <ul class="bar-list-grp">
+                                      <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
+                                      <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
                                     </ul>
-                                    <div class="skyblue-box">
-                                      <ul class="bar-list-grp">
-                                        <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
-                                        <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
-                                      </ul>
-                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </li>
-                      </ul>
-                    </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
 
-                    <!-- END 섹션 내용 -->
-                  </section>
-                  <section class="section">
-
-                    <!-- 섹션 제목 -->
-                    <div class="section-title-wrap">
-                      <h2 class="title">아바타</h2>
-                    </div>
-
-                    <!-- END 섹션 제목 -->
-
-                    <!-- 섹션 내용 -->
-                    <div class="section-content">
-                      <ul class="faq-list-grp">
-                        <li class="faq-list">
-                          <div class="accordion-faq-card">
-
-                            <!-- 아코디언 상단 -->
-                            <div class="accordion-faq-top">
-                              <div class="faq-card">
-                                <p class="txt">아바타의 사용법이 궁금해요.</p>
-                              </div>
-                            </div>
-
-                            <!-- 아코디언 하단 -->
-                            <div class="accordion-faq-bottom">
-                              <div class="faq-down-card">
-                                <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
-                                <div class="card-content">
-                                  <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
-                                  <div class="faq-content">
-                                    <ul class="dot-list-grp">
-                                      <li class="dot-list">chrome: 109 이상</li>
-                                      <li class="dot-list">safari: 14.1 이상</li>
-                                      <li class="dot-list">edge: 114 이상</li>
-                                      <li class="dot-list">firefox: 115 이상</li>
-                                    </ul>
-                                    <div class="skyblue-box">
-                                      <ul class="bar-list-grp">
-                                        <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
-                                        <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="faq-list">
-                          <div class="accordion-faq-card">
-
-                            <!-- 아코디언 상단 -->
-                            <div class="accordion-faq-top">
-                              <div class="faq-card">
-                                <p class="txt">아바타는 최대 몇회까지 제작해 볼수 있나요? </p>
-                              </div>
-                            </div>
-
-                            <!-- 아코디언 하단 -->
-                            <div class="accordion-faq-bottom">
-                              <div class="faq-down-card">
-                                <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
-                                <div class="card-content">
-                                  <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
-                                  <div class="faq-content">
-                                    <ul class="dot-list-grp">
-                                      <li class="dot-list">chrome: 109 이상</li>
-                                      <li class="dot-list">safari: 14.1 이상</li>
-                                      <li class="dot-list">edge: 114 이상</li>
-                                      <li class="dot-list">firefox: 115 이상</li>
-                                    </ul>
-                                    <div class="skyblue-box">
-                                      <ul class="bar-list-grp">
-                                        <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
-                                        <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="faq-list">
-                          <div class="accordion-faq-card">
-
-                            <!-- 아코디언 상단 -->
-                            <div class="accordion-faq-top">
-                              <div class="faq-card">
-                                <p class="txt">아바타의 다운로드 방법이 궁금해요.</p>
-                              </div>
-                            </div>
-
-                            <!-- 아코디언 하단 -->
-                            <div class="accordion-faq-bottom">
-                              <div class="faq-down-card">
-                                <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
-                                <div class="card-content">
-                                  <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
-                                  <div class="faq-content">
-                                    <ul class="dot-list-grp">
-                                      <li class="dot-list">chrome: 109 이상</li>
-                                      <li class="dot-list">safari: 14.1 이상</li>
-                                      <li class="dot-list">edge: 114 이상</li>
-                                      <li class="dot-list">firefox: 115 이상</li>
-                                    </ul>
-                                    <div class="skyblue-box">
-                                      <ul class="bar-list-grp">
-                                        <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
-                                        <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- END 섹션 내용 -->
-                  </section>
-                </div>
-                <div class="section-grid">
-                  <section class="section">
-
-                    <!-- 섹션 제목 -->
-                    <div class="section-title-wrap">
-                      <h2 class="title">커스텀 GPT</h2>
-                    </div>
-
-                    <!-- END 섹션 제목 -->
-
-                    <!-- 섹션 내용 -->
-                    <div class="section-content">
-                      <ul class="faq-list-grp">
-                        <li class="faq-list">
-                          <div class="accordion-faq-card">
-
-                            <!-- 아코디언 상단 -->
-                            <div class="accordion-faq-top">
-                              <div class="faq-card">
-                                <p class="txt">커스텀 GPT의 사용법이 궁금해요.</p>
-                              </div>
-                            </div>
-
-                            <!-- 아코디언 하단 -->
-                            <div class="accordion-faq-bottom">
-                              <div class="faq-down-card">
-                                <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
-                                <div class="card-content">
-                                  <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
-                                  <div class="faq-content">
-                                    <ul class="dot-list-grp">
-                                      <li class="dot-list">chrome: 109 이상</li>
-                                      <li class="dot-list">safari: 14.1 이상</li>
-                                      <li class="dot-list">edge: 114 이상</li>
-                                      <li class="dot-list">firefox: 115 이상</li>
-                                    </ul>
-                                    <div class="skyblue-box">
-                                      <ul class="bar-list-grp">
-                                        <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
-                                        <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="faq-list">
-                          <div class="accordion-faq-card">
-
-                            <!-- 아코디언 상단 -->
-                            <div class="accordion-faq-top">
-                              <div class="faq-card">
-                                <p class="txt">커스텀 GPT는 최대 몇회까지 제작해 볼수 있나요? </p>
-                              </div>
-                            </div>
-
-                            <!-- 아코디언 하단 -->
-                            <div class="accordion-faq-bottom">
-                              <div class="faq-down-card">
-                                <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
-                                <div class="card-content">
-                                  <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
-                                  <div class="faq-content">
-                                    <ul class="dot-list-grp">
-                                      <li class="dot-list">chrome: 109 이상</li>
-                                      <li class="dot-list">safari: 14.1 이상</li>
-                                      <li class="dot-list">edge: 114 이상</li>
-                                      <li class="dot-list">firefox: 115 이상</li>
-                                    </ul>
-                                    <div class="skyblue-box">
-                                      <ul class="bar-list-grp">
-                                        <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
-                                        <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="faq-list">
-                          <div class="accordion-faq-card">
-
-                            <!-- 아코디언 상단 -->
-                            <div class="accordion-faq-top">
-                              <div class="faq-card">
-                                <p class="txt">커스텀 GPT의 다운로드 방법이 궁금해요.</p>
-                              </div>
-                            </div>
-
-                            <!-- 아코디언 하단 -->
-                            <div class="accordion-faq-bottom">
-                              <div class="faq-down-card">
-                                <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
-                                <div class="card-content">
-                                  <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
-                                  <div class="faq-content">
-                                    <ul class="dot-list-grp">
-                                      <li class="dot-list">chrome: 109 이상</li>
-                                      <li class="dot-list">safari: 14.1 이상</li>
-                                      <li class="dot-list">edge: 114 이상</li>
-                                      <li class="dot-list">firefox: 115 이상</li>
-                                    </ul>
-                                    <div class="skyblue-box">
-                                      <ul class="bar-list-grp">
-                                        <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
-                                        <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- END 섹션 내용 -->
-                  </section>
-                  <section class="section">
-
-                    <!-- 섹션 제목 -->
-                    <div class="section-title-wrap">
-                      <h2 class="title">내 정보</h2>
-                    </div>
-
-                    <!-- END 섹션 제목 -->
-
-                    <!-- 섹션 내용 -->
-                    <div class="section-content">
-                      <ul class="faq-list-grp">
-                        <li class="faq-list">
-                          <div class="accordion-faq-card">
-
-                            <!-- 아코디언 상단 -->
-                            <div class="accordion-faq-top">
-                              <div class="faq-card">
-                                <p class="txt">내 이메일 주소를 변경 하고 싶어요.</p>
-                              </div>
-                            </div>
-
-                            <!-- 아코디언 하단 -->
-                            <div class="accordion-faq-bottom">
-                              <div class="faq-down-card">
-                                <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
-                                <div class="card-content">
-                                  <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
-                                  <div class="faq-content">
-                                    <ul class="dot-list-grp">
-                                      <li class="dot-list">chrome: 109 이상</li>
-                                      <li class="dot-list">safari: 14.1 이상</li>
-                                      <li class="dot-list">edge: 114 이상</li>
-                                      <li class="dot-list">firefox: 115 이상</li>
-                                    </ul>
-                                    <div class="skyblue-box">
-                                      <ul class="bar-list-grp">
-                                        <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
-                                        <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="faq-list">
-                          <div class="accordion-faq-card">
-
-                            <!-- 아코디언 상단 -->
-                            <div class="accordion-faq-top">
-                              <div class="faq-card">
-                                <p class="txt">비밀번호를 변경 하고 싶어요.</p>
-                              </div>
-                            </div>
-
-                            <!-- 아코디언 하단 -->
-                            <div class="accordion-faq-bottom">
-                              <div class="faq-down-card">
-                                <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
-                                <div class="card-content">
-                                  <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
-                                  <div class="faq-content">
-                                    <ul class="dot-list-grp">
-                                      <li class="dot-list">chrome: 109 이상</li>
-                                      <li class="dot-list">safari: 14.1 이상</li>
-                                      <li class="dot-list">edge: 114 이상</li>
-                                      <li class="dot-list">firefox: 115 이상</li>
-                                    </ul>
-                                    <div class="skyblue-box">
-                                      <ul class="bar-list-grp">
-                                        <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
-                                        <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="faq-list">
-                          <div class="accordion-faq-card">
-
-                            <!-- 아코디언 상단 -->
-                            <div class="accordion-faq-top">
-                              <div class="faq-card">
-                                <p class="txt">탈퇴는 어떻게 하나요?</p>
-                              </div>
-                            </div>
-
-                            <!-- 아코디언 하단 -->
-                            <div class="accordion-faq-bottom">
-                              <div class="faq-down-card">
-                                <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
-                                <div class="card-content">
-                                  <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
-                                  <div class="faq-content">
-                                    <ul class="dot-list-grp">
-                                      <li class="dot-list">chrome: 109 이상</li>
-                                      <li class="dot-list">safari: 14.1 이상</li>
-                                      <li class="dot-list">edge: 114 이상</li>
-                                      <li class="dot-list">firefox: 115 이상</li>
-                                    </ul>
-                                    <div class="skyblue-box">
-                                      <ul class="bar-list-grp">
-                                        <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
-                                        <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <!-- END 섹션 내용 -->
-                  </section>
-                </div>
+                  <!-- END 섹션 내용 -->
+                </section>
               </div>
+              <div class="section-grid">
+                <section class="section">
 
-              <!-- END 내용 -->
+                  <!-- 섹션 제목 -->
+                  <div class="section-title-wrap">
+                    <h2 class="title">커스텀 GPT</h2>
+                  </div>
+
+                  <!-- END 섹션 제목 -->
+
+                  <!-- 섹션 내용 -->
+                  <div class="section-content">
+                    <ul class="faq-list-grp">
+                      <li class="faq-list">
+                        <div class="accordion-faq-card">
+
+                          <!-- 아코디언 상단 -->
+                          <div class="accordion-faq-top">
+                            <div class="faq-card">
+                              <p class="txt">커스텀 GPT의 사용법이 궁금해요.</p>
+                            </div>
+                          </div>
+
+                          <!-- 아코디언 하단 -->
+                          <div class="accordion-faq-bottom">
+                            <div class="faq-down-card">
+                              <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
+                              <div class="card-content">
+                                <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
+                                <div class="faq-content">
+                                  <ul class="dot-list-grp">
+                                    <li class="dot-list">chrome: 109 이상</li>
+                                    <li class="dot-list">safari: 14.1 이상</li>
+                                    <li class="dot-list">edge: 114 이상</li>
+                                    <li class="dot-list">firefox: 115 이상</li>
+                                  </ul>
+                                  <div class="skyblue-box">
+                                    <ul class="bar-list-grp">
+                                      <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
+                                      <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="faq-list">
+                        <div class="accordion-faq-card">
+
+                          <!-- 아코디언 상단 -->
+                          <div class="accordion-faq-top">
+                            <div class="faq-card">
+                              <p class="txt">커스텀 GPT는 최대 몇회까지 제작해 볼수 있나요? </p>
+                            </div>
+                          </div>
+
+                          <!-- 아코디언 하단 -->
+                          <div class="accordion-faq-bottom">
+                            <div class="faq-down-card">
+                              <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
+                              <div class="card-content">
+                                <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
+                                <div class="faq-content">
+                                  <ul class="dot-list-grp">
+                                    <li class="dot-list">chrome: 109 이상</li>
+                                    <li class="dot-list">safari: 14.1 이상</li>
+                                    <li class="dot-list">edge: 114 이상</li>
+                                    <li class="dot-list">firefox: 115 이상</li>
+                                  </ul>
+                                  <div class="skyblue-box">
+                                    <ul class="bar-list-grp">
+                                      <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
+                                      <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="faq-list">
+                        <div class="accordion-faq-card">
+
+                          <!-- 아코디언 상단 -->
+                          <div class="accordion-faq-top">
+                            <div class="faq-card">
+                              <p class="txt">커스텀 GPT의 다운로드 방법이 궁금해요.</p>
+                            </div>
+                          </div>
+
+                          <!-- 아코디언 하단 -->
+                          <div class="accordion-faq-bottom">
+                            <div class="faq-down-card">
+                              <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
+                              <div class="card-content">
+                                <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
+                                <div class="faq-content">
+                                  <ul class="dot-list-grp">
+                                    <li class="dot-list">chrome: 109 이상</li>
+                                    <li class="dot-list">safari: 14.1 이상</li>
+                                    <li class="dot-list">edge: 114 이상</li>
+                                    <li class="dot-list">firefox: 115 이상</li>
+                                  </ul>
+                                  <div class="skyblue-box">
+                                    <ul class="bar-list-grp">
+                                      <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
+                                      <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- END 섹션 내용 -->
+                </section>
+                <section class="section">
+
+                  <!-- 섹션 제목 -->
+                  <div class="section-title-wrap">
+                    <h2 class="title">내 정보</h2>
+                  </div>
+
+                  <!-- END 섹션 제목 -->
+
+                  <!-- 섹션 내용 -->
+                  <div class="section-content">
+                    <ul class="faq-list-grp">
+                      <li class="faq-list">
+                        <div class="accordion-faq-card">
+
+                          <!-- 아코디언 상단 -->
+                          <div class="accordion-faq-top">
+                            <div class="faq-card">
+                              <p class="txt">내 이메일 주소를 변경 하고 싶어요.</p>
+                            </div>
+                          </div>
+
+                          <!-- 아코디언 하단 -->
+                          <div class="accordion-faq-bottom">
+                            <div class="faq-down-card">
+                              <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
+                              <div class="card-content">
+                                <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
+                                <div class="faq-content">
+                                  <ul class="dot-list-grp">
+                                    <li class="dot-list">chrome: 109 이상</li>
+                                    <li class="dot-list">safari: 14.1 이상</li>
+                                    <li class="dot-list">edge: 114 이상</li>
+                                    <li class="dot-list">firefox: 115 이상</li>
+                                  </ul>
+                                  <div class="skyblue-box">
+                                    <ul class="bar-list-grp">
+                                      <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
+                                      <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="faq-list">
+                        <div class="accordion-faq-card">
+
+                          <!-- 아코디언 상단 -->
+                          <div class="accordion-faq-top">
+                            <div class="faq-card">
+                              <p class="txt">비밀번호를 변경 하고 싶어요.</p>
+                            </div>
+                          </div>
+
+                          <!-- 아코디언 하단 -->
+                          <div class="accordion-faq-bottom">
+                            <div class="faq-down-card">
+                              <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
+                              <div class="card-content">
+                                <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
+                                <div class="faq-content">
+                                  <ul class="dot-list-grp">
+                                    <li class="dot-list">chrome: 109 이상</li>
+                                    <li class="dot-list">safari: 14.1 이상</li>
+                                    <li class="dot-list">edge: 114 이상</li>
+                                    <li class="dot-list">firefox: 115 이상</li>
+                                  </ul>
+                                  <div class="skyblue-box">
+                                    <ul class="bar-list-grp">
+                                      <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
+                                      <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="faq-list">
+                        <div class="accordion-faq-card">
+
+                          <!-- 아코디언 상단 -->
+                          <div class="accordion-faq-top">
+                            <div class="faq-card">
+                              <p class="txt">탈퇴는 어떻게 하나요?</p>
+                            </div>
+                          </div>
+
+                          <!-- 아코디언 하단 -->
+                          <div class="accordion-faq-bottom">
+                            <div class="faq-down-card">
+                              <h3 class="card-ttl">NAOS 서비스의 원활한 이용을 위해서 아래 내용들을 확인해주세요.</h3>
+                              <div class="card-content">
+                                <h4 class="faq-ttl type-lg">지원 웹 브라우저</h4>
+                                <div class="faq-content">
+                                  <ul class="dot-list-grp">
+                                    <li class="dot-list">chrome: 109 이상</li>
+                                    <li class="dot-list">safari: 14.1 이상</li>
+                                    <li class="dot-list">edge: 114 이상</li>
+                                    <li class="dot-list">firefox: 115 이상</li>
+                                  </ul>
+                                  <div class="skyblue-box">
+                                    <ul class="bar-list-grp">
+                                      <li class="bar-list">2023. 09. 12. 최소 지원 버전 기준입니다.</li>
+                                      <li class="bar-list">브라우저 호환 설정은 가변값을 관리하고 있어서, 시간이 지남에 따라 호환 버전이 올라갈 수 있습니다.</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- END 섹션 내용 -->
+                </section>
+              </div>
             </div>
-          </div>
 
-          <!-- END (대시보드) 오른쪽 내용 영역 -->
+            <!-- END 내용 -->
+          </div>
         </div>
+
+        <!-- END (대시보드) 오른쪽 내용 영역 -->
       </div>
     </div>
-    <script>
-      $('.accordion-faq-card').on('click', function() {
-        $(this).toggleClass('active');
-      })
-    </script>
-  </body>
+  </div>
+  <script>
+    $('.accordion-faq-card').on('click', function () {
+      $(this).toggleClass('active');
+    })
+  </script>
+</body>
+
 </html>
