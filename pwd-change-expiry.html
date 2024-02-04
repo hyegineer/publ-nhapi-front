@@ -8,22 +8,27 @@
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/ui.css">
     <link rel="stylesheet" href="assets/css/pages.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
   </head>
   <body>
     <div id="app">
-      <div>
-        <div>
-          <div>
-            <h1>
-              <span>변경 시간이 만료되었어요.</span>
-            </h1>
-            <p>
-              비밀번호 변경을 요청하고 오랜 시간이 지나서 세션이 만료되었어요. <br>
-              다시 비밀번호 변경을 시도해 주시기 바랍니다.
-            </p>
-          </div>
-          <div>
-            <button type="button">재설정 메일 다시 요청하기</button>
+      <div class="auth-page page-wrapper">
+        <div class="page-container">
+          <div class="auth-setting-box">
+            <div class="ttl-wrap">
+              <h1 class="title-xlg">
+                <span class="gradient-txt type-pink">변경 시간이 만료되었어요.</span>
+              </h1>
+              <p class="ttl-desc">
+                비밀번호 변경을 요청하고 오랜 시간이 지나서 세션이 만료되었어요. <br>
+                다시 비밀번호 변경을 시도해 주시기 바랍니다.
+              </p>
+            </div>
+            <div class="setting-btn-grp">
+              <button type="button" class="btn btn-type02">
+                <span class="txt">재설정 메일 다시 요청하기</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

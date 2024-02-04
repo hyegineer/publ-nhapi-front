@@ -8,48 +8,63 @@
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/ui.css">
     <link rel="stylesheet" href="assets/css/pages.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
   </head>
   <body>
     <div id="app">
-      <div>
-        <div>
-          <div>
-            <h1>
-              <span>인공지능 콘텐츠 제작의 시작,</span>
-              <span>NAOS</span>
-            </h1>
-          </div>
-          <div>
-            <div>
-              <div>
-                <img src="" alt="">
-                <div>
-                  <label>이메일 주소</label>
-                  <input type="text" placeholder="이메일 주소를 입력해주세요.">
+      <div class="auth-page page-wrapper">
+        <div class="page-container">
+          <div class="auth-form-box">
+            <div class="ttl-wrap">
+              <h1 class="title-xlg">
+                <span class="gradient-txt type-blue">인공지능 콘텐츠 제작의 시작,</span>
+                <span class="gray-txt">NAOS</span>
+              </h1>
+            </div>
+            <div class="form-box">
+              <div class="form-item-grp">
+                <div class="ico-form-item-wrap">
+
+                  <!-- TODO: 오류가 날 경우 ico-form-item 에 error 클래스를 추가해주세요 -->
+                  <div class="ico-form-item">
+                    <img src="assets/images/ico/ico-form-email.svg" alt="아이콘" class="ico">
+                    <img src="assets/images/ico/ico-form-email-red.svg" alt="아이콘" class="ico ico-error">
+                    <div class="inner-form-item">
+                      <label class="form-label">이메일 주소</label>
+                      <input type="text" placeholder="이메일 주소를 입력해주세요." class="form-inp">
+                    </div>
+                  </div>
+
+                  <!-- TODO: 오류가 날 경우 관련 오류 메세지를 띄웁니다 -->
+                  <p class="form-validation-msg type-error" style="display: none;">
+                    <img src="assets/images/ico/ico-validation-error.svg" alt="오류아이콘" class="ico ico-16">
+                    <span class="txt">존재하지 않는 이메일 주소입니다.</span>
+                  </p>
+                </div>
+                <div class="ico-form-item-wrap">
+
+                  <!-- TODO: 오류가 날 경우 ico-form-item 에 error 클래스를 추가해주세요 -->
+                  <div class="ico-form-item error">
+                    <img src="assets/images/ico/ico-form-pwd.svg" alt="아이콘" class="ico">
+                    <img src="assets/images/ico/ico-form-pwd-red.svg" alt="아이콘" class="ico ico-error">
+                    <div class="inner-form-item">
+                      <label class="form-label">비밀번호</label>
+                      <input type="password" autocomplete="new-password" placeholder="비밀번호를 입력해주세요." class="form-inp">
+                    </div>
+                  </div>
+
+                  <!-- TODO: 오류가 날 경우 관련 오류 메세지를 띄웁니다 -->
+                  <p class="form-validation-msg type-error">
+                    <img src="assets/images/ico/ico-validation-error.svg" alt="오류아이콘" class="ico ico-16">
+                    <span class="txt">계정 또는 비밀번호에 오류가 있어요.</span>
+                  </p>
                 </div>
               </div>
-              <p>
-                <img src="" alt="">
-                <span>존재하지 않는 이메일 주소입니다.</span>
-              </p>
-            </div>
-            <div>
-              <div>
-                <img src="" alt="">
-                <div>
-                  <label>비밀번호</label>
-                  <input type="password" placeholder="비밀번호를 입력해주세요.">
-                </div>
+              <div class="form-btn-grp">
+                <button type="button" class="btn btn-type01">로그인하기</button>
+                <button type="button" class="btn txt-btn type-blue">비밀번호를 잊으셨나요?</button>
               </div>
-              <p>
-                <img src="" alt="">
-                <span>계정 또는 비밀번호에 오류가 있어요.</span>
-              </p>
             </div>
-          </div>
-          <div>
-            <button type="button">로그인하기</button>
-            <a href="#">비밀번호를 잊으셨나요?</a>
           </div>
         </div>
       </div>

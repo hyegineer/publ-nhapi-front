@@ -8,29 +8,34 @@
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/ui.css">
     <link rel="stylesheet" href="assets/css/pages.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
   </head>
   <body>
     <div id="app">
-      <div>
-        <div>
-          <div>
-            <h1>
-              <span>이메일을 확인해 주세요 :)</span>
-            </h1>
-            <p>
-              비밀번호 재설정 메일을 <b>hretha@gmail.com</b>로 보냈어요. <br>
-              혹시 이메일이 오지 않았다면, 스팸함을 확인하거나 다시 요청해주세요.
-            </p>
-          </div>
-          <div>
-            <button type="button">
-              <img src="" alt="">
-              <span>이메일 다시 보내기</span>
-            </button>
-            <a href="#">로그인으로 돌아가기</a>
+      <div class="auth-page page-wrapper">
+        <div class="page-container">
+          <div class="auth-setting-box">
+            <div class="ttl-wrap">
+              <h1 class="title-xlg">
+                <span class="gradient-txt type-pink">이메일을 확인해 주세요 :)</span>
+              </h1>
+              <p class="ttl-desc">
+                비밀번호 재설정 메일을 <b class="bold-txt">hretha@gmail.com</b>로 보냈어요. <br>
+                혹시 이메일이 오지 않았다면, 스팸함을 확인하거나 다시 요청해주세요.
+              </p>
+            </div>
+            <div class="setting-btn-grp">
+              <button type="button" class="btn btn-type02">
+                <img src="assets/images/ico/ico-refresh.svg" alt="다시 아이콘" class="ico ico-15">
+                <span class="txt">이메일 다시 보내기</span>
+              </button>
+              <button type="button" class="btn txt-btn type-gray">로그인으로 돌아가기</button>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- FIXME: -->
       <div>
         <div>
           <img src="" alt="">

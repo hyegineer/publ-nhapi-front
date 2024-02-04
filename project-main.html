@@ -8,126 +8,223 @@
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/ui.css">
     <link rel="stylesheet" href="assets/css/pages.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
   </head>
   <body>
     <div id="app">
-      <div>
+      <div class="project-page page-wrapper">
 
-        <!-- (프로젝트) 왼쪽 사이드바 -->
-        <div>
-          <ul>
-            <li>
-              <div>
-                <div>
-
-                  <!-- TODO: 플러스 아이콘 -->
-                  <img src="" alt="">
-
-                  <!-- TODO: 콘텐츠 추가되면 깔리는 이미지나 비디오썸네일 -->
-                  <div>
-                    <div></div>
-                    <span>1</span>
-
-                    <!-- hover set button -->
-                    <div>
-                      <button type="button">
-                        <img src="" alt="">
-                        <span>더보기</span>
-                      </button>
-                      <div>
-                        <ul>
-                          <li>
-                            <button type="button">
-                              <img src="" alt="">
-                              <span>변경하기</span>
-                            </button>
-                          </li>
-                          <li>
-                            <button type="button">
-                              <img src="" alt="">
-                              <span>삭제하기</span>
-                            </button>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <!-- END hover set button -->
-                    <span>25초</span>
-                  </div>
-                </div>
-                <div>
-                  <ul>
-                    <li>
-                      <button type="button">
-                        <img src="" alt="">
-                        <span>보이스</span>
-                      </button>
-                    </li>
-                    <li>
-                      <button type="button">
-                        <img src="" alt="">
-                        <span>아바타</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <!-- END (프로젝트) 왼쪽 사이드바 -->
-
-        <!-- (프로젝트) 오른쪽 내용 영역 -->
-        <div>
+        <!-- (프로젝트) -->
+        <div class="project-layout">
 
           <!-- 상단 헤더 -->
-          <div>
+          <div class="project-layout-header">
 
             <!-- 상단 헤더 왼쪽 뒤로가기 + 제목 -->
-            <div>
-              <button type="button">
-                <img src="" alt="">
-                <span>뒤로 가기</span>
+            <div class="left-wrap">
+              <button type="button" class="btn back-btn">
+                <img src="assets/images/ico/ico-back-arrow-01.svg" alt="뒤로가기 아이콘" class="ico ico-31">
+                <span class="txt-hidden">뒤로 가기</span>
               </button>
-              <h1>협동조합법 1주차 1차시</h1>
+              <h1 class="page-ttl">협동조합법 1주차 1차시</h1>
             </div>
 
             <!-- END 상단 헤더 왼쪽 뒤로가기 + 제목 -->
-            <button type="button">
-              <img src="" alt="">
-              <span>생성하기</span>
-            </button>
+            <div class="right-wrap">
+              <button type="button" class="btn btn-type04">
+                <img src="assets/images/ico/ico-download.svg" alt="다시 아이콘" class="ico ico-16">
+                <span class="txt">생성하기</span>
+              </button>
+            </div>
           </div>
 
           <!-- END 상단 헤더 -->
 
           <!-- 하단 내용 -->
-          <div>
+          <div class="project-layout-content">
+
+            <!-- (프로젝트) 왼쪽 사이드바 -->
+            <div class="project-layout-left">
+              <ul class="left-sidebar">
+                <li class="left-sidebar-list">
+
+                  <!-- TODO: 추가하기 전의 카드 모양입니다. -->
+                  <div class="new-project-before-card" style="display: none;">
+                    <div class="card-area">
+
+                      <!-- TODO: 플러스 아이콘 -->
+                      <img src="assets/images/ico/ico-add.svg" alt="더하기" class="ico-add">
+                    </div>
+                    <div class="card-btn-wrap">
+                      <ul class="white-bd-box btn-list-grp">
+                        <li class="btn-list">
+                          <button type="button" class="btn list-btn-type01">
+                            <img src="assets/images/ico/ico-listbtn-voice.svg" alt="" class="ico ico-23">
+                            <span class="txt">보이스</span>
+                          </button>
+                        </li>
+                        <li class="btn-list">
+                          <button type="button" class="btn list-btn-type01">
+                            <img src="assets/images/ico/ico-listbtn-avatar.svg" alt="" class="ico ico-23">
+                            <span class="txt">아바타</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- TODO: 추가하고 난 후의 카드 모양입니다. -->
+                  <div class="new-project-after-card">
+                    <div class="card-area">
+
+                      <!-- TODO: 콘텐츠 추가되면 깔리는 이미지나 비디오썸네일 -->
+                      <div class="card-content">
+                        <figure class="thumbnail">
+                          <img src="assets/images/sample/img-sample-preview.png" alt="카드 썸네일" class="thumbnail-img">
+                        </figure>
+                        <span class="card-num">1</span>
+
+                        <!-- TODO: 콘텐츠가 선택되면 보이는 옵션버튼입니다. -->
+
+                        <!-- hover set button -->
+                        <div class="hover-set-item">
+                          <button type="button" class="btn func-btn hover-target-btn">
+                            <img src="assets/images/ico/ico-dots.svg" alt="" class="ico ico-12">
+                            <span class="txt-hidden">더보기 버튼</span>
+                          </button>
+                          <div class="hover-btn-grp">
+                            <ul class="white-bd-box btn-list-grp">
+                              <li class="btn-list">
+                                <button type="button" class="btn list-btn-type03">
+                                  <span class="ico-box type-14">
+                              <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                            </span>
+                                  <span class="txt">변경하기</span>
+                                </button>
+                              </li>
+                              <li class="btn-list">
+                                <button type="button" class="btn list-btn-type03">
+                                  <span class="ico-box type-14">
+                              <img src="assets/images/ico/ico-listbtn-del.svg" alt="" class="ico ico-12">
+                            </span>
+                                  <span class="txt red-txt">삭제하기</span>
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- END hover set button -->
+
+                        <!-- TODO: 콘텐츠가 추가되면 보이는 초입니다. -->
+                        <span class="card-time">25초</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="left-sidebar-list">
+
+                  <!-- TODO: 추가하기 전의 카드 모양입니다. -->
+                  <div class="new-project-before-card">
+                    <div class="card-area">
+
+                      <!-- TODO: 플러스 아이콘 -->
+                      <img src="assets/images/ico/ico-add.svg" alt="더하기" class="ico-add">
+                    </div>
+                    <div class="card-btn-wrap">
+                      <ul class="white-bd-box btn-list-grp">
+                        <li class="btn-list">
+                          <button type="button" class="btn list-btn-type01">
+                            <img src="assets/images/ico/ico-listbtn-voice.svg" alt="" class="ico ico-23">
+                            <span class="txt">보이스</span>
+                          </button>
+                        </li>
+                        <li class="btn-list">
+                          <button type="button" class="btn list-btn-type01">
+                            <img src="assets/images/ico/ico-listbtn-avatar.svg" alt="" class="ico ico-23">
+                            <span class="txt">아바타</span>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- TODO: 추가하고 난 후의 카드 모양입니다. -->
+                  <div class="new-project-after-card" style="display: none;">
+                    <div class="card-area">
+
+                      <!-- TODO: 콘텐츠 추가되면 깔리는 이미지나 비디오썸네일 -->
+                      <div class="card-content">
+                        <figure class="thumbnail">
+                          <img src="assets/images/sample/img-sample-preview.png" alt="카드 썸네일" class="thumbnail-img">
+                        </figure>
+                        <span class="card-num">1</span>
+
+                        <!-- TODO: 콘텐츠가 선택되면 보이는 옵션버튼입니다. -->
+
+                        <!-- hover set button -->
+                        <div class="hover-set-item">
+                          <button type="button" class="btn func-btn hover-target-btn">
+                            <img src="assets/images/ico/ico-dots.svg" alt="" class="ico ico-12">
+                            <span class="txt-hidden">더보기 버튼</span>
+                          </button>
+                          <div class="hover-btn-grp">
+                            <ul class="white-bd-box btn-list-grp">
+                              <li class="btn-list">
+                                <button type="button" class="btn list-btn-type03">
+                                  <span class="ico-box type-14">
+                              <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                            </span>
+                                  <span class="txt">변경하기</span>
+                                </button>
+                              </li>
+                              <li class="btn-list">
+                                <button type="button" class="btn list-btn-type03">
+                                  <span class="ico-box type-14">
+                              <img src="assets/images/ico/ico-listbtn-del.svg" alt="" class="ico ico-12">
+                            </span>
+                                  <span class="txt red-txt">삭제하기</span>
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- END hover set button -->
+
+                        <!-- TODO: 콘텐츠가 추가되면 보이는 초입니다. -->
+                        <span class="card-time">25초</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- END (프로젝트) 왼쪽 사이드바 -->
 
             <!-- 하단 내용의 왼쪽 영역 -->
-            <div>
+            <div class="project-layout-center">
 
               <!-- 1. 미디어, 콘텐츠쪽 -->
-              <div>
+              <div class="content-top">
 
                 <!-- TODO: 추가하기 전 -->
 
                 <!-- FIXME: 추가이미지아이콘 + 추가하기 -->
-                <div>
-                  <img src="" alt="">
-                  <div>
-                    <p>미디어 · 콘텐츠 추가하기</p>
-                    <p>(업로드 하지 않으면 보이스만 출력됩니다)</p>
+                <div class="add-card type-lg">
+                  <img src="assets/images/ico/ico-add.svg" alt="더하기" class="ico-add">
+                  <div class="card-content">
+                    <p class="card-ttl">미디어 · 콘텐츠 추가하기</p>
+                    <p class="card-desc">(업로드 하지 않으면 보이스만 출력됩니다)</p>
                   </div>
                 </div>
 
                 <!-- TODO: 추가하고 난 후 -->
-                <div>
-                  <img src="" alt="">
-                  <div>
-                    <p>오늘은 협동조합에 대한 강의를 진행하겠습니다.</p>
+                <div class="media-card">
+                  <img src="assets/images/sample/img-sample-preview.png" alt="미디어 썸네일" class="thumbnail-img">
+                  <div class="cc-wrap">
+                    <p class="cc-txt">오늘은 협동조합에 대한 강의를 진행하겠습니다.</p>
                   </div>
                 </div>
               </div>
@@ -135,194 +232,478 @@
               <!-- END 1. 미디어, 콘텐츠쪽 -->
 
               <!-- 2. 드롭다운 목록 -->
-              <div>
+              <div class="content-mid">
+                <div class="list-grp">
 
-                <!-- 리스트 -->
-                <div>
-                  <div>
-                    <p>AI 홍길동</p>
-                    <img src="" alt="">
-                  </div>
-                  <div>
-                    <div>
-                      <h4>마이 보이스</h4>
-                      <div>
-                        <div>
-                          <button type="button">송재근_1</button>
+                  <!-- 리스트 -->
+                  <div class="list">
+                    <div class="accordion-card">
+                      <div class="accordion-top">
+                        <div class="down-card">
+                          <p class="card-ttl">AI 홍길동</p>
+                          <img src="assets/images/ico/ico-down-arrow.svg" alt="아래로" class="ico mg-left ico-18">
                         </div>
-                        <div>
-                          <button type="button">김진수 교수님_v2</button>
-                        </div>
-                        <div>
-                          <button type="button">홍길동_v1</button>
+                      </div>
+                      <div class="accordion-bottom">
+                        <div class="down-content-card down-voice-content-card">
+                          <div class="category-wrap">
+                            <h4 class="category-ttl">마이 보이스</h4>
+                            <div class="detail-list-grp">
+                              <div class="detail-list">
+                                <button type="button" class="btn detail-btn">송재근_1</button>
+                              </div>
+                              <div class="detail-list">
+                                <button type="button" class="btn detail-btn">김진수 교수님_v2</button>
+                              </div>
+                              <div class="detail-list">
+                                <button type="button" class="btn detail-btn">홍길동_v1</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="category-wrap">
+                            <h4 class="category-ttl">기본 보이스</h4>
+                            <div class="detail-list-grp">
+                              <div class="detail-list">
+                                <button type="button" class="btn detail-btn">유진</button>
+                              </div>
+                              <div class="detail-list">
+                                <button type="button" class="btn detail-btn">해수</button>
+                              </div>
+                              <div class="detail-list">
+                                <button type="button" class="btn detail-btn">성현</button>
+                              </div>
+                              <div class="detail-list">
+                                <button type="button" class="btn detail-btn">근혁</button>
+                              </div>
+                              <div class="detail-list">
+                                <button type="button" class="btn detail-btn">연서</button>
+                              </div>
+                              <div class="detail-list">
+                                <button type="button" class="btn detail-btn">우진</button>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div>
-                      <h4>기본 보이스</h4>
-                      <div>
-                        <div>
-                          <button type="button">유진</button>
+                  </div>
+
+                  <!-- END 리스트 -->
+
+                  <!-- 리스트 -->
+                  <div class="list">
+                    <div class="accordion-card">
+                      <div class="accordion-top">
+                        <div class="down-card">
+                          <p class="card-ttl">세팅하기</p>
+                          <img src="assets/images/ico/ico-down-arrow.svg" alt="아래로" class="ico mg-left ico-18">
                         </div>
-                        <div>
-                          <button type="button">해수</button>
-                        </div>
-                        <div>
-                          <button type="button">성현</button>
-                        </div>
-                        <div>
-                          <button type="button">근혁</button>
-                        </div>
-                        <div>
-                          <button type="button">연서</button>
-                        </div>
-                        <div>
-                          <button type="button">우진</button>
+                      </div>
+                      <div class="accordion-bottom">
+                        <div class="down-content-card down-range-content-card">
+                          <div class="range-wrap">
+                            <h4 class="range-ttl">억양</h4>
+
+                            <!-- FIXME: -->
+                            <div class="range"></div>
+                            <div class="range-under-txt">
+                              <span class="left-txt">차분하게</span>
+                              <span class="right-txt">강하게</span>
+                            </div>
+                          </div>
+                          <div class="range-wrap">
+                            <h4 class="range-ttl">선명도+유사성</h4>
+
+                            <!-- FIXME: -->
+                            <div class="range"></div>
+                            <div class="range-under-txt">
+                              <span class="left-txt">낮게</span>
+                              <span class="right-txt">높게</span>
+                            </div>
+                          </div>
+                          <div class="range-wrap">
+                            <h4 class="range-ttl">스타일 강조</h4>
+
+                            <!-- FIXME: -->
+                            <div class="range"></div>
+                            <div class="range-under-txt">
+                              <span class="left-txt">없음</span>
+                              <span class="right-txt">과장되게</span>
+                            </div>
+                          </div>
+                          <div class="card-btn-wrap">
+                            <label class="checkbox-item type-04">
+                              <input type="checkbox" class="checkbox-inp">
+                              <label class="checkbox"></label>
+                              <span class="checkbox-txt">유사성 강조</span>
+                            </label>
+                            <button type="button" class="btn btn-type06">초기화 하기</button>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+
+                  <!-- END 리스트 -->
                 </div>
-
-                <!-- END 리스트 -->
-
-                <!-- 리스트 -->
-                <div>
-                  <div>
-                    <p>세팅하기</p>
-                    <img src="" alt="">
-                  </div>
-                  <div>
-                    <div>
-                      <div>
-                        <h4>억양</h4>
-                        <div></div>
-                        <div>
-                          <span>차분하게</span>
-                          <span>강하게</span>
-                        </div>
-                      </div>
-                      <div>
-                        <h4>선명도+유사성</h4>
-                        <div></div>
-                        <div>
-                          <span>낮게</span>
-                          <span>높게</span>
-                        </div>
-                      </div>
-                      <div>
-                        <h4>스타일 강조</h4>
-                        <div></div>
-                        <div>
-                          <span>없음</span>
-                          <span>과장되게</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div>
-                        <label>
-                          <input type="checkbox">
-                          <label></label>
-                          <span>유사성 강조</span>
-                        </label>
-                      </div>
-                      <button type="button">초기화 하기</button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- END 리스트 -->
               </div>
 
               <!-- END 2. 드롭다운 목록 -->
 
               <!-- 3. 텍스트 인풋박스 -->
-              <div>
+              <div class="content-bottom">
+                <div class="list-grp">
 
-                <!-- 리스트 -->
-                <div>
-                  <button type="button">
-                    <img src="" alt="">
-                    <span>더하기</span>
-                  </button>
-                  <div>
+                  <!-- 리스트 -->
+                  <div class="list">
+                    <div class="create-inp-item">
 
-                    <!-- 입력 영역 -->
-                    <div>
-                      <button type="button">여기를 더블 클릭하여 텍스트를 입력하세요.</button>
-
-                      <!-- TODO: 위의 버튼을 더블클릭하면 텍스트 입력영역이 보임 -->
-                      <textarea rows="1">여기를 더블 클릭하여 텍스트를 입력하세요.</textarea>
-                    </div>
-
-                    <!-- END 입력 영역 -->
-
-                    <!-- 버튼 영역 -->
-                    <div>
-                      <button type="button">
-                        <img src="" alt="">
-                        <span>보내기</span>
-                      </button>
-
-                      <!-- hover set button -->
-                      <div>
-                        <button type="button">
-                          <img src="" alt="">
-                          <span>더보기</span>
+                      <!-- 제일 왼쪽 버튼 영역 -->
+                      <div class="left-btn-wrap">
+                        <button type="button" class="btn square-ico-btn">
+                          <img src="assets/images/ico/ico-inp-plus.svg" alt="더하기 아이콘" class="ico ico-18">
+                          <span class="txt-hidden">더하기</span>
                         </button>
-                        <div>
-                          <div>
-                            <div>
-                              <h4>생성 목록</h4>
-                              <span>(4/5)</span>
-                            </div>
-                            <ul>
-                              <li>
-                                <label>
-                                  <input type="checkbox">
-                                  <label></label>
-                                  <span>12392_11_281</span>
-                                </label>
-                                <div>
-                                  <button type="button">
-                                    <img src="" alt="">
-                                    <span>재생하기</span>
-                                  </button>
-                                  <button type="button">
-                                    <img src="" alt="">
-                                    <span>삭제하기</span>
-                                  </button>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
+                        <button type="button" class="btn square-ico-btn">
+                          <img src="assets/images/ico/ico-inp-drag.svg" alt="드래그 아이콘" class="ico ico-12">
+                          <span class="txt-hidden">드래그</span>
+                        </button>
                       </div>
 
-                      <!-- END hover set button -->
+                      <!-- END 제일 왼쪽 버튼 영역 -->
+                      <div class="inp-item-box">
+
+                        <!-- 입력 영역 -->
+                        <div class="inp-item">
+
+                          <!-- TODO: 위의 버튼을 더블클릭하면 텍스트 입력영역이 보임 -->
+                          <textarea rows="1" disabled data-js-counttextarea data-js-autoresize class="target-txtarea js-target-txtarea" data-js-edit="false" maxlength="120">여기를 더블 클릭하여 텍스트를 입력하세요.</textarea>
+                        </div>
+
+                        <!-- END 입력 영역 -->
+
+                        <!-- 버튼 영역 -->
+                        <div class="inp-item-btn-wrap">
+                          <button type="button" class="btn func-btn">
+                            <img src="assets/images/ico/ico-banggi.svg" alt="" class="ico ico-18">
+                            <span class="txt-hidden">보내기 버튼</span>
+                          </button>
+
+                          <!-- hover set button -->
+                          <div class="hover-set-item">
+                            <button type="button" class="btn func-btn hover-target-btn">
+                              <img src="assets/images/ico/ico-dots.svg" alt="" class="ico ico-12">
+                              <span class="txt-hidden">더보기 버튼</span>
+                            </button>
+                            <div class="hover-btn-grp">
+                              <div class="white-bd-box create-inp-btn-box">
+                                <div class="box-ttl-wrap">
+                                  <h4 class="ttl">생성 목록</h4>
+                                  <span class="ttl-desc">(4/5)</span>
+                                </div>
+                                <ul class="btn-list-grp">
+                                  <li class="btn-list">
+                                    <label for="playlist01" class="checkbox-item type-01">
+                                      <input id="playlist01" type="checkbox" class="checkbox-inp">
+                                      <label for="playlist01" class="checkbox"></label>
+                                      <span class="checkbox-txt">12392_11_281</span>
+                                    </label>
+                                    <div class="checkbox-item-btn-grp">
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-play.svg" alt="재생 버튼" class="ico-11">
+                                        <span class="txt-hidden">재생하기</span>
+                                      </button>
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-del.svg" alt="삭제 버튼" class="ico-11">
+                                        <span class="txt-hidden">삭제하기</span>
+                                      </button>
+                                    </div>
+                                  </li>
+                                  <li class="btn-list">
+                                    <label for="playlist02" class="checkbox-item type-01">
+                                      <input id="playlist02" type="checkbox" class="checkbox-inp">
+                                      <label for="playlist02" class="checkbox"></label>
+                                      <span class="checkbox-txt">12392_11_281</span>
+                                    </label>
+                                    <div class="checkbox-item-btn-grp">
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-play.svg" alt="재생 버튼" class="ico-11">
+                                        <span class="txt-hidden">재생하기</span>
+                                      </button>
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-del.svg" alt="삭제 버튼" class="ico-11">
+                                        <span class="txt-hidden">삭제하기</span>
+                                      </button>
+                                    </div>
+                                  </li>
+                                  <li class="btn-list">
+                                    <label for="playlist03" class="checkbox-item type-01">
+                                      <input id="playlist03" type="checkbox" class="checkbox-inp">
+                                      <label for="playlist03" class="checkbox"></label>
+                                      <span class="checkbox-txt">12392_11_281</span>
+                                    </label>
+                                    <div class="checkbox-item-btn-grp">
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-play.svg" alt="재생 버튼" class="ico-11">
+                                        <span class="txt-hidden">재생하기</span>
+                                      </button>
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-del.svg" alt="삭제 버튼" class="ico-11">
+                                        <span class="txt-hidden">삭제하기</span>
+                                      </button>
+                                    </div>
+                                  </li>
+                                  <li class="btn-list">
+                                    <label for="playlist04" class="checkbox-item type-01">
+                                      <input id="playlist04" type="checkbox" class="checkbox-inp">
+                                      <label for="playlist04" class="checkbox"></label>
+                                      <span class="checkbox-txt">12392_11_281</span>
+                                    </label>
+                                    <div class="checkbox-item-btn-grp">
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-play.svg" alt="재생 버튼" class="ico-11">
+                                        <span class="txt-hidden">재생하기</span>
+                                      </button>
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-del.svg" alt="삭제 버튼" class="ico-11">
+                                        <span class="txt-hidden">삭제하기</span>
+                                      </button>
+                                    </div>
+                                  </li>
+                                  <li class="btn-list">
+                                    <label for="playlist05" class="checkbox-item type-01">
+                                      <input id="playlist05" type="checkbox" class="checkbox-inp">
+                                      <label for="playlist05" class="checkbox"></label>
+                                      <span class="checkbox-txt">12392_11_281</span>
+                                    </label>
+                                    <div class="checkbox-item-btn-grp">
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-play.svg" alt="재생 버튼" class="ico-11">
+                                        <span class="txt-hidden">재생하기</span>
+                                      </button>
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-del.svg" alt="삭제 버튼" class="ico-11">
+                                        <span class="txt-hidden">삭제하기</span>
+                                      </button>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- END hover set button -->
+                        </div>
+
+                        <!-- END 버튼 영역 -->
+
+                        <!-- 글자수 표시 영역 -->
+                        <div class="inp-item-count">
+                          <p class="count-txt">
+                            <span data-js-count>0</span>/120
+                          </p>
+                        </div>
+
+                        <!-- END 글자수 표시 영역 -->
+                      </div>
+
+                      <!-- 경고 문구 -->
+
+                      <!-- TODO: 나타나게 하려면 해당 form-validation-msg에 active 클래스 추가하면 됩니다 -->
+                      <p class="form-validation-msg type-error">
+                        <img src="assets/images/ico/ico-validation-error.svg" alt="" class="ico ico-16">
+                        <span class="txt">한문단에 120자까지만 입력할 수 있어요.</span>
+                      </p>
+
+                      <!-- 경고 문구 -->
+
+                      <!-- TODO: 나타나게 하려면 해당 form-validation-msg에 active 클래스 추가하면 됩니다 -->
+                      <p class="form-validation-msg type-error">
+                        <img src="assets/images/ico/ico-validation-error.svg" alt="" class="ico ico-16">
+                        <span class="txt">디지털 휴먼은 2문단 까지만 입력할 수 있어요.</span>
+                      </p>
+
+                      <!-- END 경고 문구 -->
                     </div>
-
-                    <!-- END 버튼 영역 -->
-
-                    <!-- 글자수 표시 영역 -->
-                    <div>
-                      <span>83/120</span>
-                    </div>
-
-                    <!-- END 글자수 표시 영역 -->
                   </div>
 
-                  <!-- 경고 문구 -->
-                  <p>
-                    <img src="" alt="">
-                    <span>한문단에 120자까지만 입력할 수 있어요.</span>
-                  </p>
+                  <!-- END 리스트 -->
 
-                  <!-- END 경고 문구 -->
+                  <!-- 리스트 -->
+                  <div class="list">
+                    <div class="create-inp-item">
+
+                      <!-- 제일 왼쪽 버튼 영역 -->
+                      <div class="left-btn-wrap">
+                        <button type="button" class="btn square-ico-btn">
+                          <img src="assets/images/ico/ico-inp-plus.svg" alt="더하기 아이콘" class="ico ico-18">
+                          <span class="txt-hidden">더하기</span>
+                        </button>
+                        <button type="button" class="btn square-ico-btn">
+                          <img src="assets/images/ico/ico-inp-drag.svg" alt="드래그 아이콘" class="ico ico-12">
+                          <span class="txt-hidden">드래그</span>
+                        </button>
+                      </div>
+
+                      <!-- END 제일 왼쪽 버튼 영역 -->
+                      <div class="inp-item-box">
+
+                        <!-- 입력 영역 -->
+                        <div class="inp-item">
+
+                          <!-- TODO: 위의 버튼을 더블클릭하면 텍스트 입력영역이 보임 -->
+                          <textarea rows="1" disabled data-js-counttextarea data-js-autoresize class="target-txtarea js-target-txtarea" data-js-edit="false" maxlength="120">여기를 더블 클릭하여 텍스트를 입력하세요.</textarea>
+                        </div>
+
+                        <!-- END 입력 영역 -->
+
+                        <!-- 버튼 영역 -->
+                        <div class="inp-item-btn-wrap">
+                          <button type="button" class="btn func-btn">
+                            <img src="assets/images/ico/ico-banggi.svg" alt="" class="ico ico-18">
+                            <span class="txt-hidden">보내기 버튼</span>
+                          </button>
+
+                          <!-- hover set button -->
+                          <div class="hover-set-item">
+                            <button type="button" class="btn func-btn hover-target-btn">
+                              <img src="assets/images/ico/ico-dots.svg" alt="" class="ico ico-12">
+                              <span class="txt-hidden">더보기 버튼</span>
+                            </button>
+                            <div class="hover-btn-grp">
+                              <div class="white-bd-box create-inp-btn-box">
+                                <div class="box-ttl-wrap">
+                                  <h4 class="ttl">생성 목록</h4>
+                                  <span class="ttl-desc">(4/5)</span>
+                                </div>
+                                <ul class="btn-list-grp">
+                                  <li class="btn-list">
+                                    <label for="playlist01" class="checkbox-item type-01">
+                                      <input id="playlist01" type="checkbox" class="checkbox-inp">
+                                      <label for="playlist01" class="checkbox"></label>
+                                      <span class="checkbox-txt">12392_11_281</span>
+                                    </label>
+                                    <div class="checkbox-item-btn-grp">
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-play.svg" alt="재생 버튼" class="ico-11">
+                                        <span class="txt-hidden">재생하기</span>
+                                      </button>
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-del.svg" alt="삭제 버튼" class="ico-11">
+                                        <span class="txt-hidden">삭제하기</span>
+                                      </button>
+                                    </div>
+                                  </li>
+                                  <li class="btn-list">
+                                    <label for="playlist02" class="checkbox-item type-01">
+                                      <input id="playlist02" type="checkbox" class="checkbox-inp">
+                                      <label for="playlist02" class="checkbox"></label>
+                                      <span class="checkbox-txt">12392_11_281</span>
+                                    </label>
+                                    <div class="checkbox-item-btn-grp">
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-play.svg" alt="재생 버튼" class="ico-11">
+                                        <span class="txt-hidden">재생하기</span>
+                                      </button>
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-del.svg" alt="삭제 버튼" class="ico-11">
+                                        <span class="txt-hidden">삭제하기</span>
+                                      </button>
+                                    </div>
+                                  </li>
+                                  <li class="btn-list">
+                                    <label for="playlist03" class="checkbox-item type-01">
+                                      <input id="playlist03" type="checkbox" class="checkbox-inp">
+                                      <label for="playlist03" class="checkbox"></label>
+                                      <span class="checkbox-txt">12392_11_281</span>
+                                    </label>
+                                    <div class="checkbox-item-btn-grp">
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-play.svg" alt="재생 버튼" class="ico-11">
+                                        <span class="txt-hidden">재생하기</span>
+                                      </button>
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-del.svg" alt="삭제 버튼" class="ico-11">
+                                        <span class="txt-hidden">삭제하기</span>
+                                      </button>
+                                    </div>
+                                  </li>
+                                  <li class="btn-list">
+                                    <label for="playlist04" class="checkbox-item type-01">
+                                      <input id="playlist04" type="checkbox" class="checkbox-inp">
+                                      <label for="playlist04" class="checkbox"></label>
+                                      <span class="checkbox-txt">12392_11_281</span>
+                                    </label>
+                                    <div class="checkbox-item-btn-grp">
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-play.svg" alt="재생 버튼" class="ico-11">
+                                        <span class="txt-hidden">재생하기</span>
+                                      </button>
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-del.svg" alt="삭제 버튼" class="ico-11">
+                                        <span class="txt-hidden">삭제하기</span>
+                                      </button>
+                                    </div>
+                                  </li>
+                                  <li class="btn-list">
+                                    <label for="playlist05" class="checkbox-item type-01">
+                                      <input id="playlist05" type="checkbox" class="checkbox-inp">
+                                      <label for="playlist05" class="checkbox"></label>
+                                      <span class="checkbox-txt">12392_11_281</span>
+                                    </label>
+                                    <div class="checkbox-item-btn-grp">
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-play.svg" alt="재생 버튼" class="ico-11">
+                                        <span class="txt-hidden">재생하기</span>
+                                      </button>
+                                      <button type="button" class="btn">
+                                        <img src="assets/images/ico/ico-create-del.svg" alt="삭제 버튼" class="ico-11">
+                                        <span class="txt-hidden">삭제하기</span>
+                                      </button>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- END hover set button -->
+                        </div>
+
+                        <!-- END 버튼 영역 -->
+
+                        <!-- 글자수 표시 영역 -->
+                        <div class="inp-item-count">
+                          <p class="count-txt">
+                            <span data-js-count>0</span>/120
+                          </p>
+                        </div>
+
+                        <!-- END 글자수 표시 영역 -->
+                      </div>
+
+                      <!-- 경고 문구 -->
+
+                      <!-- TODO: 나타나게 하려면 해당 form-validation-msg에 active 클래스 추가하면 됩니다 -->
+                      <p class="form-validation-msg type-error">
+                        <img src="assets/images/ico/ico-validation-error.svg" alt="" class="ico ico-16">
+                        <span class="txt">한문단에 120자까지만 입력할 수 있어요.</span>
+                      </p>
+
+                      <!-- 경고 문구 -->
+
+                      <!-- TODO: 나타나게 하려면 해당 form-validation-msg에 active 클래스 추가하면 됩니다 -->
+                      <p class="form-validation-msg type-error">
+                        <img src="assets/images/ico/ico-validation-error.svg" alt="" class="ico ico-16">
+                        <span class="txt">디지털 휴먼은 2문단 까지만 입력할 수 있어요.</span>
+                      </p>
+
+                      <!-- END 경고 문구 -->
+                    </div>
+                  </div>
+
+                  <!-- END 리스트 -->
                 </div>
-
-                <!-- END 리스트 -->
               </div>
 
               <!-- END 3. 텍스트 인풋박스 -->
@@ -331,210 +712,231 @@
             <!-- END 하단 내용의 왼쪽 영역 -->
 
             <!-- 하단 내용의 오른쪽 영역 -->
-            <div>
+            <div class="project-layout-right">
+              <div class="right-sidebar">
 
-              <!-- 1. 버튼 목록 페이지 -->
-              <div>
-                <ul>
-                  <li>
-                    <div class="btn list-btn-type02">
-                      <div>
-                        <img src="" alt="">
-                        <p>스크립트 작성</p>
-                        <span>chat GPT</span>
-                      </div>
-                      <img src="" alt="">
+                <!-- 1. 버튼 목록 페이지 -->
+                <div class="right-sidebar-page right-sidebar-page01 active">
+                  <div class="btn list-btn-type02" onclick="rightSidebarOpen('right-sidebar-page02');">
+                    <div class="left-txt">
+                      <img src="assets/images/ico/ico-listbtn-script.svg" alt="" class="ico ico-23">
+                      <p class="txt">스크립트 작성</p>
+                      <span class="badge">chat GPT</span>
                     </div>
-                  </li>
-                  <li>
-                    <div class="btn list-btn-type02">
-                      <div>
-                        <img src="" alt="">
-                        <p>자막 입히기</p>
-                      </div>
-                      <img src="" alt="">
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- END 1. 버튼 목록 페이지 -->
-
-              <!-- 2. 버튼 - 스크립트 작성 페이지 -->
-              <div>
-
-                <!-- 채팅방 상단 -->
-                <div>
-                  <div>
-                    <img src="" alt="">
-                    <h4>스크립트 작성</h4>
+                    <img src="assets/images/ico/ico-arrow-right.svg" alt="" class="mg-left ico ico-9">
                   </div>
-
-                  <!-- hover set button -->
-                  <div>
-                    <div>
-                      <div>
-                        <img src="" alt="">
-                        <span>GPT-3.5</span>
-                      </div>
-                      <div>
-                        <img src="" alt="">
-                        <span>드롭다운</span>
-                      </div>
+                  <div class="btn list-btn-type02" onclick="rightSidebarOpen('right-sidebar-page03');">
+                    <div class="left-txt">
+                      <img src="assets/images/ico/ico-listbtn-cc.svg" alt="" class="ico ico-23">
+                      <p class="txt">자막 입히기</p>
                     </div>
-                    <div>
-                      <ul>
-                        <li>
-                          <div>
-                            <img src="" alt="">
-                            <div>
-                              <p>GPT-3.5</p>
-                              <span>빨라요</span>
+                    <img src="assets/images/ico/ico-arrow-right.svg" alt="" class="mg-left ico ico-9">
+                  </div>
+                </div>
+
+                <!-- END 1. 버튼 목록 페이지 -->
+
+                <!-- 2. 버튼 - 스크립트 작성 페이지 -->
+                <div id="right-sidebar-page02" class="right-sidebar-page right-sidebar-page02">
+
+                  <!-- 채팅방 상단 -->
+                  <div class="right-sidebar-top">
+                    <div class="right-sidebar-header">
+                      <button type="button" class="btn back-btn" onclick="rightSidebarClose('right-sidebar-page02');">
+                        <img src="assets/images/ico/ico-back-arrow-02.svg" alt="뒤로가기" class="ico ico-26">
+                      </button>
+                      <h4 class="ttl">스크립트 작성</h4>
+                    </div>
+
+                    <!-- hover set button -->
+                    <div class="dropdown-item">
+                      <div class="dropdown-top">
+                        <div id="js-opt-btn" class="gpt-choice-wrap">
+                          <div class="left-txt">
+                            <div class="ico-box">
+                              <img id="js-opt-ico" src="assets/images/ico/ico-gpt3-5.svg" alt="" class="ico ico-17">
                             </div>
-                            <img src="" alt="">
+                            <span id="js-opt-txt" class="txt">GPT-3.5</span>
                           </div>
-                        </li>
-                        <li>
-                          <div>
-                            <img src="" alt="">
-                            <div>
-                              <p>GPT-4.0</p>
-                              <span>똑똑해요</span>
+                          <div class="right-circle">
+                            <img src="assets/images/ico/ico-arrow-down01.svg" alt="" class="ico ico-11">
+                            <span class="txt-hidden">드롭다운</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="dropdown-bottom">
+                        <ul class="white-bd-box btn-list-grp">
+                          <li class="btn-list">
+                            <div data-js-opt class="btn list-btn-type04 active">
+                              <span class="ico-box type-17">
+                          <img src="assets/images/ico/ico-gpt3-5.svg" alt="" class="ico-gpt ico ico-17">
+                        </span>
+                              <div class="txt-wrap">
+                                <p class="txt">GPT-3.5</p>
+                                <span class="sub-txt">빨라요</span>
+                              </div>
+                              <img src="assets/images/ico/ico-listbtn-checked.svg" alt="" class="mg-left ico ico-8 ico-checked">
                             </div>
-                            <img src="" alt="">
-                          </div>
-                        </li>
-                        <li>
-                          <div>
-                            <img src="" alt="">
-                            <div>
-                              <p>NAOS GPT</p>
-                              <span>내가만든 GPT 데이터로 대답해요</span>
+                          </li>
+                          <li class="btn-list">
+                            <div data-js-opt class="btn list-btn-type04">
+                              <span class="ico-box type-17">
+                          <img src="assets/images/ico/ico-gpt4-0.svg" alt="" class="ico-gpt ico ico-17">
+                        </span>
+                              <div class="txt-wrap">
+                                <p class="txt">GPT-4.0</p>
+                                <span class="sub-txt">똑똑해요</span>
+                              </div>
+
+                              <!-- TODO: 체크되면 보임 -->
+                              <img src="assets/images/ico/ico-listbtn-checked.svg" alt="" class="mg-left ico ico-8 ico-checked">
                             </div>
-                            <img src="" alt="">
-                          </div>
-                        </li>
-                      </ul>
+                          </li>
+                          <li class="btn-list">
+                            <div data-js-opt class="btn list-btn-type04">
+                              <span class="ico-box type-17">
+                          <img src="assets/images/ico/ico-gpt-naos.svg" alt="" class="ico-gpt ico ico-17">
+                        </span>
+                              <div class="txt-wrap">
+                                <p class="txt">NAOS GPT</p>
+                                <span class="sub-txt">내가만든 GPT 데이터로 대답해요</span>
+                              </div>
+
+                              <!-- TODO: 체크되면 보임 -->
+                              <img src="assets/images/ico/ico-listbtn-checked.svg" alt="" class="mg-left ico ico-8 ico-checked">
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- END hover set button -->
+                  </div>
+
+                  <!-- END 채팅방 상단 -->
+
+                  <!-- 채팅방 -->
+                  <div class="right-sidebar-mid">
+                    <div class="chat-view-box">
+                      <div class="chat-preview-container">
+                        <img src="assets/images/ico/ico-list-bubble.svg" alt="말풍선 아이콘" class="ico ico-22">
+                        <h4 class="ttl">이런 질문을 할 수 있어요</h4>
+                        <div class="ex-list-grp">
+                          <div class="ex-list">고전음악에 관한 스크립트 좀 써줄래?</div>
+                          <div class="ex-list">똑같은 내용으로 뉴스 아나운서처럼 말해줘</div>
+                          <div class="ex-list">조선시대 말투로 바꿔줘</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
-                  <!-- END hover set button -->
-                </div>
+                  <!-- END 채팅방 -->
 
-                <!-- END 채팅방 상단 -->
+                  <!-- 채팅방 하단 -->
+                  <div class="right-sidebar-bottom">
+                    <div class="chat-create-box">
+                      <textarea rows="3" placeholder="GPT에게 무엇이든 요청하고 확인하세요 :)" class="create-txtarea"></textarea>
+                      <div class="btn-wrap">
 
-                <!-- 채팅방 -->
-                <div>
-                  <div>
-                    <div>
-                      <img src="" alt="">
-                      <h4>이런 질문을 할 수 있어요</h4>
-                      <div>
-                        <div>고전음악에 관한 스크립트 좀 써줄래?</div>
-                        <div>똑같은 내용으로 뉴스 아나운서처럼 말해줘</div>
-                        <div>조선시대 말투로 바꿔줘</div>
+                        <!-- TODO: 텍스트에어리어에 입력하면 toggle-btn에 active클래스가 붙습니다 -->
+                        <button type="button" class="btn send-btn before">
+                          <img src="assets/images/ico/ico-send.svg" alt="보내기" class="ico ico-18">
+                          <span class="txt-hidden">전송하기</span>
+                        </button>
                       </div>
                     </div>
                   </div>
+
+                  <!-- END 채팅방 하단 -->
                 </div>
 
-                <!-- END 채팅방 -->
+                <!-- END 2. 버튼 - 스크립트 작성 페이지 -->
 
-                <!-- 채팅방 하단 -->
-                <div>
-                  <textarea rows="3" placeholder="GPT에게 무엇이든 요청하고 확인하세요 :)"></textarea>
-                  <div>
-                    <button type="button">
-                      <img src="" alt="">
-                      <span>전송하기</span>
-                    </button>
+                <!-- 3. 버튼 - 자막 입히기 페이지 -->
+                <div id="right-sidebar-page03" class="right-sidebar-page right-sidebar-page03">
+
+                  <!-- 상단 -->
+                  <div class="right-sidebar-top">
+                    <div class="right-sidebar-header">
+                      <button type="button" class="btn back-btn" onclick="rightSidebarClose('right-sidebar-page03');">
+                        <img src="assets/images/ico/ico-back-arrow-02.svg" alt="뒤로가기" class="ico ico-26">
+                      </button>
+                      <h4 class="ttl">자막 입히기</h4>
+                    </div>
+                  </div>
+
+                  <!-- END 상단 -->
+                  <div class="right-sidebar-mid">
+                    <ul class="form-item-grp">
+                      <div class="opt-form-item">
+                        <label class="form-label">자막 입히기(STT)</label>
+                        <div class="form-inp-wrap">
+                          <input checked type="checkbox" class="toggle-item type-01">
+                        </div>
+                      </div>
+                      <div class="opt-form-item type-col">
+                        <label class="form-label">스타일</label>
+                        <div class="form-inp-wrap">
+                          <div class="opt-list-grp">
+                            <div class="opt-list">
+                              <input checked id="font-bg-dark" type="radio" name="font-style" class="opt-checkbox-inp">
+                              <label for="font-bg-dark" class="btn cc-style-btn">
+                                <span class="bg-dark">검은배경</span>
+                              </label>
+                            </div>
+                            <div class="opt-list">
+                              <input id="font-bd-txt" type="radio" name="font-style" class="opt-checkbox-inp">
+                              <label for="font-bd-txt" class="btn cc-style-btn">
+                                <span class="bd-txt">테두리</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="opt-form-item type-col">
+                        <label class="form-label">글자 크기</label>
+                        <div class="form-inp-wrap">
+                          <div class="opt-list-grp">
+                            <div class="opt-list">
+                              <input id="font-sm" type="radio" name="font-size" class="opt-checkbox-inp">
+                              <label for="font-sm" class="btn btn-type05">작게</label>
+                            </div>
+                            <div class="opt-list">
+                              <input checked id="font-md" type="radio" name="font-size" class="opt-checkbox-inp">
+                              <label for="font-md" class="btn btn-type05">보통</label>
+                            </div>
+                            <div class="opt-list">
+                              <input id="font-lg" type="radio" name="font-size" class="opt-checkbox-inp">
+                              <label for="font-lg" class="btn btn-type05">크게</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="opt-form-item type-col">
+                        <label class="form-label">위치</label>
+                        <div class="form-inp-wrap">
+                          <div class="opt-list-grp">
+                            <div class="opt-list">
+                              <input id="font-top" type="radio" name="font-position" class="opt-checkbox-inp">
+                              <label for="font-top" class="btn btn-type05">상단</label>
+                            </div>
+                            <div class="opt-list">
+                              <input id="font-mid" type="radio" name="font-position" class="opt-checkbox-inp">
+                              <label for="font-mid" class="btn btn-type05">중앙</label>
+                            </div>
+                            <div class="opt-list">
+                              <input checked id="font-bottom" type="radio" name="font-position" class="opt-checkbox-inp">
+                              <label for="font-bottom" class="btn btn-type05">하단</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </ul>
                   </div>
                 </div>
 
-                <!-- END 채팅방 하단 -->
+                <!-- END 3. 버튼 - 자막 입히기 페이지 -->
               </div>
-
-              <!-- END 2. 버튼 - 스크립트 작성 페이지 -->
-
-              <!-- 3. 버튼 - 자막 입히기 페이지 -->
-              <div>
-
-                <!-- 상단 -->
-                <div>
-                  <div>
-                    <img src="" alt="">
-                    <h4>자막 입히기</h4>
-                  </div>
-                </div>
-
-                <!-- END 상단 -->
-                <div>
-                  <ul>
-                    <li>
-                      <div>
-                        <label>자막 입히기(STT)</label>
-                        <div>
-                          <input type="checkbox">
-                          <label></label>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <label>스타일</label>
-                        <div>
-                          <div>
-                            <span>검은배경</span>
-                          </div>
-                          <div>
-                            <span>테두리</span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <label>글자 크기</label>
-                        <div>
-                          <div>
-                            <input type="radio" name="fontsize">
-                            <label>작게</label>
-                          </div>
-                          <div>
-                            <input type="radio" name="fontsize">
-                            <label>보통</label>
-                          </div>
-                          <div>
-                            <input type="radio" name="fontsize">
-                            <label>크게</label>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div>
-                        <label>위치</label>
-                        <div>
-                          <div>
-                            <input type="radio" name="fontsize">
-                            <label>상단</label>
-                          </div>
-                          <div>
-                            <input type="radio" name="fontsize">
-                            <label>중앙</label>
-                          </div>
-                          <div>
-                            <input type="radio" name="fontsize">
-                            <label>하단</label>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <!-- END 3. 버튼 - 자막 입히기 페이지 -->
             </div>
 
             <!-- END 하단 내용의 오른쪽 영역 -->
@@ -543,8 +945,33 @@
           <!-- END 하단 내용 -->
         </div>
 
-        <!-- END (프로젝트) 오른쪽 내용 영역 -->
+        <!-- END (프로젝트) -->
       </div>
     </div>
+    <script src="assets/js/pages/project-main.js"></script>
+    <script>
+      // 아코디언 카드 눌렀을 때 아래 펼쳐지게
+      $('.accordion-card').on('click', function() {
+        $(this).toggleClass('active');
+        $(this).children('.accordion-bottom').slideToggle();
+      })
+      // 오른쪽 사이드 메뉴바 열기
+      function rightSidebarOpen(id) {
+        $('#' + id).addClass('active');
+      }
+      // 오른쪽 사이드 메뉴바 닫기
+      function rightSidebarClose(id) {
+        $('#' + id).removeClass('active');
+      }
+      // GPT 옵션 고르기
+      $('[data-js-opt]').on('click', function() {
+        var ico = $(this).children('.ico-box').children('.ico-gpt').attr('src');
+        var txt = $(this).children('.txt-wrap').children('.txt').html();
+        $('[data-js-opt]').removeClass('active');
+        $(this).addClass('active');
+        $('#js-opt-ico').attr('src', ico);
+        $('#js-opt-txt').html(txt);
+      })
+    </script>
   </body>
 </html>

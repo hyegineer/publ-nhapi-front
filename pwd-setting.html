@@ -8,57 +8,74 @@
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/ui.css">
     <link rel="stylesheet" href="assets/css/pages.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
   </head>
   <body>
     <div id="app">
-      <div>
-        <div>
-          <div>
-            <h1>
-              <span>새로운 지밀번호를 설정해주세요</span>
-            </h1>
-            <div>
-              <ul>
-                <li>
-                  <span>
-              <img src="" alt="">
-              <img src="" alt="">
-            </span>
-                  <p>최소 8자 이상</p>
-                </li>
-                <li>
-                  <span>
-              <img src="" alt="">
-              <img src="" alt="">
-            </span>
-                  <p>영문, 숫자, 특수문자 조합</p>
-                </li>
-                <li>
-                  <span>
-              <img src="" alt="">
-              <img src="" alt="">
-            </span>
-                  <p>최근 사용했던 비밀번호 제외</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <div>
-              <img src="" alt="">
-              <div>
-                <input type="password" autocomplete="new-password" placeholder="새 비밀번호">
+      <div class="auth-page page-wrapper">
+        <div class="page-container">
+          <div class="auth-form-box type-setting">
+            <div class="ttl-wrap">
+              <h1 class="title-xlg">
+                <span class="gradient-txt type-pink">새로운 비밀번호를 설정해주세요.</span>
+              </h1>
+              <div class="condition-box">
+                <ul class="list-grp">
+                  <li class="list">
+
+                    <!-- TODO: 적합할 경우 active 클래스 추가해주세요 -->
+                    <span class="toggle-btn active">
+                <img src="assets/images/ico/ico-condition-on.svg" alt="적합" class="ico ico-16 ico-on">
+                <img src="assets/images/ico/ico-condition-off.svg" alt="부적합" class="ico ico-16 ico-off">
+              </span>
+                    <p class="txt">최소 8자 이상</p>
+                  </li>
+                  <li class="list">
+
+                    <!-- TODO: 적합할 경우 active 클래스 추가해주세요 -->
+                    <span class="toggle-btn active">
+                <img src="assets/images/ico/ico-condition-on.svg" alt="적합" class="ico ico-16 ico-on">
+                <img src="assets/images/ico/ico-condition-off.svg" alt="부적합" class="ico ico-16 ico-off">
+              </span>
+                    <p class="txt">영문, 숫자, 특수문자 조합</p>
+                  </li>
+                  <li class="list">
+
+                    <!-- TODO: 적합할 경우 active 클래스 추가해주세요 -->
+                    <span class="toggle-btn">
+                <img src="assets/images/ico/ico-condition-on.svg" alt="적합" class="ico ico-16 ico-on">
+                <img src="assets/images/ico/ico-condition-off.svg" alt="부적합" class="ico ico-16 ico-off">
+              </span>
+                    <p class="txt">최근 사용했던 비밀번호 제외</p>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div>
-              <img src="" alt="">
-              <div>
-                <input type="password" autocomplete="new-password" placeholder="새 비밀번호 확인">
+            <div class="form-box">
+              <div class="form-item-grp">
+                <div class="ico-form-item-wrap">
+                  <div class="ico-form-item">
+                    <img src="assets/images/ico/ico-form-pwd.svg" alt="아이콘" class="ico">
+                    <img src="assets/images/ico/ico-form-pwd-red.svg" alt="아이콘" class="ico ico-error">
+                    <div class="inner-form-item">
+                      <input type="password" autocomplete="new-password" placeholder="새 비밀번호" class="form-inp type-sm">
+                    </div>
+                  </div>
+                </div>
+                <div class="ico-form-item-wrap">
+                  <div class="ico-form-item">
+                    <img src="assets/images/ico/ico-form-pwd.svg" alt="아이콘" class="ico">
+                    <img src="assets/images/ico/ico-form-pwd-red.svg" alt="아이콘" class="ico ico-error">
+                    <div class="inner-form-item">
+                      <input type="password" autocomplete="new-password" placeholder="새 비밀번호 확인" class="form-inp type-sm">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-btn-grp">
+                <button type="button" class="btn btn-type03">비밀번호 변경하기</button>
               </div>
             </div>
-          </div>
-          <div>
-            <button type="button">비밀번호 변경하기</button>
           </div>
         </div>
       </div>
