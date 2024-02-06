@@ -1,329 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>농협대학교 API 플랫폼</title>
+    <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/ui.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="dashboard-page page-wrapper">
+        <div class="dashboard-layout">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>농협대학교 API 플랫폼</title>
-  <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="assets/css/vendor/reset.css">
-  <link rel="stylesheet" href="assets/css/ui.css">
-  <link rel="stylesheet" href="assets/css/pages.css">
-  <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
-</head>
+          <!-- (대시보드) 왼쪽 사이드바 -->
+          <div class="dashboard-layout-sidebar">
+            <div class="left-sidebar-top">
+              <h1 class="logo">
+                <a href="dashboard-home.html" class="logo-link">
+                  <img src="assets/images/logo/logo-naos.png" alt="로고" class="logo-img">
+                </a>
+              </h1>
+              <button type="button" onclick="location.href='project-main.html';" class="btn btn-type18">
+                <img src="assets/images/ico/ico-new-add.svg" alt="더하기" class="ico ico-18">
+                <span class="txt">새 프로젝트</span>
+              </button>
+            </div>
 
-<body>
-  <div id="app">
-    <div class="dashboard-page page-wrapper">
-      <div class="dashboard-layout">
-
-        <!-- (대시보드) 왼쪽 사이드바 -->
-        <div class="dashboard-layout-sidebar">
-          <div class="left-sidebar-top">
-            <h1 class="logo">
-              <a href="dashboard-home.html" class="logo-link">
-                <img src="assets/images/logo/logo-naos.png" alt="로고" class="logo-img">
-              </a>
-            </h1>
-            <button type="button" onclick="location.href='project-main.html';" class="btn btn-type18">
-              <img src="assets/images/ico/ico-new-add.svg" alt="더하기" class="ico ico-18">
-              <span class="txt">새 프로젝트</span>
-            </button>
-          </div>
-
-          <!-- TODO: 메뉴 많아지면 스크롤 됨 -->
-          <div class="left-sidebar-mid">
-            <ul class="btn-list-grp">
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-home.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-home-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-home-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">HOME</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-voice.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-voice-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-voice-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">보이스</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-avatar.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-avatar-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-avatar-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">아바타</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-project-setting.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-project-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-project-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">프로젝트 관리</span>
-                </div>
-              </li>
-            </ul>
-            <div class="section">
+            <!-- TODO: 메뉴 많아지면 스크롤 됨 -->
+            <div class="left-sidebar-mid">
               <ul class="btn-list-grp">
-                <li class="btn-list">
-                  <div class="dropdown-btn-list">
-                    <div class="dropdown-btn-top active">
-                      <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
-                        <div class="ico-box">
-                          <img src="assets/images/ico/ico-nav-custom-on.svg" alt="아이콘" class="ico ico-on">
-                          <img src="assets/images/ico/ico-nav-custom-off.svg" alt="아이콘" class="ico ico-off">
-                        </div>
-                        <span class="txt">커스텀 GPT</span>
-                        <img src="assets/images/ico/ico-down-arrow-gray.svg" alt="아래로" class="ico ico-16 ico-down">
-                      </div>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-home.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-home-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-home-off.svg" alt="아이콘" class="ico ico-off">
                     </div>
-                    <ul class="dropdown-btn-bottom">
-                      <li class="btn-list active">
+                    <span class="txt">HOME</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-voice.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-voice-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-voice-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">보이스</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-avatar.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-avatar-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-avatar-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">아바타</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-project-setting.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-project-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-project-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">프로젝트 관리</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="section">
+                <ul class="btn-list-grp">
+                  <li class="btn-list">
+                    <div class="dropdown-btn-list">
+                      <div class="dropdown-btn-top active">
                         <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
                           <div class="ico-box">
-                            <img src="assets/images/ico/ico-nav-robot-on.svg" alt="아이콘" class="ico ico-on">
-                            <img src="assets/images/ico/ico-nav-robot-off.svg" alt="아이콘" class="ico ico-off">
+                            <img src="assets/images/ico/ico-nav-custom-on.svg" alt="아이콘" class="ico ico-on">
+                            <img src="assets/images/ico/ico-nav-custom-off.svg" alt="아이콘" class="ico ico-off">
                           </div>
-                          <span class="txt">NAOS GPT</span>
+                          <span class="txt">커스텀 GPT</span>
+                          <img src="assets/images/ico/ico-down-arrow-gray.svg" alt="아래로" class="ico ico-16 ico-down">
                         </div>
-                      </li>
-                      <li class="btn-list ">
-                        <div onclick="location.href='dashboard-custom-gpt-setting.html';" class="btn list-btn-type06">
-                          <div class="ico-box">
-                            <img src="assets/images/ico/ico-nav-gpt-setting-on.svg" alt="아이콘" class="ico ico-on">
-                            <img src="assets/images/ico/ico-nav-gpt-setting-off.svg" alt="아이콘" class="ico ico-off">
+                      </div>
+                      <ul class="dropdown-btn-bottom">
+                        <li class="btn-list active">
+                          <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
+                            <div class="ico-box">
+                              <img src="assets/images/ico/ico-nav-robot-on.svg" alt="아이콘" class="ico ico-on">
+                              <img src="assets/images/ico/ico-nav-robot-off.svg" alt="아이콘" class="ico ico-off">
+                            </div>
+                            <span class="txt">NAOS GPT</span>
                           </div>
-                          <span class="txt">GPT 설정</span>
-                        </div>
-                      </li>
-                    </ul>
+                        </li>
+                        <li class="btn-list ">
+                          <div onclick="location.href='dashboard-custom-gpt-setting.html';" class="btn list-btn-type06">
+                            <div class="ico-box">
+                              <img src="assets/images/ico/ico-nav-gpt-setting-on.svg" alt="아이콘" class="ico ico-on">
+                              <img src="assets/images/ico/ico-nav-gpt-setting-off.svg" alt="아이콘" class="ico ico-off">
+                            </div>
+                            <span class="txt">GPT 설정</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <ul class="btn-list-grp">
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-faq.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-faq-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-faq-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">자주 묻는 질문</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-notice.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-notice-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-notice-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">공지사항</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-mypage.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-mypage-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-mypage-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">내 정보</span>
                   </div>
                 </li>
               </ul>
             </div>
-            <ul class="btn-list-grp">
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-faq.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-faq-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-faq-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">자주 묻는 질문</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-notice.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-notice-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-notice-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">공지사항</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-mypage.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-mypage-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-mypage-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">내 정보</span>
-                </div>
-              </li>
-            </ul>
+            <div class="left-sidebar-bottom">
+              <span class="txt">Powered by</span>
+              <img src="assets/images/logo/logo-nh.png" alt="농협대학교 로고" class="logo-img">
+            </div>
           </div>
-          <div class="left-sidebar-bottom">
-            <span class="txt">Powered by</span>
-            <img src="assets/images/logo/logo-nh.png" alt="농협대학교 로고" class="logo-img">
-          </div>
-        </div>
 
-        <!-- END (대시보드) 왼쪽 사이드바 -->
+          <!-- END (대시보드) 왼쪽 사이드바 -->
 
-        <!-- (대시보드) 오른쪽 내용 영역 -->
+          <!-- (대시보드) 오른쪽 내용 영역 -->
 
-        <!-- 대시보드 커스텀 GPT -->
-        <div class="dashboard-layout-content">
-          <div class="dsbd-custom-gpt-page dashboard-layout-page">
+          <!-- 대시보드 커스텀 GPT -->
+          <div class="dashboard-layout-content">
+            <div class="dsbd-custom-gpt-page dashboard-layout-page">
 
-            <!-- 제목 -->
-            <div class="dashboard-ttl-wrap">
-              <h2 class="title-default">협동조합 소개와 개념 이해</h2>
-              <div class="mg-left">
-                <div class="opt-form-item">
-                  <label class="form-label">GPT 답변 받기</label>
-                  <div class="form-inp-wrap">
-                    <input type="checkbox" class="toggle-item type-02">
+              <!-- 제목 -->
+              <div class="dashboard-ttl-wrap">
+                <h2 class="title-default">협동조합 소개와 개념 이해</h2>
+                <div class="mg-left">
+                  <div class="opt-form-item">
+                    <label class="form-label">GPT 답변 받기</label>
+                    <div class="form-inp-wrap">
+                      <input type="checkbox" class="toggle-item type-02">
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- END 제목 -->
+              <!-- END 제목 -->
 
-            <!-- 내용 -->
-            <div class="dashboard-content-wrap">
-              <section class="section left-section">
+              <!-- 내용 -->
+              <div class="dashboard-content-wrap">
+                <section class="section left-section">
 
-                <!-- 커스텀 GPT 채팅창 -->
-                <div class="section-top">
-                  <div class="chat-view-box">
-                    <div class="chat-bubble-wrap">
-                      <div class="name-wrap">
-                        <img src="assets/images/ico/ico-naos.svg" alt="나오스 아이콘" class="ico ico-16">
-                        <b class="name">NAOS</b>
-                        <span class="sub-name">GPT-4.0</span>
+                  <!-- 커스텀 GPT 채팅창 -->
+                  <div class="section-top">
+                    <div class="chat-view-box">
+                      <div class="chat-bubble-wrap">
+                        <div class="name-wrap">
+                          <img src="assets/images/ico/ico-naos.svg" alt="나오스 아이콘" class="ico ico-16">
+                          <b class="name">NAOS</b>
+                          <span class="sub-name">GPT-4.0</span>
+                        </div>
+                        <div class="bubble-box">
+                          <p class="txt">안녕하세요! 저는 여러분의 AI 어시스턴트입니다. 무엇을 도와드릴까요? 제가 도와줄 수 있는 내용이 있다면 언제든지 말씀해 주세요!</p>
+                        </div>
                       </div>
-                      <div class="bubble-box">
-                        <p class="txt">안녕하세요! 저는 여러분의 AI 어시스턴트입니다. 무엇을 도와드릴까요? 제가 도와줄 수 있는 내용이 있다면 언제든지 말씀해 주세요!</p>
-                      </div>
-                    </div>
 
-                    <!-- TODO: 보낸 경우에는 type-send 클래스를 추가합니다. -->
-                    <div class="chat-bubble-wrap type-send">
-                      <div class="bubble-box">
-                        <p class="txt">협동조합의 역사가 1970년이 맞아?</p>
+                      <!-- TODO: 보낸 경우에는 type-send 클래스를 추가합니다. -->
+                      <div class="chat-bubble-wrap type-send">
+                        <div class="bubble-box">
+                          <p class="txt">협동조합의 역사가 1970년이 맞아?</p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="chat-bubble-wrap">
-                      <div class="name-wrap">
-                        <img src="assets/images/ico/ico-naos.svg" alt="나오스 아이콘" class="ico ico-16">
-                        <b class="name">NAOS</b>
-                        <span class="sub-name">GPT-4.0</span>
-                      </div>
-                      <div class="bubble-box">
-                        <p class="txt">협동조합이 현재의 모습을 갖게 된 것은 대한민국 재건기 이후입니다. 1946년 협동조합법이 제정되어 협동조합의 조직과 운영이 제도적으로
-                          보장되었고, 이후
-                          농업, 어업, 소비자
-                          등
-                          다양한
-                          분야에서 협동조합이 활발하게 활동하고 있습니다. 특히, 1970년대 이후 소비자조합의 발전이 두드러지게 나타나면서 현재의 협동조합 문화가 형성되었습니다. 현재는 농업,
-                          어업,
-                          소비자,
-                          신용 등 다양한 분야에서 활동하고 있으며, 회원들의 이익을 위해 노력하고 있습니다.</p>
+                      <div class="chat-bubble-wrap">
+                        <div class="name-wrap">
+                          <img src="assets/images/ico/ico-naos.svg" alt="나오스 아이콘" class="ico ico-16">
+                          <b class="name">NAOS</b>
+                          <span class="sub-name">GPT-4.0</span>
+                        </div>
+                        <div class="bubble-box">
+                          <p class="txt">협동조합이 현재의 모습을 갖게 된 것은 대한민국 재건기 이후입니다. 1946년 협동조합법이 제정되어 협동조합의 조직과 운영이 제도적으로 보장되었고, 이후
+                            농업, 어업, 소비자
+                            등
+                            다양한
+                            분야에서 협동조합이 활발하게 활동하고 있습니다. 특히, 1970년대 이후 소비자조합의 발전이 두드러지게 나타나면서 현재의 협동조합 문화가 형성되었습니다. 현재는 농업, 어업,
+                            소비자,
+                            신용 등 다양한 분야에서 활동하고 있으며, 회원들의 이익을 위해 노력하고 있습니다.</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <!-- END 커스텀 GPT 채팅창 -->
+                  <!-- END 커스텀 GPT 채팅창 -->
 
-                <!-- 커스텀 GPT 채팅창 하단-->
-                <div class="section-bottom">
-                  <div class="chat-create-box">
-                    <textarea rows="1" placeholder="GPT에게 무엇이든 요청하고 확인하세요 :)" class="create-txtarea"></textarea>
-                    <button type="button" class="btn send-btn before">
-                      <img src="assets/images/ico/ico-send.svg" alt="보내기" class="ico ico-18">
-                      <span class="txt-hidden">전송하기</span>
-                    </button>
+                  <!-- 커스텀 GPT 채팅창 하단-->
+                  <div class="section-bottom">
+                    <div class="chat-create-box">
+                      <textarea rows="1" placeholder="GPT에게 무엇이든 요청하고 확인하세요 :)" class="create-txtarea"></textarea>
+                      <button type="button" class="btn send-btn before">
+                        <img src="assets/images/ico/ico-send.svg" alt="보내기" class="ico ico-18">
+                        <span class="txt-hidden">전송하기</span>
+                      </button>
+                    </div>
                   </div>
-                </div>
 
-                <!-- END 커스텀 GPT 채팅창 하단-->
-              </section>
-              <section class="section right-section">
-                <ul class="list-grp">
+                  <!-- END 커스텀 GPT 채팅창 하단-->
+                </section>
+                <section class="section right-section">
+                  <ul class="list-grp">
 
-                  <!-- TODO: 선택된 버튼은 active 클래스를 추가합니다. -->
-                  <li class="list active">
-                    <div class="list-btn">
-                      <h4 class="left-txt">협동조합 소개와 개념 이해</h4>
-                      <div class="btn-wrap">
-                        <button type="button" class="btn btn-type12">데이터 보기</button>
+                    <!-- TODO: 선택된 버튼은 active 클래스를 추가합니다. -->
+                    <li class="list active">
+                      <div class="list-btn">
+                        <h4 class="left-txt">협동조합 소개와 개념 이해</h4>
+                        <div class="btn-wrap">
+                          <button type="button" onclick="openModal('modal-01');" class="btn btn-type12">데이터 보기</button>
+                        </div>
                       </div>
-                    </div>
-                  </li>
+                    </li>
 
-                  <!-- TODO: 선택된 버튼은 active 클래스를 추가합니다. -->
-                  <li class="list">
-                    <div class="list-btn">
-                      <h4 class="left-txt">협동조합 원칙과 가치</h4>
-                      <div class="btn-wrap">
-                        <button type="button" class="btn btn-type12">데이터 보기</button>
+                    <!-- TODO: 선택된 버튼은 active 클래스를 추가합니다. -->
+                    <li class="list">
+                      <div class="list-btn">
+                        <h4 class="left-txt">협동조합 원칙과 가치</h4>
+                        <div class="btn-wrap">
+                          <button type="button" onclick="openModal('modal-01');" class="btn btn-type12">데이터 보기</button>
+                        </div>
                       </div>
-                    </div>
-                  </li>
+                    </li>
 
-                  <!-- TODO: 선택된 버튼은 active 클래스를 추가합니다. -->
-                  <li class="list">
-                    <div class="list-btn">
-                      <h4 class="left-txt">협동조합 설립과 운영</h4>
-                      <div class="btn-wrap">
-                        <button type="button" class="btn btn-type12">데이터 보기</button>
+                    <!-- TODO: 선택된 버튼은 active 클래스를 추가합니다. -->
+                    <li class="list">
+                      <div class="list-btn">
+                        <h4 class="left-txt">협동조합 설립과 운영</h4>
+                        <div class="btn-wrap">
+                          <button type="button" onclick="openModal('modal-01');" class="btn btn-type12">데이터 보기</button>
+                        </div>
                       </div>
-                    </div>
-                  </li>
+                    </li>
 
-                  <!-- TODO: 선택된 버튼은 active 클래스를 추가합니다. -->
-                  <li class="list">
-                    <div class="list-btn">
-                      <h4 class="left-txt">협동조합 경영과 회계</h4>
-                      <div class="btn-wrap">
-                        <button type="button" class="btn btn-type12">데이터 보기</button>
+                    <!-- TODO: 선택된 버튼은 active 클래스를 추가합니다. -->
+                    <li class="list">
+                      <div class="list-btn">
+                        <h4 class="left-txt">협동조합 경영과 회계</h4>
+                        <div class="btn-wrap">
+                          <button type="button" onclick="openModal('modal-01');" class="btn btn-type12">데이터 보기</button>
+                        </div>
                       </div>
-                    </div>
-                  </li>
+                    </li>
 
-                  <!-- TODO: 선택된 버튼은 active 클래스를 추가합니다. -->
-                  <li class="list">
-                    <div class="list-btn">
-                      <h4 class="left-txt">협동조합과 지역사회</h4>
-                      <div class="btn-wrap">
-                        <button type="button" class="btn btn-type12">데이터 보기</button>
+                    <!-- TODO: 선택된 버튼은 active 클래스를 추가합니다. -->
+                    <li class="list">
+                      <div class="list-btn">
+                        <h4 class="left-txt">협동조합과 지역사회</h4>
+                        <div class="btn-wrap">
+                          <button type="button" onclick="openModal('modal-01');" class="btn btn-type12">데이터 보기</button>
+                        </div>
                       </div>
-                    </div>
-                  </li>
+                    </li>
 
-                  <!-- TODO: 선택된 버튼은 active 클래스를 추가합니다. -->
-                  <li class="list">
-                    <div class="list-btn">
-                      <h4 class="left-txt">기술과 협동조합</h4>
-                      <div class="btn-wrap">
-                        <button type="button" class="btn btn-type12">데이터 보기</button>
+                    <!-- TODO: 선택된 버튼은 active 클래스를 추가합니다. -->
+                    <li class="list">
+                      <div class="list-btn">
+                        <h4 class="left-txt">기술과 협동조합</h4>
+                        <div class="btn-wrap">
+                          <button type="button" onclick="openModal('modal-01');" class="btn btn-type12">데이터 보기</button>
+                        </div>
                       </div>
-                    </div>
-                  </li>
+                    </li>
 
-                  <!-- TODO: 선택된 버튼은 active 클래스를 추가합니다. -->
-                  <li class="list">
-                    <div class="list-btn">
-                      <h4 class="left-txt">협동조합 강화를 위한 리더십과 팀 빌딩의 이해</h4>
-                      <div class="btn-wrap">
-                        <button type="button" class="btn btn-type12">데이터 보기</button>
+                    <!-- TODO: 선택된 버튼은 active 클래스를 추가합니다. -->
+                    <li class="list">
+                      <div class="list-btn">
+                        <h4 class="left-txt">협동조합 강화를 위한 리더십과 팀 빌딩의 이해</h4>
+                        <div class="btn-wrap">
+                          <button type="button" onclick="openModal('modal-01');" class="btn btn-type12">데이터 보기</button>
+                        </div>
                       </div>
-                    </div>
-                  </li>
+                    </li>
 
-                  <!-- TODO: 선택된 버튼은 active 클래스를 추가합니다. -->
-                  <li class="list">
-                    <div class="list-btn">
-                      <h4 class="left-txt">협동조합 사례 연구와 프로젝트</h4>
-                      <div class="btn-wrap">
-                        <button type="button" class="btn btn-type12">데이터 보기</button>
+                    <!-- TODO: 선택된 버튼은 active 클래스를 추가합니다. -->
+                    <li class="list">
+                      <div class="list-btn">
+                        <h4 class="left-txt">협동조합 사례 연구와 프로젝트</h4>
+                        <div class="btn-wrap">
+                          <button type="button" onclick="openModal('modal-01');" class="btn btn-type12">데이터 보기</button>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                </ul>
-              </section>
+                    </li>
+                  </ul>
+                </section>
+              </div>
+
+              <!-- END 내용 -->
             </div>
+          </div>
 
-            <!-- END 내용 -->
+          <!-- END (대시보드) 오른쪽 내용 영역 -->
+        </div>
+      </div>
+
+      <!-- GPT 데이터보기 모달창 -->
+      <div id="modal-01" class="modal-wrapper">
+        <div class="modal-overlay" onclick="closeModal('modal-01');"></div>
+        <div class="custom-modal dataview-modal">
+          <button type="button" class="btn close-btn" onclick="closeModal('modal-01');">
+            <img src="assets/images/ico/ico-modal-close-x.svg" alt="">
+            <span class="txt-hidden">모달 닫기</span>
+          </button>
+          <div class="dtmodal-top">
+            <h4 class="dtmodal-ttl">협동조합 소개와 개념 이해</h4>
+          </div>
+          <div class="dtmodal-mid">
+            <div class="dtmodal-content">
+              <p class="txt">
+                [협동조합의 정의와 기본 원칙 소개] <br><br>
+                협동조합은 일반적으로 비영리적인 목적을 갖는 단체로, 그것을 구성하는 개인들의 단체적 노동이나 경제적 이익을 공동으로 추구하는 조직입니다. 협동조합의 정의와 기본
+                원칙은 국가 및 조직에 따라 다를 수 있으나, 일반적으로 국제협동조합연맹(ICAO, International Cooperative Alliance)에서 제시하는 기본 원칙을 따릅니다.
+                <br><br>
+                [협동조합의 정의] <br>
+                협동조합은 회원들의 니즈와 목표를 공동으로 충족시키기 위해, 자발적으로 결성되고 자율적으로 운영되며, 그 회원들에게 공평하게 이익을 나누는 경제적인 단체입니다.
+                <br><br>
+                [협동조합의 기본 원칙]<br>
+                1. 자발적이고 개방적인 회원 참여 (Voluntary and Open Membership): 협동조합은 자발적이며 개방적으로 모든 관심 있는 자에게 회원으로서 참여할 수 있어야 합니다.
+                <br>
+                2. 자주적인 제어와 자립 (Democratic Member Control): 회원들은 협동조합의 의사결정에 자주적으로 참여하며, 각 회원에게 동등한 투표권이 주어져야 합니다. <br>
+                3. 회원들의 경제적 참여 (Member Economic Participation): 회원들은 자원을 충분히 출자하고, 이를 적절하게 활용하며, 이익과 손실에 공평하게 참여해야 합니다.
+                <br> 4. 자율적이고 독립적인 경영 (Autonomy and
+                Independence): 협동조합은 자율적이며 독립적으로 자신의 경제적인 활동을 제어하며, 다른 조직과 독립적으로 협력할 수
+              </p>
+            </div>
           </div>
         </div>
-
-        <!-- END (대시보드) 오른쪽 내용 영역 -->
       </div>
     </div>
-
-    <!-- FIXME: GPT 데이터보기 모달창 -->
-  </div>
-</body>
-
+    <script src="assets/js/ui.js"></script>
+  </body>
 </html>

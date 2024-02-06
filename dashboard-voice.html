@@ -1,435 +1,1056 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>농협대학교 API 플랫폼</title>
+    <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/ui.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="dashboard-page page-wrapper">
+        <div class="dashboard-layout">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>농협대학교 API 플랫폼</title>
-  <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="assets/css/vendor/reset.css">
-  <link rel="stylesheet" href="assets/css/ui.css">
-  <link rel="stylesheet" href="assets/css/pages.css">
-  <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
-</head>
+          <!-- (대시보드) 왼쪽 사이드바 -->
+          <div class="dashboard-layout-sidebar">
+            <div class="left-sidebar-top">
+              <h1 class="logo">
+                <a href="dashboard-home.html" class="logo-link">
+                  <img src="assets/images/logo/logo-naos.png" alt="로고" class="logo-img">
+                </a>
+              </h1>
+              <button type="button" onclick="location.href='project-main.html';" class="btn btn-type18">
+                <img src="assets/images/ico/ico-new-add.svg" alt="더하기" class="ico ico-18">
+                <span class="txt">새 프로젝트</span>
+              </button>
+            </div>
 
-<body>
-  <div id="app">
-    <div class="dashboard-page page-wrapper">
-      <div class="dashboard-layout">
-
-        <!-- (대시보드) 왼쪽 사이드바 -->
-        <div class="dashboard-layout-sidebar">
-          <div class="left-sidebar-top">
-            <h1 class="logo">
-              <a href="dashboard-home.html" class="logo-link">
-                <img src="assets/images/logo/logo-naos.png" alt="로고" class="logo-img">
-              </a>
-            </h1>
-            <button type="button" onclick="location.href='project-main.html';" class="btn btn-type18">
-              <img src="assets/images/ico/ico-new-add.svg" alt="더하기" class="ico ico-18">
-              <span class="txt">새 프로젝트</span>
-            </button>
-          </div>
-
-          <!-- TODO: 메뉴 많아지면 스크롤 됨 -->
-          <div class="left-sidebar-mid">
-            <ul class="btn-list-grp">
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-home.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-home-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-home-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">HOME</span>
-                </div>
-              </li>
-              <li class="btn-list active">
-                <div onclick="location.href='dashboard-voice.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-voice-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-voice-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">보이스</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-avatar.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-avatar-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-avatar-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">아바타</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-project-setting.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-project-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-project-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">프로젝트 관리</span>
-                </div>
-              </li>
-            </ul>
-            <div class="section">
+            <!-- TODO: 메뉴 많아지면 스크롤 됨 -->
+            <div class="left-sidebar-mid">
               <ul class="btn-list-grp">
-                <li class="btn-list">
-                  <div class="dropdown-btn-list">
-                    <div class="dropdown-btn-top ">
-                      <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
-                        <div class="ico-box">
-                          <img src="assets/images/ico/ico-nav-custom-on.svg" alt="아이콘" class="ico ico-on">
-                          <img src="assets/images/ico/ico-nav-custom-off.svg" alt="아이콘" class="ico ico-off">
-                        </div>
-                        <span class="txt">커스텀 GPT</span>
-                        <img src="assets/images/ico/ico-down-arrow-gray.svg" alt="아래로" class="ico ico-16 ico-down">
-                      </div>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-home.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-home-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-home-off.svg" alt="아이콘" class="ico ico-off">
                     </div>
-                    <ul class="dropdown-btn-bottom">
-                      <li class="btn-list ">
-                        <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
-                          <div class="ico-box">
-                            <img src="assets/images/ico/ico-nav-robot-on.svg" alt="아이콘" class="ico ico-on">
-                            <img src="assets/images/ico/ico-nav-robot-off.svg" alt="아이콘" class="ico ico-off">
-                          </div>
-                          <span class="txt">NAOS GPT</span>
-                        </div>
-                      </li>
-                      <li class="btn-list ">
-                        <div onclick="location.href='dashboard-custom-gpt-setting.html';" class="btn list-btn-type06">
-                          <div class="ico-box">
-                            <img src="assets/images/ico/ico-nav-gpt-setting-on.svg" alt="아이콘" class="ico ico-on">
-                            <img src="assets/images/ico/ico-nav-gpt-setting-off.svg" alt="아이콘" class="ico ico-off">
-                          </div>
-                          <span class="txt">GPT 설정</span>
-                        </div>
-                      </li>
-                    </ul>
+                    <span class="txt">HOME</span>
+                  </div>
+                </li>
+                <li class="btn-list active">
+                  <div onclick="location.href='dashboard-voice.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-voice-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-voice-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">보이스</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-avatar.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-avatar-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-avatar-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">아바타</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-project-setting.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-project-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-project-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">프로젝트 관리</span>
                   </div>
                 </li>
               </ul>
-            </div>
-            <ul class="btn-list-grp">
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-faq.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-faq-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-faq-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">자주 묻는 질문</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-notice.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-notice-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-notice-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">공지사항</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-mypage.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-mypage-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-mypage-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">내 정보</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="left-sidebar-bottom">
-            <span class="txt">Powered by</span>
-            <img src="assets/images/logo/logo-nh.png" alt="농협대학교 로고" class="logo-img">
-          </div>
-        </div>
-
-        <!-- END (대시보드) 왼쪽 사이드바 -->
-
-        <!-- (대시보드) 오른쪽 내용 영역 -->
-
-        <!-- 대시보드 보이스 -->
-        <div class="dashboard-layout-content">
-          <div class="dsbd-voice-page dashboard-layout-page">
-
-            <!-- 제목 -->
-            <div class="dashboard-ttl-wrap">
-              <div class="title-item type-col">
-                <h2 class="title-default">마이 보이스</h2>
-                <p class="title-desc">단, 4분 길이의 음성으로 10초 이내에 완성되는 새로운 합성 음성 알고리즘입니다. 내가 만든 목소리로 무려 30개국의 언어를 자유롭게 이야기할 수
-                  있는
-                  창의적인 AI 툴킷입니다.</p>
-              </div>
-            </div>
-
-            <!-- END 제목 -->
-
-            <!-- 내용 -->
-            <div class="dashboard-content-wrap">
-
-              <!-- TODO: 생성된 보이스가 있을 때 -->
               <div class="section">
-                <div class="section-btn-wrap type-right">
-                  <button type="button" class="btn btn-type07">지원 언어·국가 확인하기</button>
-                </div>
-                <ul class="grid-grp">
-                  <li class="grid">
-                    <div class="add-card type-md">
-                      <img src="assets/images/ico/ico-add.svg" alt="더하기" class="ico-add">
-                      <div class="card-content">
-                        <p class="card-ttl">마이보이스 추가하기</p>
-                        <span class="card-desc">8 / 8</span>
+                <ul class="btn-list-grp">
+                  <li class="btn-list">
+                    <div class="dropdown-btn-list">
+                      <div class="dropdown-btn-top ">
+                        <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
+                          <div class="ico-box">
+                            <img src="assets/images/ico/ico-nav-custom-on.svg" alt="아이콘" class="ico ico-on">
+                            <img src="assets/images/ico/ico-nav-custom-off.svg" alt="아이콘" class="ico ico-off">
+                          </div>
+                          <span class="txt">커스텀 GPT</span>
+                          <img src="assets/images/ico/ico-down-arrow-gray.svg" alt="아래로" class="ico ico-16 ico-down">
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                  <li class="grid">
-                    <div class="triple-btn-card">
-                      <div class="card-thumbnail">
-                        <h4 class="card-ttl">AI 로사</h4>
-                      </div>
-                      <div class="card-btn-wrap">
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                          </span>
-                          <span class="txt blue-txt">사용하기</span>
-                        </button>
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                          </span>
-                          <span class="txt">편집하기</span>
-                        </button>
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                          </span>
-                          <span class="txt">삭제하기</span>
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="grid">
-                    <div class="triple-btn-card">
-                      <div class="card-thumbnail">
-                        <h4 class="card-ttl">기훈</h4>
-                      </div>
-                      <div class="card-btn-wrap">
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                          </span>
-                          <span class="txt blue-txt">사용하기</span>
-                        </button>
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                          </span>
-                          <span class="txt">편집하기</span>
-                        </button>
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                          </span>
-                          <span class="txt">삭제하기</span>
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="grid">
-                    <div class="triple-btn-card">
-                      <div class="card-thumbnail">
-                        <h4 class="card-ttl">지훈</h4>
-                      </div>
-                      <div class="card-btn-wrap">
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                          </span>
-                          <span class="txt blue-txt">사용하기</span>
-                        </button>
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                          </span>
-                          <span class="txt">편집하기</span>
-                        </button>
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                          </span>
-                          <span class="txt">삭제하기</span>
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="grid">
-                    <div class="triple-btn-card">
-                      <div class="card-thumbnail">
-                        <h4 class="card-ttl">민수</h4>
-                      </div>
-                      <div class="card-btn-wrap">
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                          </span>
-                          <span class="txt blue-txt">사용하기</span>
-                        </button>
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                          </span>
-                          <span class="txt">편집하기</span>
-                        </button>
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                          </span>
-                          <span class="txt">삭제하기</span>
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="grid">
-                    <div class="triple-btn-card">
-                      <div class="card-thumbnail">
-                        <h4 class="card-ttl">김진수 교수님</h4>
-                      </div>
-                      <div class="card-btn-wrap">
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                          </span>
-                          <span class="txt blue-txt">사용하기</span>
-                        </button>
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                          </span>
-                          <span class="txt">편집하기</span>
-                        </button>
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                          </span>
-                          <span class="txt">삭제하기</span>
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="grid">
-                    <div class="triple-btn-card">
-                      <div class="card-thumbnail">
-                        <h4 class="card-ttl">나</h4>
-                      </div>
-                      <div class="card-btn-wrap">
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                          </span>
-                          <span class="txt blue-txt">사용하기</span>
-                        </button>
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                          </span>
-                          <span class="txt">편집하기</span>
-                        </button>
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                          </span>
-                          <span class="txt">삭제하기</span>
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="grid">
-                    <div class="triple-btn-card">
-                      <div class="card-thumbnail">
-                        <h4 class="card-ttl">Test</h4>
-                      </div>
-                      <div class="card-btn-wrap">
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                          </span>
-                          <span class="txt blue-txt">사용하기</span>
-                        </button>
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                          </span>
-                          <span class="txt">편집하기</span>
-                        </button>
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                          </span>
-                          <span class="txt">삭제하기</span>
-                        </button>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="grid">
-                    <div class="triple-btn-card">
-                      <div class="card-thumbnail">
-                        <h4 class="card-ttl">아무나</h4>
-                      </div>
-                      <div class="card-btn-wrap">
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
-                          </span>
-                          <span class="txt blue-txt">사용하기</span>
-                        </button>
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                          </span>
-                          <span class="txt">편집하기</span>
-                        </button>
-                        <button type="button" class="btn list-btn-type05">
-                          <span class="ico-box">
-                            <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
-                          </span>
-                          <span class="txt">삭제하기</span>
-                        </button>
-                      </div>
+                      <ul class="dropdown-btn-bottom">
+                        <li class="btn-list ">
+                          <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
+                            <div class="ico-box">
+                              <img src="assets/images/ico/ico-nav-robot-on.svg" alt="아이콘" class="ico ico-on">
+                              <img src="assets/images/ico/ico-nav-robot-off.svg" alt="아이콘" class="ico ico-off">
+                            </div>
+                            <span class="txt">NAOS GPT</span>
+                          </div>
+                        </li>
+                        <li class="btn-list ">
+                          <div onclick="location.href='dashboard-custom-gpt-setting.html';" class="btn list-btn-type06">
+                            <div class="ico-box">
+                              <img src="assets/images/ico/ico-nav-gpt-setting-on.svg" alt="아이콘" class="ico ico-on">
+                              <img src="assets/images/ico/ico-nav-gpt-setting-off.svg" alt="아이콘" class="ico ico-off">
+                            </div>
+                            <span class="txt">GPT 설정</span>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </li>
                 </ul>
               </div>
+              <ul class="btn-list-grp">
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-faq.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-faq-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-faq-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">자주 묻는 질문</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-notice.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-notice-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-notice-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">공지사항</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-mypage.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-mypage-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-mypage-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">내 정보</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="left-sidebar-bottom">
+              <span class="txt">Powered by</span>
+              <img src="assets/images/logo/logo-nh.png" alt="농협대학교 로고" class="logo-img">
+            </div>
+          </div>
 
-              <!-- TODO: 생성된 보이스가 없을 때 -->
-              <div class="nothing-box">
-                <h3 class="nothing-ttl">생성된 마이보이스가 없어요</h3>
-                <p class="nothing-desc">나만의 마이보이스를 생성해 보세요</p>
-                <div class="btn-wrap">
-                  <button type="button" class="btn btn-type11">마이보이스 생성하기</button>
+          <!-- END (대시보드) 왼쪽 사이드바 -->
+
+          <!-- (대시보드) 오른쪽 내용 영역 -->
+
+          <!-- 대시보드 보이스 -->
+          <div class="dashboard-layout-content">
+            <div class="dsbd-voice-page dashboard-layout-page">
+
+              <!-- 제목 -->
+              <div class="dashboard-ttl-wrap">
+                <div class="title-item type-col">
+                  <h2 class="title-default">마이 보이스</h2>
+                  <p class="title-desc">단, 4분 길이의 음성으로 10초 이내에 완성되는 새로운 합성 음성 알고리즘입니다. 내가 만든 목소리로 무려 30개국의 언어를 자유롭게 이야기할 수 있는
+                    창의적인 AI 툴킷입니다.</p>
+                </div>
+              </div>
+
+              <!-- END 제목 -->
+
+              <!-- 내용 -->
+              <div class="dashboard-content-wrap">
+
+                <!-- TODO: 생성된 보이스가 있을 때 -->
+                <div class="section">
+                  <div class="section-btn-wrap type-right">
+                    <button type="button" class="btn btn-type07" onclick="openModal('modal-01');">지원 언어·국가 확인하기</button>
+                  </div>
+                  <ul class="grid-grp">
+                    <li class="grid">
+                      <div onclick="showFloating('floating-01');openModal('modal-02');" class="add-card type-md">
+                        <img src="assets/images/ico/ico-add.svg" alt="더하기" class="ico-add">
+                        <div class="card-content">
+                          <p class="card-ttl">마이보이스 추가하기</p>
+                          <span class="card-desc">8 / 8</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="grid">
+                      <div class="triple-btn-card">
+                        <div class="card-thumbnail">
+                          <h4 class="card-ttl">AI 로사</h4>
+                        </div>
+                        <div class="card-btn-wrap">
+                          <button type="button" onclick="location.href='project-main.html';" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                      </span>
+                            <span class="txt blue-txt">사용하기</span>
+                          </button>
+                          <button type="button" onclick="openModal('modal-04');" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                      </span>
+                            <span class="txt">편집하기</span>
+                          </button>
+                          <button type="button" onclick="openModal('modal-05');" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                      </span>
+                            <span class="txt">삭제하기</span>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="grid">
+                      <div class="triple-btn-card">
+                        <div class="card-thumbnail">
+                          <h4 class="card-ttl">기훈</h4>
+                        </div>
+                        <div class="card-btn-wrap">
+                          <button type="button" onclick="location.href='project-main.html';" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                      </span>
+                            <span class="txt blue-txt">사용하기</span>
+                          </button>
+                          <button type="button" onclick="openModal('modal-04');" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                      </span>
+                            <span class="txt">편집하기</span>
+                          </button>
+                          <button type="button" onclick="openModal('modal-05');" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                      </span>
+                            <span class="txt">삭제하기</span>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="grid">
+                      <div class="triple-btn-card">
+                        <div class="card-thumbnail">
+                          <h4 class="card-ttl">지훈</h4>
+                        </div>
+                        <div class="card-btn-wrap">
+                          <button type="button" onclick="location.href='project-main.html';" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                      </span>
+                            <span class="txt blue-txt">사용하기</span>
+                          </button>
+                          <button type="button" onclick="openModal('modal-04');" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                      </span>
+                            <span class="txt">편집하기</span>
+                          </button>
+                          <button type="button" onclick="openModal('modal-05');" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                      </span>
+                            <span class="txt">삭제하기</span>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="grid">
+                      <div class="triple-btn-card">
+                        <div class="card-thumbnail">
+                          <h4 class="card-ttl">민수</h4>
+                        </div>
+                        <div class="card-btn-wrap">
+                          <button type="button" onclick="location.href='project-main.html';" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                      </span>
+                            <span class="txt blue-txt">사용하기</span>
+                          </button>
+                          <button type="button" onclick="openModal('modal-04');" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                      </span>
+                            <span class="txt">편집하기</span>
+                          </button>
+                          <button type="button" onclick="openModal('modal-05');" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                      </span>
+                            <span class="txt">삭제하기</span>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="grid">
+                      <div class="triple-btn-card">
+                        <div class="card-thumbnail">
+                          <h4 class="card-ttl">김진수 교수님</h4>
+                        </div>
+                        <div class="card-btn-wrap">
+                          <button type="button" onclick="location.href='project-main.html';" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                      </span>
+                            <span class="txt blue-txt">사용하기</span>
+                          </button>
+                          <button type="button" onclick="openModal('modal-04');" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                      </span>
+                            <span class="txt">편집하기</span>
+                          </button>
+                          <button type="button" onclick="openModal('modal-05');" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                      </span>
+                            <span class="txt">삭제하기</span>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="grid">
+                      <div class="triple-btn-card">
+                        <div class="card-thumbnail">
+                          <h4 class="card-ttl">나</h4>
+                        </div>
+                        <div class="card-btn-wrap">
+                          <button type="button" onclick="location.href='project-main.html';" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                      </span>
+                            <span class="txt blue-txt">사용하기</span>
+                          </button>
+                          <button type="button" onclick="openModal('modal-04');" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                      </span>
+                            <span class="txt">편집하기</span>
+                          </button>
+                          <button type="button" onclick="openModal('modal-05');" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                      </span>
+                            <span class="txt">삭제하기</span>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="grid">
+                      <div class="triple-btn-card">
+                        <div class="card-thumbnail">
+                          <h4 class="card-ttl">Test</h4>
+                        </div>
+                        <div class="card-btn-wrap">
+                          <button type="button" onclick="location.href='project-main.html';" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                      </span>
+                            <span class="txt blue-txt">사용하기</span>
+                          </button>
+                          <button type="button" onclick="openModal('modal-04');" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                      </span>
+                            <span class="txt">편집하기</span>
+                          </button>
+                          <button type="button" onclick="openModal('modal-05');" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                      </span>
+                            <span class="txt">삭제하기</span>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="grid">
+                      <div class="triple-btn-card">
+                        <div class="card-thumbnail">
+                          <h4 class="card-ttl">아무나</h4>
+                        </div>
+                        <div class="card-btn-wrap">
+                          <button type="button" onclick="location.href='project-main.html';" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-use.svg" alt="" class="ico ico-16">
+                      </span>
+                            <span class="txt blue-txt">사용하기</span>
+                          </button>
+                          <button type="button" onclick="openModal('modal-04');" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                      </span>
+                            <span class="txt">편집하기</span>
+                          </button>
+                          <button type="button" onclick="openModal('modal-05');" class="btn list-btn-type05">
+                            <span class="ico-box">
+                        <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-12">
+                      </span>
+                            <span class="txt">삭제하기</span>
+                          </button>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- TODO: 생성된 보이스가 없을 때 -->
+                <div class="nothing-box">
+                  <h3 class="nothing-ttl">생성된 마이보이스가 없어요</h3>
+                  <p class="nothing-desc">나만의 마이보이스를 생성해 보세요</p>
+                  <div class="btn-wrap">
+                    <button type="button" onclick="openModal('modal-02');" class="btn btn-type11">마이보이스 생성하기</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- END 내용 -->
+            </div>
+          </div>
+
+          <!-- END (대시보드) 오른쪽 내용 영역 -->
+        </div>
+      </div>
+
+      <!-- 더는 추가할 수 없음 알림 -->
+      <div id="floating-01" class="floating-wrapper">
+        <div class="floating-txt">
+          <img src="assets/images/ico/ico-warning-red.svg" alt="" class="ico ico-18">
+          <p class="txt">슬롯을 더 이상 추가할 수 없습니다</p>
+        </div>
+      </div>
+
+      <!-- 지원국가 확인하기 모달 -->
+      <div id="modal-01" class="modal-wrapper">
+        <div class="modal-overlay" onclick="closeModal('modal-01');"></div>
+        <div class="custom-modal content-modal">
+          <button type="button" class="btn close-btn" onclick="closeModal('modal-01');">
+            <img src="assets/images/ico/ico-modal-close-x.svg" alt="">
+            <span class="txt-hidden">모달 닫기</span>
+          </button>
+          <div class="cmodal-top">
+            <div class="ico-box">
+              <img src="assets/images/ico/ico-multi-lang.svg" alt="모달 아이콘" class="ico">
+            </div>
+            <h4 class="cmodal-ttl">다국어 지원</h4>
+            <p class="cmodal-desc">One Source - Multi Language</p>
+          </div>
+          <div class="cmodal-mid">
+            <div class="cmodal-content">
+              <div class="cmodal-multi-lang-content">
+                <div class="lang-list-grp">
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ko.png" alt="한국 국기" class="img-flag">
+              </span>
+                    <span class="txt">한국</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-eng.png" alt="영어 국기" class="img-flag">
+              </span>
+                    <span class="txt">영어</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ch.png" alt="중국 국기" class="img-flag">
+              </span>
+                    <span class="txt">중국</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-eng.png" alt="일본 국기" class="img-flag">
+              </span>
+                    <span class="txt">일본</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ko.png" alt="한국 국기" class="img-flag">
+              </span>
+                    <span class="txt">한국</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-eng.png" alt="영어 국기" class="img-flag">
+              </span>
+                    <span class="txt">영어</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ch.png" alt="중국 국기" class="img-flag">
+              </span>
+                    <span class="txt">중국</span>
+                  </div>
+
+                  <!-- 한 줄 -->
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ko.png" alt="한국 국기" class="img-flag">
+              </span>
+                    <span class="txt">한국</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-eng.png" alt="영어 국기" class="img-flag">
+              </span>
+                    <span class="txt">영어</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ch.png" alt="중국 국기" class="img-flag">
+              </span>
+                    <span class="txt">중국</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-eng.png" alt="일본 국기" class="img-flag">
+              </span>
+                    <span class="txt">일본</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ko.png" alt="한국 국기" class="img-flag">
+              </span>
+                    <span class="txt">한국</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-eng.png" alt="영어 국기" class="img-flag">
+              </span>
+                    <span class="txt">영어</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ch.png" alt="중국 국기" class="img-flag">
+              </span>
+                    <span class="txt">중국</span>
+                  </div>
+
+                  <!-- 한 줄 -->
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ko.png" alt="한국 국기" class="img-flag">
+              </span>
+                    <span class="txt">한국</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-eng.png" alt="영어 국기" class="img-flag">
+              </span>
+                    <span class="txt">영어</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ch.png" alt="중국 국기" class="img-flag">
+              </span>
+                    <span class="txt">중국</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-eng.png" alt="일본 국기" class="img-flag">
+              </span>
+                    <span class="txt">일본</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ko.png" alt="한국 국기" class="img-flag">
+              </span>
+                    <span class="txt">한국</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-eng.png" alt="영어 국기" class="img-flag">
+              </span>
+                    <span class="txt">영어</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ch.png" alt="중국 국기" class="img-flag">
+              </span>
+                    <span class="txt">중국</span>
+                  </div>
+
+                  <!-- 한 줄 -->
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ko.png" alt="한국 국기" class="img-flag">
+              </span>
+                    <span class="txt">한국</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-eng.png" alt="영어 국기" class="img-flag">
+              </span>
+                    <span class="txt">영어</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ch.png" alt="중국 국기" class="img-flag">
+              </span>
+                    <span class="txt">중국</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-eng.png" alt="일본 국기" class="img-flag">
+              </span>
+                    <span class="txt">일본</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ko.png" alt="한국 국기" class="img-flag">
+              </span>
+                    <span class="txt">한국</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-eng.png" alt="영어 국기" class="img-flag">
+              </span>
+                    <span class="txt">영어</span>
+                  </div>
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ch.png" alt="중국 국기" class="img-flag">
+              </span>
+                    <span class="txt">중국</span>
+                  </div>
+
+                  <!-- 한 줄 -->
+                  <div class="lang-list">
+                    <span class="lang-flag">
+                <img src="assets/images/ico/ico-flag-ch.png" alt="중국 국기" class="img-flag">
+              </span>
+                    <span class="txt">중국</span>
+                  </div>
                 </div>
               </div>
             </div>
-
-            <!-- END 내용 -->
+          </div>
+          <div class="cmodal-bottom">
+            <button type="button" class="btn btn-type08">
+              <span class="txt">네, 확인했어요</span>
+            </button>
           </div>
         </div>
+      </div>
 
-        <!-- END (대시보드) 오른쪽 내용 영역 -->
+      <!-- 추가하기 모달 (STEP 01 ~ 03)-->
+      <div id="modal-02" class="modal-wrapper">
+        <div class="modal-overlay" onclick="closeModal('modal-02');"></div>
+        <div class="custom-modal content-modal">
+          <button type="button" class="btn close-btn" onclick="closeModal('modal-01');">
+            <img src="assets/images/ico/ico-modal-close-x.svg" alt="">
+            <span class="txt-hidden">모달 닫기</span>
+          </button>
+          <div class="cmodal-step-containers">
+
+            <!-- 1. 마이보이스 제작 가이드 첫번째 스텝 -->
+            <div id="modal-voice-guide01" class="cmodal-step-container active">
+              <div class="cmodal-top">
+                <div class="ico-box">
+                  <img src="assets/images/ico/ico-guide01.svg" alt="모달 아이콘">
+                </div>
+                <h4 class="cmodal-ttl">마이 보이스 제작 가이드</h4>
+                <p class="cmodal-desc">고품질 음성을 제작하기 위해 반드시 지켜주세요!</p>
+              </div>
+              <div class="cmodal-mid">
+                <div class="cmodal-content">
+                  <div class="cmodal-step-content type-01">
+                    <h3 class="guide-ttl">원본 음성 파일에는 “목소리”만 담아주세요</h3>
+                    <div class="gray-box-grp">
+                      <div class="gray-box">
+                        <img src="assets/images/ico/img-prohibition.svg" alt="금지" class="img-prohibition">
+                        <p class="txt">배경 음악</p>
+                      </div>
+                      <div class="gray-box">
+                        <img src="assets/images/ico/img-prohibition.svg" alt="금지" class="img-prohibition">
+                        <p class="txt">기침·숨·바람 소리</p>
+                      </div>
+                      <div class="gray-box">
+                        <img src="assets/images/ico/img-prohibition.svg" alt="금지" class="img-prohibition">
+                        <p class="txt">“음” “저기” “그” <br>음성적 잉여표현</p>
+                      </div>
+                      <div class="gray-box">
+                        <img src="assets/images/ico/img-prohibition.svg" alt="금지" class="img-prohibition">
+                        <p class="txt">키보드·마우스 소리</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cmodal-bottom">
+                <button type="button" onclick="nextGuide('modal-voice-guide01', 'modal-voice-guide02')" class="btn btn-type08">
+                  <span class="txt">네, 이해했어요</span>
+                  <img src="assets/images/ico/ico-next.svg" alt="" class="ico ico-next ico-13">
+                </button>
+              </div>
+            </div>
+
+            <!-- 2. 마이보이스 제작 가이드 두번째 스텝 -->
+            <div id="modal-voice-guide02" class="cmodal-step-container">
+              <div class="cmodal-top">
+                <div class="ico-box">
+                  <img src="assets/images/ico/ico-guide01.svg" alt="모달 아이콘">
+                </div>
+                <h4 class="cmodal-ttl">마이 보이스 제작 가이드</h4>
+                <p class="cmodal-desc">고품질 음성을 제작하기 위해 반드시 지켜주세요!</p>
+              </div>
+              <div class="cmodal-mid">
+                <div class="cmodal-content">
+                  <div class="cmodal-step-content type-02">
+                    <h3 class="guide-ttl">목소리를 최대한 “일정하게” 유지해주세요</h3>
+                    <div class="gray-box-grp">
+                      <div class="gray-box">
+                        <div class="voice-step02-guide01-box">
+                          <b class="bold-txt">10MB</b>
+                          <span class="gray-txt">각 음성별 약 4분</span>
+                        </div>
+                        <p class="txt">용량 준수</p>
+                      </div>
+                      <div class="gray-box">
+                        <div class="voice-step02-guide02-box">
+                          <img src="assets/images/ico/ico-voice-step02-guide02.svg" alt="" class="img">
+                        </div>
+                        <p class="txt">한 가지 톤 유지</p>
+                      </div>
+                      <div class="gray-box">
+                        <div class="voice-step02-guide03-box">
+                          <div class="ex-data-box">
+                            <img src="assets/images/ico/ico-ex-play.svg" alt="예시 재생 아이콘" class="ico ico-13">
+                            <span class="txt">예시1</span>
+                          </div>
+                          <div class="ex-data-box">
+                            <img src="assets/images/ico/ico-ex-play.svg" alt="예시 재생 아이콘" class="ico ico-13">
+                            <span class="txt">예시2</span>
+                          </div>
+                        </div>
+                        <p class="txt">학습 데이터 예시</p>
+                      </div>
+                      <div class="gray-box">
+                        <div class="voice-step02-guide04-box">
+                          <ul>
+                            <li class="ex-txt">‘차분하게’</li>
+                            <li class="ex-txt">‘개성있게’</li>
+                            <li class="ex-txt">‘저음으로’</li>
+                          </ul>
+                          <img src="assets/images/ico/ico-ex-figure.svg" alt="" class="img">
+                        </div>
+                        <p class="txt">음성 스타일 구상</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cmodal-bottom">
+                <button type="button" onclick="nextGuide('modal-voice-guide02', 'modal-voice-guide03')" class="btn btn-type08">
+                  <span class="txt">네, 이해했어요</span>
+                  <img src="assets/images/ico/ico-next.svg" alt="" class="ico ico-next ico-13">
+                </button>
+              </div>
+            </div>
+
+            <!-- 3. 마이보이스 제작 가이드 세번째 스텝 -->
+            <div id="modal-voice-guide03" class="cmodal-step-container">
+              <div class="cmodal-mid">
+                <div class="cmodal-content">
+                  <div class="cmodal-upload-content">
+                    <div class="form-item-grp">
+                      <div class="form-item type-02">
+                        <label class="form-label">이름</label>
+                        <div class="form-inp-wrap">
+                          <div class="inp-wrap">
+                            <input type="text" placeholder="이름을 입력해주세요" class="form-inp">
+                          </div>
+
+                          <!-- TODO: 해당 영역에 드래그하면 업로드 되게 구현 필요 -->
+                          <div class="drag-area">
+                            <img src="assets/images/ico/ico-drag.svg" alt="드래그 아이콘" class="ico ico-34">
+                            <h3 class="area-ttl">클릭 혹은 드래그&드랍 하여 파일을 추가해주세요</h3>
+                            <p class="area-desc">각 용량은 10MB로 제한 합니다</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-item type-02">
+                        <div class="form-label-wrap">
+                          <label class="form-label">업로드 샘플 목록</label>
+                          <span class="sub-txt">(음성 1개여도 학습 가능)</span>
+                          <p class="count-txt">
+                            <span>5</span>
+                            <span>/</span>
+                            <span>25</span>
+                          </p>
+                        </div>
+                        <div class="form-inp-wrap">
+                          <div class="bd-gray-box">
+                            <ul class="list-grp">
+
+                              <!-- 리스트 -->
+                              <li class="list">
+                                <div class="sample-list">
+                                  <div class="left-txt">
+                                    <p class="txt">샘플 오디오1.mp3</p>
+                                    <span class="badge type-gray">9.6MB</span>
+                                  </div>
+                                  <div class="btn-grp">
+                                    <button type="button" class="btn">
+                                      <img src="assets/images/ico/ico-create-play.svg" alt="재생하기 아이콘" class="ico ico-11">
+                                      <span class="txt-hidden">재생하기</span>
+                                    </button>
+                                    <button type="button" class="btn" onclick="openModal('modal-03');">
+                                      <img src="assets/images/ico/ico-create-del.svg" alt="삭제하기 아이콘" class="ico ico-11">
+                                      <span class="txt-hidden">삭제하기</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <!-- END 리스트 -->
+
+                              <!-- 리스트 -->
+                              <li class="list">
+                                <div class="sample-list">
+                                  <div class="left-txt">
+                                    <p class="txt">샘플 오디오122344...</p>
+                                    <span class="badge type-gray">40.5 KB</span>
+                                  </div>
+                                  <div class="btn-grp">
+                                    <button type="button" class="btn">
+                                      <img src="assets/images/ico/ico-create-play.svg" alt="재생하기 아이콘" class="ico ico-11">
+                                      <span class="txt-hidden">재생하기</span>
+                                    </button>
+                                    <button type="button" class="btn" onclick="openModal('modal-03');">
+                                      <img src="assets/images/ico/ico-create-del.svg" alt="삭제하기 아이콘" class="ico ico-11">
+                                      <span class="txt-hidden">삭제하기</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <!-- END 리스트 -->
+
+                              <!-- 리스트 -->
+                              <li class="list">
+                                <div class="sample-list">
+                                  <div class="left-txt">
+                                    <p class="txt">샘플 오디오 목소리(...</p>
+                                    <span class="badge type-gray">32.5 KB</span>
+                                  </div>
+                                  <div class="btn-grp">
+                                    <button type="button" class="btn">
+                                      <img src="assets/images/ico/ico-create-play.svg" alt="재생하기 아이콘" class="ico ico-11">
+                                      <span class="txt-hidden">재생하기</span>
+                                    </button>
+                                    <button type="button" class="btn" onclick="openModal('modal-03');">
+                                      <img src="assets/images/ico/ico-create-del.svg" alt="삭제하기 아이콘" class="ico ico-11">
+                                      <span class="txt-hidden">삭제하기</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </li>
+
+                              <!-- END 리스트 -->
+                            </ul>
+                          </div>
+                          <div class="bang-txt-box">
+                            <img src="assets/images/ico/ico-bang-blue.svg" alt="" class="ico ico-16">
+                            <p class="txt">샘플의 품질이 수량보다 더 중요합니다. 노이즈가 많은 샘플은 나쁜 결과를 가져올 수 있습니다. 총 5분 이상의 오디오를 제공하면 성능이 거의 향상되지
+                              않습니다.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <label for="sample-agree" class="checkbox-item type-03">
+                      <input id="sample-agree" type="checkbox" class="checkbox-inp">
+                      <label for="sample-agree" class="checkbox"></label>
+                      <span class="checkbox-txt">음성 샘플을 업로드하고 복제하는 데 필요한 모든 권리나 동의가 있음을 확인하고 플랫폼에서 생성된 콘텐츠를 불법, 사기 또는 유해한 목적으로
+                  사용하지 않을 것임을 확인합니다. 또한, 나는 NAOS의 서비스 약관 및 개인정보 보호정책을 준수할 의무를 재확인합니다.</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="cmodal-bottom">
+
+                <!-- TODO: 업로드 완료되면 before 클래스 없애주세요 -->
+                <button type="button" class="btn btn-type09 before">마이 보이스 생성</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 업로드된 파일 삭제 확인 모달 -->
+      <div id="modal-03" class="modal-wrapper">
+        <div class="modal-overlay" onclick="closeModal('modal-03');"></div>
+        <div class="custom-modal system-modal">
+          <div class="smodal-top">
+            <h3 class="smodal-ttl">업로드 된 파일을 <br>삭제 하시겠습니까?</h3>
+          </div>
+          <div class="smodal-btn-wrap">
+            <button type="button" onclick="closeModal('modal-03');" class="btn btn-type20">취소</button>
+            <button type="button" class="btn btn-type21">네, 삭제할게요</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 마이보이스 생성하기 모달 -->
+      <div id="modal-04" class="modal-wrapper">
+        <div class="modal-overlay" onclick="closeModal('modal-04');"></div>
+        <div class="custom-modal content-modal">
+          <button type="button" class="btn close-btn" onclick="closeModal('modal-04');">
+            <img src="assets/images/ico/ico-modal-close-x.svg" alt="">
+            <span class="txt-hidden">모달 닫기</span>
+          </button>
+          <div class="cmodal-mid">
+            <div class="cmodal-content">
+              <div class="cmodal-upload-content">
+                <div class="form-item-grp">
+                  <div class="form-item type-02">
+                    <label class="form-label">이름</label>
+                    <div class="form-inp-wrap">
+                      <div class="inp-wrap">
+                        <input type="text" placeholder="이름을 입력해주세요" class="form-inp">
+                      </div>
+
+                      <!-- TODO: 해당 영역에 드래그하면 업로드 되게 구현 필요 -->
+                      <div class="drag-area">
+                        <img src="assets/images/ico/ico-drag.svg" alt="드래그 아이콘" class="ico ico-34">
+                        <h3 class="area-ttl">클릭 혹은 드래그&드랍 하여 파일을 추가해주세요</h3>
+                        <p class="area-desc">각 용량은 10MB로 제한 합니다</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-item type-02">
+                    <div class="form-label-wrap">
+                      <label class="form-label">업로드 샘플 목록</label>
+                      <span class="sub-txt">(음성 1개여도 학습 가능)</span>
+                      <p class="count-txt">
+                        <span>5</span>
+                        <span>/</span>
+                        <span>25</span>
+                      </p>
+                    </div>
+                    <div class="form-inp-wrap">
+                      <div class="bd-gray-box">
+                        <ul class="list-grp">
+
+                          <!-- 리스트 -->
+                          <li class="list">
+                            <div class="sample-list">
+                              <div class="left-txt">
+                                <p class="txt">샘플 오디오1.mp3</p>
+                                <span class="badge type-gray">9.6MB</span>
+                              </div>
+                              <div class="btn-grp">
+                                <button type="button" class="btn">
+                                  <img src="assets/images/ico/ico-create-play.svg" alt="재생하기 아이콘" class="ico ico-11">
+                                  <span class="txt-hidden">재생하기</span>
+                                </button>
+                                <button type="button" class="btn" onclick="openModal('modal-03');">
+                                  <img src="assets/images/ico/ico-create-del.svg" alt="삭제하기 아이콘" class="ico ico-11">
+                                  <span class="txt-hidden">삭제하기</span>
+                                </button>
+                              </div>
+                            </div>
+                          </li>
+
+                          <!-- END 리스트 -->
+
+                          <!-- 리스트 -->
+                          <li class="list">
+                            <div class="sample-list">
+                              <div class="left-txt">
+                                <p class="txt">샘플 오디오122344...</p>
+                                <span class="badge type-gray">40.5 KB</span>
+                              </div>
+                              <div class="btn-grp">
+                                <button type="button" class="btn">
+                                  <img src="assets/images/ico/ico-create-play.svg" alt="재생하기 아이콘" class="ico ico-11">
+                                  <span class="txt-hidden">재생하기</span>
+                                </button>
+                                <button type="button" class="btn" onclick="openModal('modal-03');">
+                                  <img src="assets/images/ico/ico-create-del.svg" alt="삭제하기 아이콘" class="ico ico-11">
+                                  <span class="txt-hidden">삭제하기</span>
+                                </button>
+                              </div>
+                            </div>
+                          </li>
+
+                          <!-- END 리스트 -->
+
+                          <!-- 리스트 -->
+                          <li class="list">
+                            <div class="sample-list">
+                              <div class="left-txt">
+                                <p class="txt">샘플 오디오 목소리(...</p>
+                                <span class="badge type-gray">32.5 KB</span>
+                              </div>
+                              <div class="btn-grp">
+                                <button type="button" class="btn">
+                                  <img src="assets/images/ico/ico-create-play.svg" alt="재생하기 아이콘" class="ico ico-11">
+                                  <span class="txt-hidden">재생하기</span>
+                                </button>
+                                <button type="button" class="btn" onclick="openModal('modal-03');">
+                                  <img src="assets/images/ico/ico-create-del.svg" alt="삭제하기 아이콘" class="ico ico-11">
+                                  <span class="txt-hidden">삭제하기</span>
+                                </button>
+                              </div>
+                            </div>
+                          </li>
+
+                          <!-- END 리스트 -->
+                        </ul>
+                      </div>
+                      <div class="bang-txt-box">
+                        <img src="assets/images/ico/ico-bang-blue.svg" alt="" class="ico ico-16">
+                        <p class="txt">샘플의 품질이 수량보다 더 중요합니다. 노이즈가 많은 샘플은 나쁜 결과를 가져올 수 있습니다. 총 5분 이상의 오디오를 제공하면 성능이 거의 향상되지
+                          않습니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="sample-agree" class="checkbox-item type-03">
+                  <input id="sample-agree" type="checkbox" class="checkbox-inp">
+                  <label for="sample-agree" class="checkbox"></label>
+                  <span class="checkbox-txt">음성 샘플을 업로드하고 복제하는 데 필요한 모든 권리나 동의가 있음을 확인하고 플랫폼에서 생성된 콘텐츠를 불법, 사기 또는 유해한 목적으로
+              사용하지 않을 것임을 확인합니다. 또한, 나는 NAOS의 서비스 약관 및 개인정보 보호정책을 준수할 의무를 재확인합니다.</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="cmodal-bottom">
+
+            <!-- TODO: 업로드 완료되면 before 클래스 없애주세요 -->
+            <button type="button" class="btn btn-type09 before">마이 보이스 생성</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 업로드된 파일 삭제 확인 모달 -->
+      <div id="modal-05" class="modal-wrapper">
+        <div class="modal-overlay" onclick="closeModal('modal-05');"></div>
+        <div class="custom-modal system-modal">
+          <div class="smodal-top">
+            <h3 class="smodal-ttl">보이스를 삭제하시겠습니까</h3>
+          </div>
+          <div class="smodal-btn-wrap">
+            <button type="button" onclick="closeModal('modal-05');" class="btn btn-type20">취소</button>
+            <button type="button" class="btn btn-type21">네, 삭제할게요</button>
+          </div>
+        </div>
       </div>
     </div>
-    <div>
-      <div>
-        <img src="" alt="">
-        <p>슬롯을 더 이상 추가할 수 없습니다</p>
-      </div>
-    </div>
-
-    <!-- FIXME: 지원국가 확인하기 모달 -->
-
-    <!-- FIXME: 추가하기 모달 (STEP 01 ~ 03)-->
-  </div>
-</body>
-
+    <script src="assets/js/ui.js"></script>
+    <script>
+      // 마이보이스 제작하기&아바타 생성하기 모달 내 스텝 이동 구현
+      function nextGuide(prev, next) {
+        $('#' + prev).removeClass('active');
+        $('#' + next).addClass('active');
+      }
+    </script>
+  </body>
 </html>

@@ -1,575 +1,697 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>농협대학교 API 플랫폼</title>
+    <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/ui.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="dashboard-page page-wrapper">
+        <div class="dashboard-layout">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>농협대학교 API 플랫폼</title>
-  <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="assets/css/vendor/reset.css">
-  <link rel="stylesheet" href="assets/css/ui.css">
-  <link rel="stylesheet" href="assets/css/pages.css">
-  <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
-</head>
+          <!-- (대시보드) 왼쪽 사이드바 -->
+          <div class="dashboard-layout-sidebar">
+            <div class="left-sidebar-top">
+              <h1 class="logo">
+                <a href="dashboard-home.html" class="logo-link">
+                  <img src="assets/images/logo/logo-naos.png" alt="로고" class="logo-img">
+                </a>
+              </h1>
+              <button type="button" onclick="location.href='project-main.html';" class="btn btn-type18">
+                <img src="assets/images/ico/ico-new-add.svg" alt="더하기" class="ico ico-18">
+                <span class="txt">새 프로젝트</span>
+              </button>
+            </div>
 
-<body>
-  <div id="app">
-    <div class="dashboard-page page-wrapper">
-      <div class="dashboard-layout">
-
-        <!-- (대시보드) 왼쪽 사이드바 -->
-        <div class="dashboard-layout-sidebar">
-          <div class="left-sidebar-top">
-            <h1 class="logo">
-              <a href="dashboard-home.html" class="logo-link">
-                <img src="assets/images/logo/logo-naos.png" alt="로고" class="logo-img">
-              </a>
-            </h1>
-            <button type="button" onclick="location.href='project-main.html';" class="btn btn-type18">
-              <img src="assets/images/ico/ico-new-add.svg" alt="더하기" class="ico ico-18">
-              <span class="txt">새 프로젝트</span>
-            </button>
-          </div>
-
-          <!-- TODO: 메뉴 많아지면 스크롤 됨 -->
-          <div class="left-sidebar-mid">
-            <ul class="btn-list-grp">
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-home.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-home-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-home-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">HOME</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-voice.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-voice-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-voice-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">보이스</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-avatar.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-avatar-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-avatar-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">아바타</span>
-                </div>
-              </li>
-              <li class="btn-list active">
-                <div onclick="location.href='dashboard-project-setting.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-project-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-project-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">프로젝트 관리</span>
-                </div>
-              </li>
-            </ul>
-            <div class="section">
+            <!-- TODO: 메뉴 많아지면 스크롤 됨 -->
+            <div class="left-sidebar-mid">
               <ul class="btn-list-grp">
-                <li class="btn-list">
-                  <div class="dropdown-btn-list">
-                    <div class="dropdown-btn-top ">
-                      <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
-                        <div class="ico-box">
-                          <img src="assets/images/ico/ico-nav-custom-on.svg" alt="아이콘" class="ico ico-on">
-                          <img src="assets/images/ico/ico-nav-custom-off.svg" alt="아이콘" class="ico ico-off">
-                        </div>
-                        <span class="txt">커스텀 GPT</span>
-                        <img src="assets/images/ico/ico-down-arrow-gray.svg" alt="아래로" class="ico ico-16 ico-down">
-                      </div>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-home.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-home-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-home-off.svg" alt="아이콘" class="ico ico-off">
                     </div>
-                    <ul class="dropdown-btn-bottom">
-                      <li class="btn-list ">
+                    <span class="txt">HOME</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-voice.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-voice-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-voice-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">보이스</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-avatar.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-avatar-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-avatar-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">아바타</span>
+                  </div>
+                </li>
+                <li class="btn-list active">
+                  <div onclick="location.href='dashboard-project-setting.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-project-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-project-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">프로젝트 관리</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="section">
+                <ul class="btn-list-grp">
+                  <li class="btn-list">
+                    <div class="dropdown-btn-list">
+                      <div class="dropdown-btn-top ">
                         <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
                           <div class="ico-box">
-                            <img src="assets/images/ico/ico-nav-robot-on.svg" alt="아이콘" class="ico ico-on">
-                            <img src="assets/images/ico/ico-nav-robot-off.svg" alt="아이콘" class="ico ico-off">
+                            <img src="assets/images/ico/ico-nav-custom-on.svg" alt="아이콘" class="ico ico-on">
+                            <img src="assets/images/ico/ico-nav-custom-off.svg" alt="아이콘" class="ico ico-off">
                           </div>
-                          <span class="txt">NAOS GPT</span>
+                          <span class="txt">커스텀 GPT</span>
+                          <img src="assets/images/ico/ico-down-arrow-gray.svg" alt="아래로" class="ico ico-16 ico-down">
                         </div>
-                      </li>
-                      <li class="btn-list ">
-                        <div onclick="location.href='dashboard-custom-gpt-setting.html';" class="btn list-btn-type06">
-                          <div class="ico-box">
-                            <img src="assets/images/ico/ico-nav-gpt-setting-on.svg" alt="아이콘" class="ico ico-on">
-                            <img src="assets/images/ico/ico-nav-gpt-setting-off.svg" alt="아이콘" class="ico ico-off">
+                      </div>
+                      <ul class="dropdown-btn-bottom">
+                        <li class="btn-list ">
+                          <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
+                            <div class="ico-box">
+                              <img src="assets/images/ico/ico-nav-robot-on.svg" alt="아이콘" class="ico ico-on">
+                              <img src="assets/images/ico/ico-nav-robot-off.svg" alt="아이콘" class="ico ico-off">
+                            </div>
+                            <span class="txt">NAOS GPT</span>
                           </div>
-                          <span class="txt">GPT 설정</span>
-                        </div>
-                      </li>
-                    </ul>
+                        </li>
+                        <li class="btn-list ">
+                          <div onclick="location.href='dashboard-custom-gpt-setting.html';" class="btn list-btn-type06">
+                            <div class="ico-box">
+                              <img src="assets/images/ico/ico-nav-gpt-setting-on.svg" alt="아이콘" class="ico ico-on">
+                              <img src="assets/images/ico/ico-nav-gpt-setting-off.svg" alt="아이콘" class="ico ico-off">
+                            </div>
+                            <span class="txt">GPT 설정</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <ul class="btn-list-grp">
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-faq.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-faq-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-faq-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">자주 묻는 질문</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-notice.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-notice-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-notice-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">공지사항</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-mypage.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-mypage-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-mypage-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">내 정보</span>
                   </div>
                 </li>
               </ul>
             </div>
-            <ul class="btn-list-grp">
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-faq.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-faq-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-faq-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">자주 묻는 질문</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-notice.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-notice-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-notice-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">공지사항</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-mypage.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-mypage-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-mypage-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">내 정보</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="left-sidebar-bottom">
-            <span class="txt">Powered by</span>
-            <img src="assets/images/logo/logo-nh.png" alt="농협대학교 로고" class="logo-img">
-          </div>
-        </div>
-
-        <!-- END (대시보드) 왼쪽 사이드바 -->
-
-        <!-- (대시보드) 오른쪽 내용 영역 -->
-
-        <!-- 대시보드 프로젝트 관리 -->
-        <div class="dashboard-layout-content">
-          <div class="dsbd-project-page dashboard-layout-page">
-
-            <!-- 제목 -->
-            <div class="dashboard-ttl-wrap">
-              <h2 class="title-default">프로젝트 관리</h2>
+            <div class="left-sidebar-bottom">
+              <span class="txt">Powered by</span>
+              <img src="assets/images/logo/logo-nh.png" alt="농협대학교 로고" class="logo-img">
             </div>
+          </div>
 
-            <!-- END 제목 -->
+          <!-- END (대시보드) 왼쪽 사이드바 -->
 
-            <!-- 내용 -->
-            <div class="dashboard-content-wrap">
+          <!-- (대시보드) 오른쪽 내용 영역 -->
 
-              <!-- TODO: 프로젝트 있을 때 -->
-              <ul class="grid-grp">
-                <li class="grid">
-                  <div class="project-card">
-                    <div class="card-thumbnail">
+          <!-- 대시보드 프로젝트 관리 -->
+          <div class="dashboard-layout-content">
+            <div class="dsbd-project-page dashboard-layout-page">
 
-                      <!-- FIXME: 진행률 원형 프로그레스 -->
+              <!-- 제목 -->
+              <div class="dashboard-ttl-wrap">
+                <h2 class="title-default">프로젝트 관리</h2>
+              </div>
 
-                      <!-- 썸네일 상단 우측 버튼영역 -->
-                      <div class="thumbnail-btn-wrap">
-                        <button type="button" class="btn func-btn">
-                          <img src="assets/images/ico/ico-download-dark.svg" alt="" class="ico ico-15">
-                          <span class="txt-hidden">다운로드 버튼</span>
-                        </button>
+              <!-- END 제목 -->
 
-                        <!-- hover set button -->
-                        <div class="hover-set-item">
-                          <button type="button" class="btn func-btn hover-target-btn">
-                            <img src="assets/images/ico/ico-dots.svg" alt="" class="ico ico-12">
-                            <span class="txt-hidden">더보기 버튼</span>
-                          </button>
-                          <div class="hover-btn-grp">
-                            <ul class="white-bd-box btn-list-grp">
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-use-dark.svg" alt="" class="ico ico-14">
-                                  </span>
-                                  <span class="txt">제목 바꾸기</span>
-                                </button>
-                              </li>
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                                  </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                              </li>
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-del.svg" alt="" class="ico ico-12">
-                                  </span>
-                                  <span class="txt red-txt">삭제하기</span>
-                                </button>
-                              </li>
-                            </ul>
+              <!-- 내용 -->
+              <div class="dashboard-content-wrap">
+
+                <!-- TODO: 프로젝트 있을 때 -->
+                <ul class="grid-grp">
+                  <li class="grid">
+                    <div class="project-card">
+                      <div class="card-thumbnail">
+
+                        <!-- TODO: 생성 중인 프로젝트는 해당 card-thumbnail-progress가 보입니다 -->
+                        <div class="card-thumbnail-progress" style="display: none;">
+                          <div class="js-circle">
+                            <div class="bar"></div>
+                            <div class="box">
+                              <span></span>
+                              <b>생성중</b>
+                            </div>
                           </div>
                         </div>
 
-                        <!-- END hover set button -->
-                      </div>
-
-                      <!-- END 썸네일 상단 우측 버튼영역 -->
-                      <figure class="thumbnail">
-
-                        <!-- <img src="assets/images/sample/img-sample-project-ex01.png" alt="" class="thumbnail-img"> -->
-                      </figure>
-                    </div>
-                    <div class="card-content">
-                      <h4 class="card-ttl">협동조합법 1주차 1차시</h4>
-                      <div class="card-date">
-                        <span class="date-txt">2023.12.05 08:53</span>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="grid">
-                  <div class="project-card">
-                    <div class="card-thumbnail">
-
-                      <!-- 썸네일 상단 우측 버튼영역 -->
-                      <div class="thumbnail-btn-wrap">
-                        <button type="button" class="btn func-btn">
-                          <img src="assets/images/ico/ico-download-dark.svg" alt="" class="ico ico-15">
-                          <span class="txt-hidden">다운로드 버튼</span>
-                        </button>
-
-                        <!-- hover set button -->
-                        <div class="hover-set-item">
-                          <button type="button" class="btn func-btn hover-target-btn">
-                            <img src="assets/images/ico/ico-dots.svg" alt="" class="ico ico-12">
-                            <span class="txt-hidden">더보기 버튼</span>
+                        <!-- 썸네일 상단 우측 버튼영역 -->
+                        <div class="thumbnail-btn-wrap">
+                          <button type="button" class="btn func-btn">
+                            <img src="assets/images/ico/ico-download-dark.svg" alt="" class="ico ico-15">
+                            <span class="txt-hidden">다운로드 버튼</span>
                           </button>
-                          <div class="hover-btn-grp">
-                            <ul class="white-bd-box btn-list-grp">
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-use-dark.svg" alt="" class="ico ico-14">
-                                  </span>
-                                  <span class="txt">제목 바꾸기</span>
-                                </button>
-                              </li>
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                                  </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                              </li>
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-del.svg" alt="" class="ico ico-12">
-                                  </span>
-                                  <span class="txt red-txt">삭제하기</span>
-                                </button>
-                              </li>
-                            </ul>
+
+                          <!-- hover set button -->
+                          <div class="hover-set-item">
+                            <button type="button" class="btn func-btn hover-target-btn">
+                              <img src="assets/images/ico/ico-dots.svg" alt="" class="ico ico-12">
+                              <span class="txt-hidden">더보기 버튼</span>
+                            </button>
+                            <div class="hover-btn-grp">
+                              <ul class="white-bd-box btn-list-grp">
+                                <li class="btn-list">
+                                  <button type="button" class="js-edit-title-btn btn list-btn-type05">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-use-dark.svg" alt="" class="ico ico-14">
+                              </span>
+                                    <span class="txt">제목 바꾸기</span>
+                                  </button>
+                                </li>
+                                <li class="btn-list">
+                                  <button type="button" class="btn list-btn-type05" onclick="location.href='project-main.html';">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                              </span>
+                                    <span class="txt">편집하기</span>
+                                  </button>
+                                </li>
+                                <li class="btn-list">
+                                  <button type="button" class="btn list-btn-type05" onclick="openModal('modal-02');">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-del.svg" alt="" class="ico ico-12">
+                              </span>
+                                    <span class="txt red-txt">삭제하기</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <!-- END hover set button -->
+                        </div>
+
+                        <!-- END 썸네일 상단 우측 버튼영역 -->
+                        <figure class="thumbnail">
+
+                          <!-- <img src="assets/images/sample/img-sample-project-ex01.png" alt="" class="thumbnail-img"> -->
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <input type="text" readonly value="협동조합법 1주차 1차시" class="card-ttl">
+                        <div class="card-date">
+                          <span class="date-txt">2023.12.05 08:53</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="grid">
+                    <div class="project-card">
+                      <div class="card-thumbnail">
+                        <div class="card-thumbnail-progress">
+                          <div class="js-circle">
+                            <div class="bar"></div>
+                            <div class="box">
+                              <span></span>
+                              <b>생성중</b>
+                            </div>
                           </div>
                         </div>
 
-                        <!-- END hover set button -->
-                      </div>
-
-                      <!-- END 썸네일 상단 우측 버튼영역 -->
-                      <figure class="thumbnail">
-                        <img src="assets/images/sample/img-sample-project-ex01.png" alt="" class="thumbnail-img">
-                      </figure>
-                    </div>
-                    <div class="card-content">
-                      <h4 class="card-ttl">협동조합법 1주차 1차시</h4>
-                      <div class="card-date">
-                        <span class="date-txt">2023.12.05 08:53</span>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="grid">
-                  <div class="project-card">
-                    <div class="card-thumbnail">
-
-                      <!-- 썸네일 상단 우측 버튼영역 -->
-                      <div class="thumbnail-btn-wrap">
-                        <button type="button" class="btn func-btn">
-                          <img src="assets/images/ico/ico-download-dark.svg" alt="" class="ico ico-15">
-                          <span class="txt-hidden">다운로드 버튼</span>
-                        </button>
-
-                        <!-- hover set button -->
-                        <div class="hover-set-item">
-                          <button type="button" class="btn func-btn hover-target-btn">
-                            <img src="assets/images/ico/ico-dots.svg" alt="" class="ico ico-12">
-                            <span class="txt-hidden">더보기 버튼</span>
+                        <!-- 썸네일 상단 우측 버튼영역 -->
+                        <div class="thumbnail-btn-wrap">
+                          <button type="button" class="btn func-btn">
+                            <img src="assets/images/ico/ico-download-dark.svg" alt="" class="ico ico-15">
+                            <span class="txt-hidden">다운로드 버튼</span>
                           </button>
-                          <div class="hover-btn-grp">
-                            <ul class="white-bd-box btn-list-grp">
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-use-dark.svg" alt="" class="ico ico-14">
-                                  </span>
-                                  <span class="txt">제목 바꾸기</span>
-                                </button>
-                              </li>
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                                  </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                              </li>
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-del.svg" alt="" class="ico ico-12">
-                                  </span>
-                                  <span class="txt red-txt">삭제하기</span>
-                                </button>
-                              </li>
-                            </ul>
+
+                          <!-- hover set button -->
+                          <div class="hover-set-item">
+                            <button type="button" class="btn func-btn hover-target-btn">
+                              <img src="assets/images/ico/ico-dots.svg" alt="" class="ico ico-12">
+                              <span class="txt-hidden">더보기 버튼</span>
+                            </button>
+                            <div class="hover-btn-grp">
+                              <ul class="white-bd-box btn-list-grp">
+                                <li class="btn-list">
+                                  <button type="button" class="js-edit-title-btn btn list-btn-type05">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-use-dark.svg" alt="" class="ico ico-14">
+                              </span>
+                                    <span class="txt">제목 바꾸기</span>
+                                  </button>
+                                </li>
+                                <li class="btn-list">
+                                  <button type="button" class="btn list-btn-type05" onclick="location.href='project-main.html';">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                              </span>
+                                    <span class="txt">편집하기</span>
+                                  </button>
+                                </li>
+                                <li class="btn-list">
+                                  <button type="button" class="btn list-btn-type05" onclick="openModal('modal-02');">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-del.svg" alt="" class="ico ico-12">
+                              </span>
+                                    <span class="txt red-txt">삭제하기</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <!-- END hover set button -->
+                        </div>
+
+                        <!-- END 썸네일 상단 우측 버튼영역 -->
+                        <figure class="thumbnail">
+                          <img src="assets/images/sample/img-sample-project-ex01.png" alt="" class="thumbnail-img">
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <input type="text" readonly value="협동조합법 1주차 1차시" class="card-ttl">
+                        <div class="card-date">
+                          <span class="date-txt">2023.12.05 08:53</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="grid">
+                    <div class="project-card">
+                      <div class="card-thumbnail">
+
+                        <!-- TODO: 생성 중인 프로젝트는 해당 card-thumbnail-progress가 보입니다 -->
+                        <div class="card-thumbnail-progress" style="display: none;">
+                          <div class="js-circle">
+                            <div class="bar"></div>
+                            <div class="box">
+                              <span></span>
+                              <b>생성중</b>
+                            </div>
                           </div>
                         </div>
 
-                        <!-- END hover set button -->
-                      </div>
-
-                      <!-- END 썸네일 상단 우측 버튼영역 -->
-                      <figure class="thumbnail">
-
-                        <!-- <img src="assets/images/sample/img-sample-project-ex01.png" alt="" class="thumbnail-img"> -->
-                      </figure>
-                    </div>
-                    <div class="card-content">
-                      <h4 class="card-ttl">협동조합법 1주차 1차시</h4>
-                      <div class="card-date">
-                        <span class="date-txt">2023.12.05 08:53</span>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="grid">
-                  <div class="project-card">
-                    <div class="card-thumbnail">
-
-                      <!-- 썸네일 상단 우측 버튼영역 -->
-                      <div class="thumbnail-btn-wrap">
-                        <button type="button" class="btn func-btn">
-                          <img src="assets/images/ico/ico-download-dark.svg" alt="" class="ico ico-15">
-                          <span class="txt-hidden">다운로드 버튼</span>
-                        </button>
-
-                        <!-- hover set button -->
-                        <div class="hover-set-item">
-                          <button type="button" class="btn func-btn hover-target-btn">
-                            <img src="assets/images/ico/ico-dots.svg" alt="" class="ico ico-12">
-                            <span class="txt-hidden">더보기 버튼</span>
+                        <!-- 썸네일 상단 우측 버튼영역 -->
+                        <div class="thumbnail-btn-wrap">
+                          <button type="button" class="btn func-btn">
+                            <img src="assets/images/ico/ico-download-dark.svg" alt="" class="ico ico-15">
+                            <span class="txt-hidden">다운로드 버튼</span>
                           </button>
-                          <div class="hover-btn-grp">
-                            <ul class="white-bd-box btn-list-grp">
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-use-dark.svg" alt="" class="ico ico-14">
-                                  </span>
-                                  <span class="txt">제목 바꾸기</span>
-                                </button>
-                              </li>
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                                  </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                              </li>
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-del.svg" alt="" class="ico ico-12">
-                                  </span>
-                                  <span class="txt red-txt">삭제하기</span>
-                                </button>
-                              </li>
-                            </ul>
+
+                          <!-- hover set button -->
+                          <div class="hover-set-item">
+                            <button type="button" class="btn func-btn hover-target-btn">
+                              <img src="assets/images/ico/ico-dots.svg" alt="" class="ico ico-12">
+                              <span class="txt-hidden">더보기 버튼</span>
+                            </button>
+                            <div class="hover-btn-grp">
+                              <ul class="white-bd-box btn-list-grp">
+                                <li class="btn-list">
+                                  <button type="button" class="js-edit-title-btn btn list-btn-type05">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-use-dark.svg" alt="" class="ico ico-14">
+                              </span>
+                                    <span class="txt">제목 바꾸기</span>
+                                  </button>
+                                </li>
+                                <li class="btn-list">
+                                  <button type="button" class="btn list-btn-type05" onclick="location.href='project-main.html';">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                              </span>
+                                    <span class="txt">편집하기</span>
+                                  </button>
+                                </li>
+                                <li class="btn-list">
+                                  <button type="button" class="btn list-btn-type05" onclick="openModal('modal-02');">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-del.svg" alt="" class="ico ico-12">
+                              </span>
+                                    <span class="txt red-txt">삭제하기</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <!-- END hover set button -->
+                        </div>
+
+                        <!-- END 썸네일 상단 우측 버튼영역 -->
+                        <figure class="thumbnail">
+
+                          <!-- <img src="assets/images/sample/img-sample-project-ex01.png" alt="" class="thumbnail-img"> -->
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <input type="text" readonly value="협동조합법 1주차 1차시" class="card-ttl">
+                        <div class="card-date">
+                          <span class="date-txt">2023.12.05 08:53</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="grid">
+                    <div class="project-card">
+                      <div class="card-thumbnail">
+
+                        <!-- TODO: 생성 중인 프로젝트는 해당 card-thumbnail-progress가 보입니다 -->
+                        <div class="card-thumbnail-progress" style="display: none;">
+                          <div class="js-circle">
+                            <div class="bar"></div>
+                            <div class="box">
+                              <span></span>
+                              <b>생성중</b>
+                            </div>
                           </div>
                         </div>
 
-                        <!-- END hover set button -->
-                      </div>
-
-                      <!-- END 썸네일 상단 우측 버튼영역 -->
-                      <figure class="thumbnail">
-                        <img src="assets/images/sample/img-sample-project-ex02.png" alt="" class="thumbnail-img">
-                      </figure>
-                    </div>
-                    <div class="card-content">
-                      <h4 class="card-ttl">협동조합법 1주차 1차시</h4>
-                      <div class="card-date">
-                        <span class="date-txt">2023.12.05 08:53</span>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="grid">
-                  <div class="project-card">
-                    <div class="card-thumbnail">
-
-                      <!-- 썸네일 상단 우측 버튼영역 -->
-                      <div class="thumbnail-btn-wrap">
-                        <button type="button" class="btn func-btn">
-                          <img src="assets/images/ico/ico-download-dark.svg" alt="" class="ico ico-15">
-                          <span class="txt-hidden">다운로드 버튼</span>
-                        </button>
-
-                        <!-- hover set button -->
-                        <div class="hover-set-item">
-                          <button type="button" class="btn func-btn hover-target-btn">
-                            <img src="assets/images/ico/ico-dots.svg" alt="" class="ico ico-12">
-                            <span class="txt-hidden">더보기 버튼</span>
+                        <!-- 썸네일 상단 우측 버튼영역 -->
+                        <div class="thumbnail-btn-wrap">
+                          <button type="button" class="btn func-btn">
+                            <img src="assets/images/ico/ico-download-dark.svg" alt="" class="ico ico-15">
+                            <span class="txt-hidden">다운로드 버튼</span>
                           </button>
-                          <div class="hover-btn-grp">
-                            <ul class="white-bd-box btn-list-grp">
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-use-dark.svg" alt="" class="ico ico-14">
-                                  </span>
-                                  <span class="txt">제목 바꾸기</span>
-                                </button>
-                              </li>
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                                  </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                              </li>
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-del.svg" alt="" class="ico ico-12">
-                                  </span>
-                                  <span class="txt red-txt">삭제하기</span>
-                                </button>
-                              </li>
-                            </ul>
+
+                          <!-- hover set button -->
+                          <div class="hover-set-item">
+                            <button type="button" class="btn func-btn hover-target-btn">
+                              <img src="assets/images/ico/ico-dots.svg" alt="" class="ico ico-12">
+                              <span class="txt-hidden">더보기 버튼</span>
+                            </button>
+                            <div class="hover-btn-grp">
+                              <ul class="white-bd-box btn-list-grp">
+                                <li class="btn-list">
+                                  <button type="button" class="js-edit-title-btn btn list-btn-type05">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-use-dark.svg" alt="" class="ico ico-14">
+                              </span>
+                                    <span class="txt">제목 바꾸기</span>
+                                  </button>
+                                </li>
+                                <li class="btn-list">
+                                  <button type="button" class="btn list-btn-type05" onclick="location.href='project-main.html';">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                              </span>
+                                    <span class="txt">편집하기</span>
+                                  </button>
+                                </li>
+                                <li class="btn-list">
+                                  <button type="button" class="btn list-btn-type05" onclick="openModal('modal-02');">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-del.svg" alt="" class="ico ico-12">
+                              </span>
+                                    <span class="txt red-txt">삭제하기</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <!-- END hover set button -->
+                        </div>
+
+                        <!-- END 썸네일 상단 우측 버튼영역 -->
+                        <figure class="thumbnail">
+                          <img src="assets/images/sample/img-sample-project-ex02.png" alt="" class="thumbnail-img">
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <input type="text" readonly value="협동조합법 1주차 1차시" class="card-ttl">
+                        <div class="card-date">
+                          <span class="date-txt">2023.12.05 08:53</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="grid">
+                    <div class="project-card">
+                      <div class="card-thumbnail">
+
+                        <!-- TODO: 생성 중인 프로젝트는 해당 card-thumbnail-progress가 보입니다 -->
+                        <div class="card-thumbnail-progress" style="display: none;">
+                          <div class="js-circle">
+                            <div class="bar"></div>
+                            <div class="box">
+                              <span></span>
+                              <b>생성중</b>
+                            </div>
                           </div>
                         </div>
 
-                        <!-- END hover set button -->
-                      </div>
-
-                      <!-- END 썸네일 상단 우측 버튼영역 -->
-                      <figure class="thumbnail">
-                        <img src="assets/images/sample/img-sample-project-ex03.png" alt="" class="thumbnail-img">
-                      </figure>
-                    </div>
-                    <div class="card-content">
-                      <h4 class="card-ttl">협동조합법 1주차 1차시</h4>
-                      <div class="card-date">
-                        <span class="date-txt">2023.12.05 08:53</span>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="grid">
-                  <div class="project-card">
-                    <div class="card-thumbnail">
-
-                      <!-- 썸네일 상단 우측 버튼영역 -->
-                      <div class="thumbnail-btn-wrap">
-                        <button type="button" class="btn func-btn">
-                          <img src="assets/images/ico/ico-download-dark.svg" alt="" class="ico ico-15">
-                          <span class="txt-hidden">다운로드 버튼</span>
-                        </button>
-
-                        <!-- hover set button -->
-                        <div class="hover-set-item">
-                          <button type="button" class="btn func-btn hover-target-btn">
-                            <img src="assets/images/ico/ico-dots.svg" alt="" class="ico ico-12">
-                            <span class="txt-hidden">더보기 버튼</span>
+                        <!-- 썸네일 상단 우측 버튼영역 -->
+                        <div class="thumbnail-btn-wrap">
+                          <button type="button" class="btn func-btn">
+                            <img src="assets/images/ico/ico-download-dark.svg" alt="" class="ico ico-15">
+                            <span class="txt-hidden">다운로드 버튼</span>
                           </button>
-                          <div class="hover-btn-grp">
-                            <ul class="white-bd-box btn-list-grp">
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-use-dark.svg" alt="" class="ico ico-14">
-                                  </span>
-                                  <span class="txt">제목 바꾸기</span>
-                                </button>
-                              </li>
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
-                                  </span>
-                                  <span class="txt">편집하기</span>
-                                </button>
-                              </li>
-                              <li class="btn-list">
-                                <button type="button" class="btn list-btn-type05">
-                                  <span class="ico-box">
-                                    <img src="assets/images/ico/ico-listbtn-del.svg" alt="" class="ico ico-12">
-                                  </span>
-                                  <span class="txt red-txt">삭제하기</span>
-                                </button>
-                              </li>
-                            </ul>
+
+                          <!-- hover set button -->
+                          <div class="hover-set-item">
+                            <button type="button" class="btn func-btn hover-target-btn">
+                              <img src="assets/images/ico/ico-dots.svg" alt="" class="ico ico-12">
+                              <span class="txt-hidden">더보기 버튼</span>
+                            </button>
+                            <div class="hover-btn-grp">
+                              <ul class="white-bd-box btn-list-grp">
+                                <li class="btn-list">
+                                  <button type="button" class="js-edit-title-btn btn list-btn-type05">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-use-dark.svg" alt="" class="ico ico-14">
+                              </span>
+                                    <span class="txt">제목 바꾸기</span>
+                                  </button>
+                                </li>
+                                <li class="btn-list">
+                                  <button type="button" class="btn list-btn-type05" onclick="location.href='project-main.html';">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                              </span>
+                                    <span class="txt">편집하기</span>
+                                  </button>
+                                </li>
+                                <li class="btn-list">
+                                  <button type="button" class="btn list-btn-type05" onclick="openModal('modal-02');">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-del.svg" alt="" class="ico ico-12">
+                              </span>
+                                    <span class="txt red-txt">삭제하기</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <!-- END hover set button -->
+                        </div>
+
+                        <!-- END 썸네일 상단 우측 버튼영역 -->
+                        <figure class="thumbnail">
+                          <img src="assets/images/sample/img-sample-project-ex03.png" alt="" class="thumbnail-img">
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <input type="text" readonly value="협동조합법 1주차 1차시" class="card-ttl">
+                        <div class="card-date">
+                          <span class="date-txt">2023.12.05 08:53</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="grid">
+                    <div class="project-card">
+                      <div class="card-thumbnail">
+
+                        <!-- TODO: 생성 중인 프로젝트는 해당 card-thumbnail-progress가 보입니다 -->
+                        <div class="card-thumbnail-progress" style="display: none;">
+                          <div class="js-circle">
+                            <div class="bar"></div>
+                            <div class="box">
+                              <span></span>
+                              <b>생성중</b>
+                            </div>
                           </div>
                         </div>
 
-                        <!-- END hover set button -->
-                      </div>
+                        <!-- 썸네일 상단 우측 버튼영역 -->
+                        <div class="thumbnail-btn-wrap">
+                          <button type="button" class="btn func-btn">
+                            <img src="assets/images/ico/ico-download-dark.svg" alt="" class="ico ico-15">
+                            <span class="txt-hidden">다운로드 버튼</span>
+                          </button>
 
-                      <!-- END 썸네일 상단 우측 버튼영역 -->
-                      <figure class="thumbnail">
+                          <!-- hover set button -->
+                          <div class="hover-set-item">
+                            <button type="button" class="btn func-btn hover-target-btn">
+                              <img src="assets/images/ico/ico-dots.svg" alt="" class="ico ico-12">
+                              <span class="txt-hidden">더보기 버튼</span>
+                            </button>
+                            <div class="hover-btn-grp">
+                              <ul class="white-bd-box btn-list-grp">
+                                <li class="btn-list">
+                                  <button type="button" class="js-edit-title-btn btn list-btn-type05">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-use-dark.svg" alt="" class="ico ico-14">
+                              </span>
+                                    <span class="txt">제목 바꾸기</span>
+                                  </button>
+                                </li>
+                                <li class="btn-list">
+                                  <button type="button" class="btn list-btn-type05" onclick="location.href='project-main.html';">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-edit.svg" alt="" class="ico ico-13">
+                              </span>
+                                    <span class="txt">편집하기</span>
+                                  </button>
+                                </li>
+                                <li class="btn-list">
+                                  <button type="button" class="btn list-btn-type05" onclick="openModal('modal-02');">
+                                    <span class="ico-box">
+                                <img src="assets/images/ico/ico-listbtn-del.svg" alt="" class="ico ico-12">
+                              </span>
+                                    <span class="txt red-txt">삭제하기</span>
+                                  </button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
 
-                        <!-- <img src="assets/images/sample/img-sample-project-ex01.png" alt="" class="thumbnail-img"> -->
-                      </figure>
-                    </div>
-                    <div class="card-content">
-                      <h4 class="card-ttl">협동조합법 1주차 1차시</h4>
-                      <div class="card-date">
-                        <span class="date-txt">2023.12.05 08:53</span>
+                          <!-- END hover set button -->
+                        </div>
+
+                        <!-- END 썸네일 상단 우측 버튼영역 -->
+                        <figure class="thumbnail">
+
+                          <!-- <img src="assets/images/sample/img-sample-project-ex01.png" alt="" class="thumbnail-img"> -->
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <input type="text" readonly value="협동조합법 1주차 1차시" class="card-ttl">
+                        <div class="card-date">
+                          <span class="date-txt">2023.12.05 08:53</span>
+                        </div>
                       </div>
                     </div>
+                  </li>
+                </ul>
+
+                <!-- TODO: 프로젝트가 없을 때 -->
+                <div class="nothing-box">
+                  <h3 class="nothing-ttl">진행중인 프로젝트가 없어요</h3>
+                  <p class="nothing-desc">프로젝트를 생성해 다양한 캐릭터 보이스와 마이보이스를 이용해 TTS를 경험해보세요</p>
+                  <div class="btn-wrap">
+                    <button type="button" class="btn btn-type11">프로젝트 생성하기</button>
                   </div>
-                </li>
-              </ul>
-
-              <!-- TODO: 프로젝트가 없을 때 -->
-              <div class="nothing-box">
-                <h3 class="nothing-ttl">진행중인 프로젝트가 없어요</h3>
-                <p class="nothing-desc">프로젝트를 생성해 다양한 캐릭터 보이스와 마이보이스를 이용해 TTS를 경험해보세요</p>
-                <div class="btn-wrap">
-                  <button type="button" class="btn btn-type11">프로젝트 생성하기</button>
                 </div>
               </div>
-            </div>
 
-            <!-- END 내용 -->
+              <!-- END 내용 -->
+            </div>
+          </div>
+
+          <!-- END (대시보드) 오른쪽 내용 영역 -->
+        </div>
+      </div>
+
+      <!-- 프로젝트 제목변경 모달 -->
+      <div id="modal-01" class="modal-wrapper">
+        <div class="modal-overlay" onclick="closeModal('modal-01');"></div>
+        <div class="custom-modal system-modal">
+          <div class="smodal-top">
+            <h3 class="smodal-ttl">프로젝트 제목을 변경 하시겠습니까?</h3>
+          </div>
+          <div class="smodal-btn-wrap">
+            <button type="button" onclick="closeModal('modal-01');" class="btn btn-type20">취소</button>
+            <button type="button" class="btn btn-type19">네, 변경할게요</button>
           </div>
         </div>
+      </div>
 
-        <!-- END (대시보드) 오른쪽 내용 영역 -->
+      <!-- 프로젝트 삭제확인 모달 -->
+      <div id="modal-02" class="modal-wrapper">
+        <div class="modal-overlay" onclick="closeModal('modal-02');"></div>
+        <div class="custom-modal system-modal">
+          <div class="smodal-top">
+            <h3 class="smodal-ttl">프로젝트를 삭제하시겠습니까?</h3>
+          </div>
+          <div class="smodal-btn-wrap">
+            <button type="button" onclick="closeModal('modal-02');" class="btn btn-type20">취소</button>
+            <button type="button" class="btn btn-type21">네, 삭제할게요</button>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- FIXME: 프로젝트 관리의 모달들 -->
-  </div>
-</body>
-
+    <script src="assets/js/ui.js"></script>
+    <script>
+      // 제목 바꾸기
+      $('.js-edit-title-btn').on('click', function(e) {
+        var titleInput = $(e.currentTarget).parents('.card-thumbnail').siblings('.card-content').children('.card-ttl');
+        titleInput.prop('readonly', false);
+        titleInput.focus();
+      })
+      $('.card-ttl').on('keyup', function(key) {
+        if (key.keyCode == 13) {
+          openModal('modal-01');
+        }
+      })
+      $('.card-ttl').on('blur', function() {
+        openModal('modal-01');
+        $(this).prop('readonly', true);
+      })
+    </script>
+    <script>
+      // https://kottenator.github.io/jquery-circle-progress/
+      // 프로젝트 만들 때 진행률 보여주는 써클 프로그레스바 (라이브러리 끌어다씀)
+      let options = {
+        startAngle: -1.55,
+        value: 0.78,
+        size: 130,
+        lineCap: 'round',
+        fill: {
+          gradient: ['#56CCF2', '#2F75F1']
+        },
+        thickness: 14,
+        emptyFill: "#ccc"
+      }
+      $('.js-circle .bar').circleProgress(options).on('circle-animation-progress', function(event, progress, stepValue) {
+        $(this).parent().find("span").text(Math.round(100 * stepValue) + "%");
+      });
+    </script>
+  </body>
 </html>

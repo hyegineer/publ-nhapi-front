@@ -1,361 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>농협대학교 API 플랫폼</title>
+    <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/ui.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="dashboard-page page-wrapper">
+        <div class="dashboard-layout">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>농협대학교 API 플랫폼</title>
-  <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="assets/css/vendor/reset.css">
-  <link rel="stylesheet" href="assets/css/ui.css">
-  <link rel="stylesheet" href="assets/css/pages.css">
-  <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
-</head>
+          <!-- (대시보드) 왼쪽 사이드바 -->
+          <div class="dashboard-layout-sidebar">
+            <div class="left-sidebar-top">
+              <h1 class="logo">
+                <a href="dashboard-home.html" class="logo-link">
+                  <img src="assets/images/logo/logo-naos.png" alt="로고" class="logo-img">
+                </a>
+              </h1>
+              <button type="button" onclick="location.href='project-main.html';" class="btn btn-type18">
+                <img src="assets/images/ico/ico-new-add.svg" alt="더하기" class="ico ico-18">
+                <span class="txt">새 프로젝트</span>
+              </button>
+            </div>
 
-<body>
-  <div id="app">
-    <div class="dashboard-page page-wrapper">
-      <div class="dashboard-layout">
-
-        <!-- (대시보드) 왼쪽 사이드바 -->
-        <div class="dashboard-layout-sidebar">
-          <div class="left-sidebar-top">
-            <h1 class="logo">
-              <a href="dashboard-home.html" class="logo-link">
-                <img src="assets/images/logo/logo-naos.png" alt="로고" class="logo-img">
-              </a>
-            </h1>
-            <button type="button" onclick="location.href='project-main.html';" class="btn btn-type18">
-              <img src="assets/images/ico/ico-new-add.svg" alt="더하기" class="ico ico-18">
-              <span class="txt">새 프로젝트</span>
-            </button>
-          </div>
-
-          <!-- TODO: 메뉴 많아지면 스크롤 됨 -->
-          <div class="left-sidebar-mid">
-            <ul class="btn-list-grp">
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-home.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-home-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-home-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">HOME</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-voice.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-voice-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-voice-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">보이스</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-avatar.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-avatar-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-avatar-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">아바타</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-project-setting.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-project-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-project-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">프로젝트 관리</span>
-                </div>
-              </li>
-            </ul>
-            <div class="section">
+            <!-- TODO: 메뉴 많아지면 스크롤 됨 -->
+            <div class="left-sidebar-mid">
               <ul class="btn-list-grp">
-                <li class="btn-list">
-                  <div class="dropdown-btn-list">
-                    <div class="dropdown-btn-top ">
-                      <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
-                        <div class="ico-box">
-                          <img src="assets/images/ico/ico-nav-custom-on.svg" alt="아이콘" class="ico ico-on">
-                          <img src="assets/images/ico/ico-nav-custom-off.svg" alt="아이콘" class="ico ico-off">
-                        </div>
-                        <span class="txt">커스텀 GPT</span>
-                        <img src="assets/images/ico/ico-down-arrow-gray.svg" alt="아래로" class="ico ico-16 ico-down">
-                      </div>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-home.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-home-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-home-off.svg" alt="아이콘" class="ico ico-off">
                     </div>
-                    <ul class="dropdown-btn-bottom">
-                      <li class="btn-list ">
+                    <span class="txt">HOME</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-voice.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-voice-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-voice-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">보이스</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-avatar.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-avatar-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-avatar-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">아바타</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-project-setting.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-project-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-project-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">프로젝트 관리</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="section">
+                <ul class="btn-list-grp">
+                  <li class="btn-list">
+                    <div class="dropdown-btn-list">
+                      <div class="dropdown-btn-top ">
                         <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
                           <div class="ico-box">
-                            <img src="assets/images/ico/ico-nav-robot-on.svg" alt="아이콘" class="ico ico-on">
-                            <img src="assets/images/ico/ico-nav-robot-off.svg" alt="아이콘" class="ico ico-off">
+                            <img src="assets/images/ico/ico-nav-custom-on.svg" alt="아이콘" class="ico ico-on">
+                            <img src="assets/images/ico/ico-nav-custom-off.svg" alt="아이콘" class="ico ico-off">
                           </div>
-                          <span class="txt">NAOS GPT</span>
+                          <span class="txt">커스텀 GPT</span>
+                          <img src="assets/images/ico/ico-down-arrow-gray.svg" alt="아래로" class="ico ico-16 ico-down">
                         </div>
-                      </li>
-                      <li class="btn-list ">
-                        <div onclick="location.href='dashboard-custom-gpt-setting.html';" class="btn list-btn-type06">
-                          <div class="ico-box">
-                            <img src="assets/images/ico/ico-nav-gpt-setting-on.svg" alt="아이콘" class="ico ico-on">
-                            <img src="assets/images/ico/ico-nav-gpt-setting-off.svg" alt="아이콘" class="ico ico-off">
+                      </div>
+                      <ul class="dropdown-btn-bottom">
+                        <li class="btn-list ">
+                          <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
+                            <div class="ico-box">
+                              <img src="assets/images/ico/ico-nav-robot-on.svg" alt="아이콘" class="ico ico-on">
+                              <img src="assets/images/ico/ico-nav-robot-off.svg" alt="아이콘" class="ico ico-off">
+                            </div>
+                            <span class="txt">NAOS GPT</span>
                           </div>
-                          <span class="txt">GPT 설정</span>
-                        </div>
-                      </li>
-                    </ul>
+                        </li>
+                        <li class="btn-list ">
+                          <div onclick="location.href='dashboard-custom-gpt-setting.html';" class="btn list-btn-type06">
+                            <div class="ico-box">
+                              <img src="assets/images/ico/ico-nav-gpt-setting-on.svg" alt="아이콘" class="ico ico-on">
+                              <img src="assets/images/ico/ico-nav-gpt-setting-off.svg" alt="아이콘" class="ico ico-off">
+                            </div>
+                            <span class="txt">GPT 설정</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <ul class="btn-list-grp">
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-faq.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-faq-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-faq-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">자주 묻는 질문</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-notice.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-notice-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-notice-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">공지사항</span>
+                  </div>
+                </li>
+                <li class="btn-list active">
+                  <div onclick="location.href='dashboard-mypage.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-mypage-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-mypage-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">내 정보</span>
                   </div>
                 </li>
               </ul>
             </div>
-            <ul class="btn-list-grp">
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-faq.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-faq-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-faq-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">자주 묻는 질문</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-notice.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-notice-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-notice-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">공지사항</span>
-                </div>
-              </li>
-              <li class="btn-list active">
-                <div onclick="location.href='dashboard-mypage.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-mypage-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-mypage-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">내 정보</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="left-sidebar-bottom">
-            <span class="txt">Powered by</span>
-            <img src="assets/images/logo/logo-nh.png" alt="농협대학교 로고" class="logo-img">
-          </div>
-        </div>
-
-        <!-- END (대시보드) 왼쪽 사이드바 -->
-
-        <!-- (대시보드) 오른쪽 내용 영역 -->
-
-        <!-- 대시보드 내 정보 -->
-        <div class="dashboard-layout-content">
-          <div class="dsbd-mypage-page dashboard-layout-page">
-
-            <!-- 제목 -->
-            <div class="dashboard-ttl-wrap type-bd">
-              <h2 class="title-lg">내 정보</h2>
+            <div class="left-sidebar-bottom">
+              <span class="txt">Powered by</span>
+              <img src="assets/images/logo/logo-nh.png" alt="농협대학교 로고" class="logo-img">
             </div>
+          </div>
 
-            <!-- END 제목 -->
+          <!-- END (대시보드) 왼쪽 사이드바 -->
 
-            <!-- 내용 -->
-            <div class="dashboard-content-wrap">
-              <section class="section-grid">
-                <div class="left-section">
+          <!-- (대시보드) 오른쪽 내용 영역 -->
 
-                  <!-- 내 정보 설정 카드 -->
-                  <div class="white-bd-box mypage-info-setting-box">
-                    <div class="box-title-wrap">
-                      <h4 class="title-md">프로필</h4>
-                    </div>
-                    <div class="box-content-wrap">
-                      <figure class="thumbnail type-circle">
-                        <img src="assets/images/sample/img-sample-profile.svg" alt="" class="thumbnail-img">
-                      </figure>
-                      <div class="edit-btn-wrap">
-                        <button type="button" class="btn btn-type07">
-                          <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-14">
-                          <span class="txt">삭제하기</span>
-                        </button>
-                        <button type="button" class="btn btn-type14">사진 불러오기</button>
+          <!-- 대시보드 내 정보 -->
+          <div class="dashboard-layout-content">
+            <div class="dsbd-mypage-page dashboard-layout-page">
+
+              <!-- 제목 -->
+              <div class="dashboard-ttl-wrap type-bd">
+                <h2 class="title-lg">내 정보</h2>
+              </div>
+
+              <!-- END 제목 -->
+
+              <!-- 내용 -->
+              <div class="dashboard-content-wrap">
+                <section class="section-grid">
+                  <div class="left-section">
+
+                    <!-- 내 정보 설정 카드 -->
+                    <div class="white-bd-box mypage-info-setting-box">
+                      <div class="box-title-wrap">
+                        <h4 class="title-md">프로필</h4>
                       </div>
-                    </div>
-                    <div class="form-item-grp">
-                      <div class="form-item">
-                        <label class="form-label">이름</label>
-                        <div class="form-inp-wrap">
-                          <div class="inp-wrap">
-                            <input type="text" placeholder="성" class="form-inp">
-                            <input type="text" placeholder="이름" class="form-inp">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-item">
-                        <label class="form-label">연락처</label>
-                        <div class="form-inp-wrap">
-                          <div class="inp-wrap">
-                            <input type="text" value="010-1234-5678" disabled class="form-inp">
-                          </div>
-                          <p class="form-validation-msg">초기에 등록한 연락처는 변경이 불가합니다</p>
+                      <div class="box-content-wrap">
+                        <figure class="thumbnail type-circle">
+                          <img src="assets/images/sample/img-sample-profile.svg" alt="" class="thumbnail-img">
+                        </figure>
+                        <div class="edit-btn-wrap">
+                          <button type="button" class="btn btn-type07">
+                            <img src="assets/images/ico/ico-listbtn-del-dark.svg" alt="" class="ico ico-14">
+                            <span class="txt">삭제하기</span>
+                          </button>
+                          <button type="button" class="btn btn-type14">사진 불러오기</button>
                         </div>
                       </div>
-                      <div class="form-item">
-                        <label class="form-label">구분</label>
-                        <div class="form-inp-wrap">
-                          <div class="inp-wrap">
-                            <select class="form-inp">
-                              <option value="교수">교수</option>
-                              <option value="학생">학생</option>
-                              <option value="교직원">교직원</option>
-                              <option value="관계자">관계자</option>
-                              <option value="기타">기타</option>
-                            </select>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-item">
-                        <label class="form-label">연락처</label>
-                        <div class="form-inp-wrap">
-                          <div class="inp-wrap">
-                            <input type="text" value="abcd123@gmail.com" disabled class="form-inp">
-                          </div>
-                          <p class="form-validation-msg">초기에 등록한 이메일은 변경이 불가합니다</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- END 내 정보 설정 카드 -->
-                </div>
-                <div class="right-section">
-
-                  <!-- 사용량 카드 -->
-                  <div class="white-bd-box mypage-usage-box">
-                    <div class="box-title-wrap">
-                      <h4 class="title-md">사용량</h4>
-                    </div>
-                    <div class="box-content-wrap type-grid">
-                      <div class="box-content">
-                        <div class="title-item">
-                          <img src="assets/images/ico/ico-voice.svg" alt="아이콘" class="ico ico-20">
-                          <h4 class="title-sm">보이스</h4>
-                        </div>
-                        <div class="progress-wrap">
-                          <div class="progress">
-                            <span class="progress-bar" style="width: 90%;"></span>
-                          </div>
-                          <div class="progress-under-txt">
-                            <span class="right-txt">74 / 100 G</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="box-content">
-                        <div class="title-item">
-                          <img src="assets/images/ico/ico-human.svg" alt="아이콘" class="ico ico-20">
-                          <h4 class="title-sm">아바타</h4>
-                        </div>
-                        <div class="progress-wrap">
-                          <div class="progress">
-                            <span class="progress-bar" style="width: 90%;"></span>
-                          </div>
-                          <div class="progress-under-txt">
-                            <span class="right-txt">74 / 100 G</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="box-btn-wrap">
-                      <button type="button" class="btn btn-type15">추가사용 요청</button>
-                    </div>
-                  </div>
-
-                  <!-- END 사용량 카드 -->
-
-                  <!-- 비밀번호 설정 카드 -->
-                  <div class="white-bd-box mypage-pwd-setting-box">
-                    <div class="box-title-wrap">
-                      <h4 class="title-md">비밀번호 설정</h4>
-                    </div>
-                    <div class="box-content-wrap">
                       <div class="form-item-grp">
                         <div class="form-item">
-                          <label class="form-label">현재 비밀번호</label>
+                          <label class="form-label">이름</label>
                           <div class="form-inp-wrap">
-                            <input type="text" value="abcd123!" class="form-inp" disabled>
-                          </div>
-                        </div>
-                        <div class="form-item">
-                          <label class="form-label">새 비밀번호</label>
-                          <div class="form-inp-wrap">
-                            <div class="inp-pwd-wrap">
-                              <input type="text" value="abcd123!" class="form-inp">
-
-                              <!-- TODO: 사용불가일 시 able-txt 에 error 클래스가 추가됩니다 -->
-                              <span class="able-txt">사용가능</span>
-                              <button type="button" class="btn toggle-btn">
-                                <img src="assets/images/ico/ico-pwd-off.svg" alt="숨기기" class="ico ico-18 ico-off">
-                                <img src="assets/images/ico/ico-pwd-on.svg" alt="보이기" class="ico ico-18 ico-on">
-                              </button>
+                            <div class="inp-wrap">
+                              <input type="text" placeholder="성" class="form-inp">
+                              <input type="text" placeholder="이름" class="form-inp">
                             </div>
-                            <p class="form-validation-msg type-right">비밀번호는 8자 이상으로 영문, 숫자, 특수문자를 조합해주세요</p>
                           </div>
                         </div>
                         <div class="form-item">
-                          <label class="form-label">새 비밀번호</label>
+                          <label class="form-label">연락처</label>
                           <div class="form-inp-wrap">
-                            <div class="inp-pwd-wrap">
-                              <input type="text" value="abcd123!" class="form-inp">
+                            <div class="inp-wrap">
+                              <input type="text" value="010-1234-5678" disabled class="form-inp">
+                            </div>
+                            <p class="form-validation-msg">초기에 등록한 연락처는 변경이 불가합니다</p>
+                          </div>
+                        </div>
+                        <div class="form-item">
+                          <label class="form-label">구분</label>
+                          <div class="form-inp-wrap">
+                            <div class="inp-wrap">
+                              <select class="form-inp">
+                                <option value="교수">교수</option>
+                                <option value="학생">학생</option>
+                                <option value="교직원">교직원</option>
+                                <option value="관계자">관계자</option>
+                                <option value="기타">기타</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-item">
+                          <label class="form-label">연락처</label>
+                          <div class="form-inp-wrap">
+                            <div class="inp-wrap">
+                              <input type="text" value="abcd123@gmail.com" disabled class="form-inp">
+                            </div>
+                            <p class="form-validation-msg">초기에 등록한 이메일은 변경이 불가합니다</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-                              <!-- TODO: 사용불가일 시 toggle-btn 에 active 클래스가 추가됩니다 -->
-                              <button type="button" class="btn toggle-btn">
-                                <img src="assets/images/ico/ico-circle-no.svg" alt="불가" class="ico ico-17 ico-off">
-                                <img src="assets/images/ico/ico-circle-ok.svg" alt="가능" class="ico ico-17 ico-on">
-                              </button>
+                    <!-- END 내 정보 설정 카드 -->
+                  </div>
+                  <div class="right-section">
+
+                    <!-- 사용량 카드 -->
+                    <div class="white-bd-box mypage-usage-box">
+                      <div class="box-title-wrap">
+                        <h4 class="title-md">사용량</h4>
+                      </div>
+                      <div class="box-content-wrap type-grid">
+                        <div class="box-content">
+                          <div class="title-item">
+                            <img src="assets/images/ico/ico-voice.svg" alt="아이콘" class="ico ico-20">
+                            <h4 class="title-sm">보이스</h4>
+                          </div>
+                          <div class="progress-wrap">
+                            <div class="progress">
+                              <span class="progress-bar" style="width: 90%;"></span>
+                            </div>
+                            <div class="progress-under-txt">
+                              <span class="right-txt">74 / 100 G</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="box-content">
+                          <div class="title-item">
+                            <img src="assets/images/ico/ico-human.svg" alt="아이콘" class="ico ico-20">
+                            <h4 class="title-sm">아바타</h4>
+                          </div>
+                          <div class="progress-wrap">
+                            <div class="progress">
+                              <span class="progress-bar" style="width: 90%;"></span>
+                            </div>
+                            <div class="progress-under-txt">
+                              <span class="right-txt">74 / 100 G</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="box-btn-wrap">
+                        <button type="button" onclick="openModal('modal-03');" class="btn btn-type15">추가사용 요청</button>
+                      </div>
+                    </div>
+
+                    <!-- END 사용량 카드 -->
+
+                    <!-- 비밀번호 설정 카드 -->
+                    <div class="white-bd-box mypage-pwd-setting-box">
+                      <div class="box-title-wrap">
+                        <h4 class="title-md">비밀번호 설정</h4>
+                      </div>
+                      <div class="box-content-wrap">
+                        <div class="form-item-grp">
+                          <div class="form-item">
+                            <label class="form-label">현재 비밀번호</label>
+                            <div class="form-inp-wrap">
+                              <input type="text" value="abcd123!" class="form-inp" disabled>
+                            </div>
+                          </div>
+                          <div class="form-item">
+                            <label class="form-label">새 비밀번호</label>
+                            <div class="form-inp-wrap">
+                              <div class="inp-pwd-wrap">
+                                <input type="text" value="abcd123!" class="form-inp">
+
+                                <!-- TODO: 사용불가일 시 able-txt 에 error 클래스가 추가됩니다 -->
+                                <span class="able-txt">사용가능</span>
+                                <button type="button" class="btn toggle-btn">
+                                  <img src="assets/images/ico/ico-pwd-off.svg" alt="숨기기" class="ico ico-18 ico-off">
+                                  <img src="assets/images/ico/ico-pwd-on.svg" alt="보이기" class="ico ico-18 ico-on">
+                                </button>
+                              </div>
+                              <p class="form-validation-msg type-right">비밀번호는 8자 이상으로 영문, 숫자, 특수문자를 조합해주세요</p>
+                            </div>
+                          </div>
+                          <div class="form-item">
+                            <label class="form-label">새 비밀번호</label>
+                            <div class="form-inp-wrap">
+                              <div class="inp-pwd-wrap">
+                                <input type="text" value="abcd123!" class="form-inp">
+
+                                <!-- TODO: 사용불가일 시 toggle-btn 에 active 클래스가 추가됩니다 -->
+                                <button type="button" class="btn toggle-btn">
+                                  <img src="assets/images/ico/ico-circle-no.svg" alt="불가" class="ico ico-17 ico-off">
+                                  <img src="assets/images/ico/ico-circle-ok.svg" alt="가능" class="ico ico-17 ico-on">
+                                </button>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </section>
-              <section class="section">
-                <div class="agree-box-container">
-                  <div class="agree-box">
-                    <p class="txt">본 서비스 이용과 관련하여 귀사가 본인의 개인(신용)정보를 수집ㆍ이용하고자 하는 경우에는「개인정보보호법」제15조 및 제22조,「신용정보의 이용 및 보호에
-                      관한
-                      법률」제32조 및
-                      제33조에
-                      따라 동의를 얻어야 합니다. 이에 본인은 귀사가 아래의 내용과 같이 본인의 개인(신용)정보를 수집ㆍ이용하는데 동의합니다.
-                      <br><br>
-                      ☐ 개인(신용)정보의 수집ㆍ이용 목적 <br>
-                      ◦ NAOS 행정 처리 및 서비스 제공을 위한 회원관리
-                    </p>
+                </section>
+                <section class="section">
+                  <div class="agree-box-container">
+                    <div class="agree-box">
+                      <p class="txt">본 서비스 이용과 관련하여 귀사가 본인의 개인(신용)정보를 수집ㆍ이용하고자 하는 경우에는「개인정보보호법」제15조 및 제22조,「신용정보의 이용 및 보호에 관한
+                        법률」제32조 및
+                        제33조에
+                        따라 동의를 얻어야 합니다. 이에 본인은 귀사가 아래의 내용과 같이 본인의 개인(신용)정보를 수집ㆍ이용하는데 동의합니다.
+                        <br><br>
+                        ☐ 개인(신용)정보의 수집ㆍ이용 목적 <br>
+                        ◦ NAOS 행정 처리 및 서비스 제공을 위한 회원관리
+                      </p>
+                    </div>
+                    <div class="agree-list">
+                      <label for="agree" class="checkbox-item type-02">
+                        <input id="agree" type="checkbox" class="checkbox-inp">
+                        <label for="agree" class="checkbox"></label>
+                        <span class="checkbox-txt">위 내용에 동의합니다.</span>
+                      </label>
+                    </div>
                   </div>
-                  <div class="agree-list">
-                    <label for="agree" class="checkbox-item type-02">
-                      <input id="agree" type="checkbox" class="checkbox-inp">
-                      <label for="agree" class="checkbox"></label>
-                      <span class="checkbox-txt">위 내용에 동의합니다.</span>
-                    </label>
-                  </div>
+                </section>
+                <div class="page-btn-wrap">
+                  <button type="button" class="btn btn-type16">변경사항 저장</button>
                 </div>
-              </section>
-              <div class="page-btn-wrap">
-                <button type="button" class="btn btn-type16">변경사항 저장</button>
               </div>
-            </div>
 
-            <!-- END 내용 -->
+              <!-- END 내용 -->
+            </div>
+          </div>
+
+          <!-- END (대시보드) 오른쪽 내용 영역 -->
+        </div>
+      </div>
+
+      <!-- 개인정보 약관 동의 모달 -->
+      <div id="modal-01" class="modal-wrapper">
+        <div class="modal-overlay" onclick="closeModal('modal-01');"></div>
+        <div class="custom-modal system-modal">
+          <div class="smodal-top">
+            <h3 class="smodal-ttl">개인정보보호 약관에 동의해주세요</h3>
+          </div>
+          <div class="smodal-btn-wrap">
+            <button type="button" onclick="closeModal('modal-01');" class="btn btn-type20">취소</button>
+            <button type="button" class="btn btn-type19">네, 확인할게요</button>
           </div>
         </div>
+      </div>
 
-        <!-- END (대시보드) 오른쪽 내용 영역 -->
+      <!-- 변경사항 저장 모달 -->
+      <div id="modal-02" class="modal-wrapper">
+        <div class="modal-overlay" onclick="closeModal('modal-02');"></div>
+        <div class="custom-modal system-modal">
+          <div class="smodal-top">
+            <h3 class="smodal-ttl">변경사항을 저장 하시겠습니까?</h3>
+          </div>
+          <div class="smodal-btn-wrap">
+            <button type="button" onclick="closeModal('modal-02');" class="btn btn-type20">취소</button>
+            <button type="button" class="btn btn-type19">네, 저장할게요</button>
+          </div>
+        </div>
+      </div>
+      <div id="modal-03" class="modal-wrapper">
+        <div class="modal-overlay" onclick="closeModal('modal-03');"></div>
+        <div class="custom-modal mypage-request-modal">
+          <button type="button" class="btn close-btn" onclick="closeModal('modal-03');">
+            <img src="assets/images/ico/ico-modal-close-x.svg" alt="">
+            <span class="txt-hidden">모달 닫기</span>
+          </button>
+          <div class="mrmodal-top">
+            <h3 class="mrmodal-ttl">추가로 요청할 <br>콘텐츠를 선택해주세요 </h3>
+          </div>
+          <div class="mrmodal-mid">
+            <div class="mrmodal-content">
+              <div class="request-list-grp">
+                <input id="request-voice" type="checkbox" class="none request-inp">
+
+                <!-- TODO: 인풋이랑 같이 해놨긴 했는데, 만약 인풋 사용안하신다면 해당 request-list에 active 클래스 붙히면 모양 바뀝니다 -->
+                <label for="request-voice" class="request-list type-voice">
+                  <img src="assets/images/ico/ico-request-voice-on.svg" alt="보이스 활성화" class="img img-on">
+                  <img src="assets/images/ico/ico-request-voice-off.svg" alt="보이스 비활성화" class="img img-off">
+                  <span class="txt">보이스</span>
+                </label>
+                <input id="request-avatar" type="checkbox" class="none request-inp">
+
+                <!-- TODO: 인풋이랑 같이 해놨긴 했는데, 만약 인풋 사용안하신다면 해당 request-list에 active 클래스 붙히면 모양 바뀝니다 -->
+                <label for="request-avatar" class="request-list type-avatar">
+                  <img src="assets/images/ico/ico-request-avatar-on.svg" alt="아바타 활성화" class="img img-on">
+                  <img src="assets/images/ico/ico-request-avatar-off.svg" alt="아바타 비활성화" class="img img-off">
+                  <span class="txt">아바타</span>
+                </label>
+              </div>
+              <p class="mrmodal-content-txt">추가사용의 경우 내부 관리 환경에 따라 <br>관리자 승인이 거부 될 수 있습니다</p>
+            </div>
+          </div>
+          <div class="mrmodal-bottom">
+            <button type="button" class="btn btn-type19">추가 사용 요청하기</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</body>
-
+    <script src="assets/js/ui.js"></script>
+  </body>
 </html>

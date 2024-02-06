@@ -1,312 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>농협대학교 API 플랫폼</title>
+    <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/ui.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="dashboard-page page-wrapper">
+        <div class="dashboard-layout">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>농협대학교 API 플랫폼</title>
-  <link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="assets/css/vendor/reset.css">
-  <link rel="stylesheet" href="assets/css/ui.css">
-  <link rel="stylesheet" href="assets/css/pages.css">
-  <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
-</head>
+          <!-- (대시보드) 왼쪽 사이드바 -->
+          <div class="dashboard-layout-sidebar">
+            <div class="left-sidebar-top">
+              <h1 class="logo">
+                <a href="dashboard-home.html" class="logo-link">
+                  <img src="assets/images/logo/logo-naos.png" alt="로고" class="logo-img">
+                </a>
+              </h1>
+              <button type="button" onclick="location.href='project-main.html';" class="btn btn-type18">
+                <img src="assets/images/ico/ico-new-add.svg" alt="더하기" class="ico ico-18">
+                <span class="txt">새 프로젝트</span>
+              </button>
+            </div>
 
-<body>
-  <div id="app">
-    <div class="dashboard-page page-wrapper">
-      <div class="dashboard-layout">
-
-        <!-- (대시보드) 왼쪽 사이드바 -->
-        <div class="dashboard-layout-sidebar">
-          <div class="left-sidebar-top">
-            <h1 class="logo">
-              <a href="dashboard-home.html" class="logo-link">
-                <img src="assets/images/logo/logo-naos.png" alt="로고" class="logo-img">
-              </a>
-            </h1>
-            <button type="button" onclick="location.href='project-main.html';" class="btn btn-type18">
-              <img src="assets/images/ico/ico-new-add.svg" alt="더하기" class="ico ico-18">
-              <span class="txt">새 프로젝트</span>
-            </button>
-          </div>
-
-          <!-- TODO: 메뉴 많아지면 스크롤 됨 -->
-          <div class="left-sidebar-mid">
-            <ul class="btn-list-grp">
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-home.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-home-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-home-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">HOME</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-voice.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-voice-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-voice-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">보이스</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-avatar.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-avatar-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-avatar-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">아바타</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-project-setting.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-project-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-project-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">프로젝트 관리</span>
-                </div>
-              </li>
-            </ul>
-            <div class="section">
+            <!-- TODO: 메뉴 많아지면 스크롤 됨 -->
+            <div class="left-sidebar-mid">
               <ul class="btn-list-grp">
-                <li class="btn-list">
-                  <div class="dropdown-btn-list">
-                    <div class="dropdown-btn-top ">
-                      <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
-                        <div class="ico-box">
-                          <img src="assets/images/ico/ico-nav-custom-on.svg" alt="아이콘" class="ico ico-on">
-                          <img src="assets/images/ico/ico-nav-custom-off.svg" alt="아이콘" class="ico ico-off">
-                        </div>
-                        <span class="txt">커스텀 GPT</span>
-                        <img src="assets/images/ico/ico-down-arrow-gray.svg" alt="아래로" class="ico ico-16 ico-down">
-                      </div>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-home.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-home-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-home-off.svg" alt="아이콘" class="ico ico-off">
                     </div>
-                    <ul class="dropdown-btn-bottom">
-                      <li class="btn-list ">
+                    <span class="txt">HOME</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-voice.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-voice-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-voice-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">보이스</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-avatar.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-avatar-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-avatar-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">아바타</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-project-setting.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-project-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-project-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">프로젝트 관리</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="section">
+                <ul class="btn-list-grp">
+                  <li class="btn-list">
+                    <div class="dropdown-btn-list">
+                      <div class="dropdown-btn-top ">
                         <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
                           <div class="ico-box">
-                            <img src="assets/images/ico/ico-nav-robot-on.svg" alt="아이콘" class="ico ico-on">
-                            <img src="assets/images/ico/ico-nav-robot-off.svg" alt="아이콘" class="ico ico-off">
+                            <img src="assets/images/ico/ico-nav-custom-on.svg" alt="아이콘" class="ico ico-on">
+                            <img src="assets/images/ico/ico-nav-custom-off.svg" alt="아이콘" class="ico ico-off">
                           </div>
-                          <span class="txt">NAOS GPT</span>
+                          <span class="txt">커스텀 GPT</span>
+                          <img src="assets/images/ico/ico-down-arrow-gray.svg" alt="아래로" class="ico ico-16 ico-down">
                         </div>
-                      </li>
-                      <li class="btn-list ">
-                        <div onclick="location.href='dashboard-custom-gpt-setting.html';" class="btn list-btn-type06">
-                          <div class="ico-box">
-                            <img src="assets/images/ico/ico-nav-gpt-setting-on.svg" alt="아이콘" class="ico ico-on">
-                            <img src="assets/images/ico/ico-nav-gpt-setting-off.svg" alt="아이콘" class="ico ico-off">
+                      </div>
+                      <ul class="dropdown-btn-bottom">
+                        <li class="btn-list ">
+                          <div onclick="location.href='dashboard-custom-gpt.html';" class="btn list-btn-type06">
+                            <div class="ico-box">
+                              <img src="assets/images/ico/ico-nav-robot-on.svg" alt="아이콘" class="ico ico-on">
+                              <img src="assets/images/ico/ico-nav-robot-off.svg" alt="아이콘" class="ico ico-off">
+                            </div>
+                            <span class="txt">NAOS GPT</span>
                           </div>
-                          <span class="txt">GPT 설정</span>
-                        </div>
-                      </li>
-                    </ul>
+                        </li>
+                        <li class="btn-list ">
+                          <div onclick="location.href='dashboard-custom-gpt-setting.html';" class="btn list-btn-type06">
+                            <div class="ico-box">
+                              <img src="assets/images/ico/ico-nav-gpt-setting-on.svg" alt="아이콘" class="ico ico-on">
+                              <img src="assets/images/ico/ico-nav-gpt-setting-off.svg" alt="아이콘" class="ico ico-off">
+                            </div>
+                            <span class="txt">GPT 설정</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <ul class="btn-list-grp">
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-faq.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-faq-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-faq-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">자주 묻는 질문</span>
+                  </div>
+                </li>
+                <li class="btn-list active">
+                  <div onclick="location.href='dashboard-notice.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-notice-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-notice-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">공지사항</span>
+                  </div>
+                </li>
+                <li class="btn-list ">
+                  <div onclick="location.href='dashboard-mypage.html';" class="btn list-btn-type06">
+                    <div class="ico-box">
+                      <img src="assets/images/ico/ico-nav-mypage-on.svg" alt="아이콘" class="ico ico-on">
+                      <img src="assets/images/ico/ico-nav-mypage-off.svg" alt="아이콘" class="ico ico-off">
+                    </div>
+                    <span class="txt">내 정보</span>
                   </div>
                 </li>
               </ul>
             </div>
-            <ul class="btn-list-grp">
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-faq.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-faq-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-faq-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">자주 묻는 질문</span>
-                </div>
-              </li>
-              <li class="btn-list active">
-                <div onclick="location.href='dashboard-notice.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-notice-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-notice-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">공지사항</span>
-                </div>
-              </li>
-              <li class="btn-list ">
-                <div onclick="location.href='dashboard-mypage.html';" class="btn list-btn-type06">
-                  <div class="ico-box">
-                    <img src="assets/images/ico/ico-nav-mypage-on.svg" alt="아이콘" class="ico ico-on">
-                    <img src="assets/images/ico/ico-nav-mypage-off.svg" alt="아이콘" class="ico ico-off">
-                  </div>
-                  <span class="txt">내 정보</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="left-sidebar-bottom">
-            <span class="txt">Powered by</span>
-            <img src="assets/images/logo/logo-nh.png" alt="농협대학교 로고" class="logo-img">
-          </div>
-        </div>
-
-        <!-- END (대시보드) 왼쪽 사이드바 -->
-
-        <!-- (대시보드) 오른쪽 내용 영역 -->
-
-        <!-- 대시보드 공지사항 -->
-        <div class="dashboard-layout-content">
-          <div class="dsbd-notice-page dashboard-layout-page">
-
-            <!-- 제목 -->
-            <div class="dashboard-ttl-wrap type-bd">
-              <h2 class="title-lg">공지사항</h2>
+            <div class="left-sidebar-bottom">
+              <span class="txt">Powered by</span>
+              <img src="assets/images/logo/logo-nh.png" alt="농협대학교 로고" class="logo-img">
             </div>
-
-            <!-- END 제목 -->
-
-            <!-- 내용 -->
-            <div class="dashboard-content-wrap">
-              <ul class="notice-list-grp">
-                <li class="notice-list">
-
-                  <!-- 공지사항 카드 -->
-                  <div class="notice-list-card">
-                    <div class="notice-list-top">
-                      <div class="title-item">
-                        <h4 class="card-ttl">[NAOS 사용법] 오프라인 교육 참가 안내</h4>
-                        <span class="date-txt">2024.01.01</span>
-                      </div>
-                    </div>
-                    <div class="notice-list-bottom">
-                      <p class="txt">농협대학교에서 시행 중인 온라인 AI플랫폼 NAOS와 관련하여2024년도 신규교육일정을 아래와 같이 공모하오니 관심있는 분들의 적극적인 참여를
-                        바랍니다.
-                      </p>
-                    </div>
-                  </div>
-
-                  <!-- END 공지사항 카드 -->
-                </li>
-                <li class="notice-list">
-
-                  <!-- 공지사항 카드 -->
-                  <div class="notice-list-card">
-                    <div class="notice-list-top">
-                      <div class="title-item">
-                        <h4 class="card-ttl">[NAOS 사용법] 오프라인 교육 참가 안내</h4>
-                        <span class="date-txt">2024.01.01</span>
-                      </div>
-                    </div>
-                    <div class="notice-list-bottom">
-                      <p class="txt">농협대학교에서 시행 중인 온라인 AI플랫폼 NAOS와 관련하여2024년도 신규교육일정을 아래와 같이 공모하오니 관심있는 분들의 적극적인 참여를
-                        바랍니다.
-                      </p>
-                    </div>
-                  </div>
-
-                  <!-- END 공지사항 카드 -->
-                </li>
-                <li class="notice-list">
-
-                  <!-- 공지사항 카드 -->
-                  <div class="notice-list-card">
-                    <div class="notice-list-top">
-                      <div class="title-item">
-                        <h4 class="card-ttl">[NAOS 사용법] 오프라인 교육 참가 안내</h4>
-                        <span class="date-txt">2024.01.01</span>
-                      </div>
-                    </div>
-                    <div class="notice-list-bottom">
-                      <p class="txt">농협대학교에서 시행 중인 온라인 AI플랫폼 NAOS와 관련하여2024년도 신규교육일정을 아래와 같이 공모하오니 관심있는 분들의 적극적인 참여를
-                        바랍니다.
-                      </p>
-                    </div>
-                  </div>
-
-                  <!-- END 공지사항 카드 -->
-                </li>
-                <li class="notice-list">
-
-                  <!-- 공지사항 카드 -->
-                  <div class="notice-list-card">
-                    <div class="notice-list-top">
-                      <div class="title-item">
-                        <h4 class="card-ttl">[NAOS 사용법] 오프라인 교육 참가 안내</h4>
-                        <span class="date-txt">2024.01.01</span>
-                      </div>
-                    </div>
-                    <div class="notice-list-bottom">
-                      <p class="txt">농협대학교에서 시행 중인 온라인 AI플랫폼 NAOS와 관련하여2024년도 신규교육일정을 아래와 같이 공모하오니 관심있는 분들의 적극적인 참여를
-                        바랍니다.
-                      </p>
-                    </div>
-                  </div>
-
-                  <!-- END 공지사항 카드 -->
-                </li>
-                <li class="notice-list">
-
-                  <!-- 공지사항 카드 -->
-                  <div class="notice-list-card">
-                    <div class="notice-list-top">
-                      <div class="title-item">
-                        <h4 class="card-ttl">[NAOS 사용법] 오프라인 교육 참가 안내</h4>
-                        <span class="date-txt">2024.01.01</span>
-                      </div>
-                    </div>
-                    <div class="notice-list-bottom">
-                      <p class="txt">농협대학교에서 시행 중인 온라인 AI플랫폼 NAOS와 관련하여2024년도 신규교육일정을 아래와 같이 공모하오니 관심있는 분들의 적극적인 참여를
-                        바랍니다.
-                      </p>
-                    </div>
-                  </div>
-
-                  <!-- END 공지사항 카드 -->
-                </li>
-                <li class="notice-list">
-
-                  <!-- 공지사항 카드 -->
-                  <div class="notice-list-card">
-                    <div class="notice-list-top">
-                      <div class="title-item">
-                        <h4 class="card-ttl">[NAOS 사용법] 오프라인 교육 참가 안내</h4>
-                        <span class="date-txt">2024.01.01</span>
-                      </div>
-                    </div>
-                    <div class="notice-list-bottom">
-                      <p class="txt">농협대학교에서 시행 중인 온라인 AI플랫폼 NAOS와 관련하여2024년도 신규교육일정을 아래와 같이 공모하오니 관심있는 분들의 적극적인 참여를
-                        바랍니다.
-                      </p>
-                    </div>
-                  </div>
-
-                  <!-- END 공지사항 카드 -->
-                </li>
-                <li class="notice-list">
-
-                  <!-- 공지사항 카드 -->
-                  <div class="notice-list-card">
-                    <div class="notice-list-top">
-                      <div class="title-item">
-                        <h4 class="card-ttl">[NAOS 사용법] 오프라인 교육 참가 안내</h4>
-                        <span class="date-txt">2024.01.01</span>
-                      </div>
-                    </div>
-                    <div class="notice-list-bottom">
-                      <p class="txt">농협대학교에서 시행 중인 온라인 AI플랫폼 NAOS와 관련하여2024년도 신규교육일정을 아래와 같이 공모하오니 관심있는 분들의 적극적인 참여를
-                        바랍니다.
-                      </p>
-                    </div>
-                  </div>
-
-                  <!-- END 공지사항 카드 -->
-                </li>
-              </ul>
-            </div>
-
-            <!-- END 내용 -->
           </div>
-        </div>
 
-        <!-- END (대시보드) 오른쪽 내용 영역 -->
+          <!-- END (대시보드) 왼쪽 사이드바 -->
+
+          <!-- (대시보드) 오른쪽 내용 영역 -->
+
+          <!-- 대시보드 공지사항 -->
+          <div class="dashboard-layout-content">
+            <div class="dsbd-notice-page dashboard-layout-page">
+
+              <!-- 제목 -->
+              <div class="dashboard-ttl-wrap type-bd">
+                <h2 class="title-lg">공지사항</h2>
+              </div>
+
+              <!-- END 제목 -->
+
+              <!-- 내용 -->
+              <div class="dashboard-content-wrap">
+                <ul class="notice-list-grp">
+                  <li class="notice-list">
+
+                    <!-- 공지사항 카드 -->
+                    <div class="notice-list-card">
+                      <div class="notice-list-top">
+                        <div class="title-item">
+                          <h4 class="card-ttl">[NAOS 사용법] 오프라인 교육 참가 안내</h4>
+                          <span class="date-txt">2024.01.01</span>
+                        </div>
+                      </div>
+                      <div class="notice-list-bottom">
+                        <p class="txt">농협대학교에서 시행 중인 온라인 AI플랫폼 NAOS와 관련하여2024년도 신규교육일정을 아래와 같이 공모하오니 관심있는 분들의 적극적인 참여를 바랍니다.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- END 공지사항 카드 -->
+                  </li>
+                  <li class="notice-list">
+
+                    <!-- 공지사항 카드 -->
+                    <div class="notice-list-card">
+                      <div class="notice-list-top">
+                        <div class="title-item">
+                          <h4 class="card-ttl">[NAOS 사용법] 오프라인 교육 참가 안내</h4>
+                          <span class="date-txt">2024.01.01</span>
+                        </div>
+                      </div>
+                      <div class="notice-list-bottom">
+                        <p class="txt">농협대학교에서 시행 중인 온라인 AI플랫폼 NAOS와 관련하여2024년도 신규교육일정을 아래와 같이 공모하오니 관심있는 분들의 적극적인 참여를 바랍니다.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- END 공지사항 카드 -->
+                  </li>
+                  <li class="notice-list">
+
+                    <!-- 공지사항 카드 -->
+                    <div class="notice-list-card">
+                      <div class="notice-list-top">
+                        <div class="title-item">
+                          <h4 class="card-ttl">[NAOS 사용법] 오프라인 교육 참가 안내</h4>
+                          <span class="date-txt">2024.01.01</span>
+                        </div>
+                      </div>
+                      <div class="notice-list-bottom">
+                        <p class="txt">농협대학교에서 시행 중인 온라인 AI플랫폼 NAOS와 관련하여2024년도 신규교육일정을 아래와 같이 공모하오니 관심있는 분들의 적극적인 참여를 바랍니다.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- END 공지사항 카드 -->
+                  </li>
+                  <li class="notice-list">
+
+                    <!-- 공지사항 카드 -->
+                    <div class="notice-list-card">
+                      <div class="notice-list-top">
+                        <div class="title-item">
+                          <h4 class="card-ttl">[NAOS 사용법] 오프라인 교육 참가 안내</h4>
+                          <span class="date-txt">2024.01.01</span>
+                        </div>
+                      </div>
+                      <div class="notice-list-bottom">
+                        <p class="txt">농협대학교에서 시행 중인 온라인 AI플랫폼 NAOS와 관련하여2024년도 신규교육일정을 아래와 같이 공모하오니 관심있는 분들의 적극적인 참여를 바랍니다.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- END 공지사항 카드 -->
+                  </li>
+                  <li class="notice-list">
+
+                    <!-- 공지사항 카드 -->
+                    <div class="notice-list-card">
+                      <div class="notice-list-top">
+                        <div class="title-item">
+                          <h4 class="card-ttl">[NAOS 사용법] 오프라인 교육 참가 안내</h4>
+                          <span class="date-txt">2024.01.01</span>
+                        </div>
+                      </div>
+                      <div class="notice-list-bottom">
+                        <p class="txt">농협대학교에서 시행 중인 온라인 AI플랫폼 NAOS와 관련하여2024년도 신규교육일정을 아래와 같이 공모하오니 관심있는 분들의 적극적인 참여를 바랍니다.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- END 공지사항 카드 -->
+                  </li>
+                  <li class="notice-list">
+
+                    <!-- 공지사항 카드 -->
+                    <div class="notice-list-card">
+                      <div class="notice-list-top">
+                        <div class="title-item">
+                          <h4 class="card-ttl">[NAOS 사용법] 오프라인 교육 참가 안내</h4>
+                          <span class="date-txt">2024.01.01</span>
+                        </div>
+                      </div>
+                      <div class="notice-list-bottom">
+                        <p class="txt">농협대학교에서 시행 중인 온라인 AI플랫폼 NAOS와 관련하여2024년도 신규교육일정을 아래와 같이 공모하오니 관심있는 분들의 적극적인 참여를 바랍니다.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- END 공지사항 카드 -->
+                  </li>
+                  <li class="notice-list">
+
+                    <!-- 공지사항 카드 -->
+                    <div class="notice-list-card">
+                      <div class="notice-list-top">
+                        <div class="title-item">
+                          <h4 class="card-ttl">[NAOS 사용법] 오프라인 교육 참가 안내</h4>
+                          <span class="date-txt">2024.01.01</span>
+                        </div>
+                      </div>
+                      <div class="notice-list-bottom">
+                        <p class="txt">농협대학교에서 시행 중인 온라인 AI플랫폼 NAOS와 관련하여2024년도 신규교육일정을 아래와 같이 공모하오니 관심있는 분들의 적극적인 참여를 바랍니다.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- END 공지사항 카드 -->
+                  </li>
+                </ul>
+              </div>
+
+              <!-- END 내용 -->
+            </div>
+          </div>
+
+          <!-- END (대시보드) 오른쪽 내용 영역 -->
+        </div>
       </div>
     </div>
-  </div>
-</body>
-
+    <script src="assets/js/ui.js"></script>
+  </body>
 </html>
